@@ -1,4 +1,6 @@
- theme: jekyll-theme-midnight
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
 title: "Electrical Cars"
 description: "A website that puts together the specs and looks of various Top Electrical Vehicals"
 gitorg: "https://github.com/Firestorm0986/frontend-proj"
