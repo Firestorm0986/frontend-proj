@@ -22,11 +22,21 @@
     td a.active {
         color: white;
         background-color: #484f93;
-      }
-      a{
+    }
+
+    a{
         padding-left: 5rem;
         padding-right: 5rem;
-      }
+    }
+
+    td a.back {
+        color: black;
+        background-color: white;   
+    }
+
+    td a.back:hover{
+        background-color: #4f538b;
+    }
 
 </style>
 
@@ -34,9 +44,9 @@
 <table>
     <tr>
         <td><a class = "active" href="/">Home</a></td>
-        <td><a href="/housing">Tesla</a></td>
-        <td><a href="/food">Rivian</a></td>
-        <td><a href="/sports">Lucid</a></td>
-        <td><a href="/activities">NIO</a></td>
+        <td><a class = "back" href="/housing">Tesla</a></td>
+        <td><a class = "back" href="/food">Rivian</a></td>
+        <td><a class = "back" href="/sports">Lucid</a></td>
+        <td><a class = "back" href="/activities">NIO</a></td>
     </tr>
 </table>

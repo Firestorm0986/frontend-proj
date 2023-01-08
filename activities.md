@@ -1,3 +1,11 @@
+## NIO
+> Group events will occur each afternoon.  These are intended to explore local area attractions and build family bonds.
+
+### Tuesday Afternoon
+> Hike and/or Bike coordinated by Johnner.   There are 11 miles of trails and water around campus.   We will go on an adventure and explore the surroundings toward the Dam.
+
+- Arial photos of Camp and Nearby [Shasta Dam](https://en.wikipedia.org/wiki/Shasta_Dam)
+
 <!--- This section is Cascading Style Sheet (CSS) and applies to HTML -->
 <style>
 /* "row style" is flexible size and aligns pictures in center */
@@ -12,13 +20,6 @@
   padding: 5px;
 }
 </style>
-## Planned Activities
-> Group events will occur each afternoon.  These are intended to explore local area attractions and build family bonds.
-
-### Tuesday Afternoon
-> Hike and/or Bike coordinated by Johnner.   There are 11 miles of trails and water around campus.   We will go on an adventure and explore the surroundings toward the Dam.
-
-- Arial photos of Camp and Nearby [Shasta Dam](https://en.wikipedia.org/wiki/Shasta_Dam)
 
 <div class="row"> <!--- make a new row -->
   <!-- each column is one-third of width -->

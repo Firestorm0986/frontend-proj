@@ -1,4 +1,4 @@
-## Sports
+## Lucid
 > Group sports will occur each every morning.  Sports will be fun and competitive.  Winners will have Leuck bragging rights for years to come.  On site..
 
 - Swimming Pool
