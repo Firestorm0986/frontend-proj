@@ -1,41 +1,78 @@
 ## Lucid
-> Group sports will occur each every morning.  Sports will be fun and competitive.  Winners will have Leuck bragging rights for years to come.  On site..
+> Founded by Bernard Tse, Sam Weng, and Sheaupyng Lin, Lucid Motors, Inc. was created in 2007, originally "focused on building electric vehicle batteries and powertrains for other vehicle manufacturers". Eventually the company moved to all electric car manufacturing after many began to invest. 
 
-- Swimming Pool
-- Fishing (Bring your own equipment, some provided by ranch)
-- Mountain biking (Bike on bikes, some provided by ranch)
-- Horseshoes
-- Basketball
-- Bocce ball 
-- Ping pong
-- Table soccer
-- Air hockey
-- Billiards
+### 2024 Lucid Gravity
+> **Overview:** 
+- Duel electric motors
+- All wheel drive
+- Performance-oriented Grand Touring trim
 
-### Tuesday Morning
-> Greet Games by Johnner and family.  Volleyball, Basketball, and Swimming have been generational sports for the Leuck's.  Early Leuck outings were to Tyler Texas and swimming was an all afternoon event.  At one time, almost all the Leuck's were in Eugene Oregon and many holidays were spent at the Danebo Church playing ball. Later their were reunions at Silver Creek Falls, Mexico, and Wenatchee. So in Leuck tradition, the morning will start with sports and of course socializing.  The theme of the 1st sports activity day will be: play, socialize, eat, rinse, and repeat.
-- The facility has a field and Volleyball net
-- Half-Court basketball
-- Bocce Ball
-- Pool
-
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/coram-ranch-field.webp" alt="Field" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/coram-ranch-bocce.webp" alt="Bocce" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/coram-ranch-pool.webp" alt="Pool" style="width:100%">
-  </div>
+<html>
+<div>
+<br>
+<img src="images/gravity.png" alt="gravity.png" style="width:400px;height:400px;" class="imgMain">
+</br>
 </div>
+</html>
 
-### Wednesday Morning
-> Pool Olympics by Annalyce and Peyton.  Curious feedback ... Hey, we’ve decided we are including a polar plunge. Please be prepared to provide the cash. 😂👍🏽
+| Model | Estimated Price | Horsepower |
+| - | - | - |
+| Pure | $90,000 | 1,000 |
+| Touring | $110,000 | ~1,100 |
+| Grand Touring | $140,000 | ~1,100 |
+| Grand Touring Performance | $170,000 | ~1,100 |
+| Sapphire | $250,000 | 1,200 |
 
-### Thursday Morning
-> Field Olympics by Taylor and Jake.  Early feedback ... Definitely wiffle ball/softball and volleyball!!!
 
-### Friday Morning
+### Lucid Air
+> **Overview:**
+- Lucid's "main", most popular car with 
+- In 2018, the Lucid prototype gained media popularity by "smoking" other electric car models such as those made by Tesla
+- Many upgraded versions have been produced up until they started production on their new, unreleased 2024 Lucid Gravity 
+
+| Lucid Air Model | EPA Range | Horsepower | Price |
+| - | - | - | - |
+| Dream Edition Range (19″ wheels) | 520 mi. | 933 | $169,000 |
+| Dream Edition Range (21″ wheels) | 481 mi. | 933 | $169,000 |
+| Dream Edition Performance (19″ wheels) | 471 mi. | 1111 | $169,000 |
+| Dream Edition Performance (21″ wheels) | 451 mi. | 1111 | $169,000 |
+| Grand Touring (19″ wheels) | 516 mi. | 800 | $139,000 |
+| Grand Touring (21″ wheels) | 469 mi. | 800 | $139,000 |
+| Touring | 406 mi. | 620 | $95,000 |
+| Pure | 406 mi. | 480 | $77,400 |
+
+<button onclick="myFunction()">Dream Edition</button>
+<script>
+function myFunction() {
+  var x = document.createElement("IMG");
+  x.setAttribute("src", "dreamedition.png");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+  x.setAttribute("alt", "image");
+  document.body.appendChild(x);
+}
+</script>
+
+<button onclick="myFunction()">Touring</button>
+<script>
+function myFunction() {
+  var y = document.createElement("IMG");
+  y.setAttribute("src", "air.png");
+  y.setAttribute("width", "304");
+  y.setAttribute("height", "228");
+  y.setAttribute("alt", "image");
+  document.body.appendChild(y);
+}
+</script>
+
+<button onclick="myFunction()">Pure</button>
+<script>
+function myFunction() {
+  var z = document.createElement("IMG");
+  z.setAttribute("src", "pure.png");
+  z.setAttribute("width", "304");
+  z.setAttribute("height", "228");
+  z.setAttribute("alt", "image");
+  document.body.appendChild(z);
+}
+</script>
