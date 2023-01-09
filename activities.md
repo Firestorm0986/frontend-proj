@@ -6,25 +6,71 @@
 >>>>>>> __Nio Inc.__ is a Chinese multinational automobile manufacturer headquartered in Shanghai, specializing in designing and developing electric vehicles. The company is known for its development of battery-swapping stations for its vehicles, as an alternative to conventional charging stations
 
 >>>>>>### Modles
->>>>>>> Hike and/or Bike coordinated by Johnner.   There are 11 miles of trails and water around campus.   We will go on an adventure and explore the surroundings toward the Dam.
+>>>>>>> There are a total of 3 models of car with various veriosns of car in them 
 
->>>>>>>- Arial photos of Camp and Nearby [Shasta Dam](https://en.wikipedia.org/wiki/Shasta_Dam)
+<table class = "mytable">
+  <tr>
+    <th>Model</th>
+    <th>Version 1</th>
+    <th>Version 2</th>
+    <th>Version 3</th>
+  </tr>
+  <tr>
+    <td class = "mytd">ET</td>
+    <td class = "mytd">et7</td>
+    <td class = "mytd">et5</td>
+    <td class = "mytd">-</td>
+  </tr>
+  <tr>
+    <td class = "mytd">ES</td>
+    <td class = "mytd">es8</td>
+    <td class = "mytd">es7</td>
+    <td class = "mytd">es6</td>
+  </tr>
+  <tr>
+    <td class = "mytd">EC</td>
+    <td class = "mytd">ec7</td>
+    <td class = "mytd">ec6</td>
+    <td class = "mytd">-</td>
+  </tr>
+</table>
+<div class = "container">
+  <div class = "secondary">
+    <button class = "mybutton" onclick = "location.href = 'https://www.nio.com/et7'"> ET</button>
+    <button class = "mybutton" onclick = "location.href = 'https://www.nio.com/es8'"> ES </button>
+    <button class = "mybutton" onclick = "location.href = 'https://www.nio.com/ec7'"> EC</button>
+  </div>
+</div>
+
+>>>>>>> - Click the above buttons to take you to the newest version of that modle of car.
 
 <!--- This section is Cascading Style Sheet (CSS) and applies to HTML -->
 <style>
 /* "row style" is flexible size and aligns pictures in center */
-
-
-.row {
-  align-items: center;
-  display:  ;
+.mytable {
+  width:50%;
+  
+  margin:auto;
+  text-align: center;
+  border: 1px solid;
 }
 
-/* "column style" is one-third of the width with padding */
-.column {
-  flex: 33.33%;
-  padding: 0px;
-  left:20rem;
+.mytd, th {
+  border: 1px solid;
+}
+
+.secondary{
+  margin-top: 1rem;
+  text-align:center;
+}
+
+.mybutton{
+  width: 6rem;
+  height:2rem;
+}
+.container{
+  height: 10%;
+  width:100%;
 }
 
 .image1 {
@@ -38,21 +84,3 @@
 
 
 </style>
-
-
-
->>>>>>### Wednesday Afternoon
->>>>>>> Spelunking coordinated by Johnner and Lora.  The Mortensen's frequent through the California corridor.  On each pass we have been wanting to visit the [Lake Shasta Caverns](https://lakeshastacaverns.clickforward.com/).   This is highly recommended by all locals and the trip include bus, boat ride, and cave adventure.   
-- Pack up lunch and leave by about 12:45pm
-- 32 minute drive to the event
-- 45 minute pre-checking required, we can Picnic while we wait
-- Fees $37 adult, $23 7-15, $13 3-6, under 2 yrs free, 20 people required for this rate
-- 600 stairs in cavern and 1 hour hike, there are options for bus/boat only and a half-way turnout in cave
-- 2 hours of bus, boat and hike
-- Options for Gem Stone mining on site
-
-
->>>>>>### Thursday Afternoon
->>>>>>> Boating coordinated by Jared.  In the Eugene days the family had several boating trips at the surrounding lakes.  UJ (Frank's brother) was the center of many of these trips.  Picking up for UJ, Jared is coordinating a boating adventure and will be providing us updates.
-
->>>>>>> - [Bridge Bay at Shasta Lake](https://bridgebayhouseboats.com/small-boat-rental/ski-boat/)
