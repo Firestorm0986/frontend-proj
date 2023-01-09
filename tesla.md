@@ -54,7 +54,7 @@ img {
         <td>Tesla Model S</td>
         <td>June 22, 2012</td>
         <td>5 door sedan<BR>First Electric vehicle to top monthly sales<BR>Time Magazine's Best 25 inventions of 2012<BR>Bestselling plug-in car worldwide for 2015-16<BR>EPA Range of 402 miles<BR>Top speed of 149 mph<BR>670 hp with 3.1 s 0-60 mph</td>
-        <td><img width = "100%" height="250%" src = "/images/tesla-model-s.jpg" /></td>
+        <td><img class = "img2" width = "100%" height="250%" src = "/images/tesla-model-s.jpg" /></td>
     </tr>
     <tr>
         <td>Tesla Model X</td>
