@@ -11,8 +11,18 @@ td {
     vertical-align: middle;
 }
 img {
-    width: 100%;
+    width: 90%;
     height: 275%;
+    object-fit: contain;
+}
+
+.mytable1 {
+  width:70%;
+  
+  margin:auto;
+  text-align: center;
+  background-color: lightgrey;  
+  border-radius: 20px
 }
 </style>
 
@@ -43,7 +53,9 @@ img {
 
 
 >>>>>>>>## Cars
-<table>
+
+
+<table class = "mytable1">
     <tr>
         <th>Car</th>
         <th>Release Date</th>
@@ -54,7 +66,7 @@ img {
         <td>Tesla Model S</td>
         <td>June 22, 2012</td>
         <td>5 door sedan<BR>First Electric vehicle to top monthly sales<BR>Time Magazine's Best 25 inventions of 2012<BR>Bestselling plug-in car worldwide for 2015-16<BR>EPA Range of 402 miles<BR>Top speed of 149 mph<BR>670 hp with 3.1 s 0-60 mph</td>
-        <td><img class = "img2" width = "100%" height="250%" src = "/images/tesla-model-s.jpg" /></td>
+        <td><img src = "/images/tesla-model-s.jpg"  /></td>
     </tr>
     <tr>
         <td>Tesla Model X</td>
@@ -78,7 +90,7 @@ img {
         <td>Tesla Semi</td>
         <td>December 2022</td>
         <td>All-electric Class 8 semi-trailer truck<BR>2 variants: 300 miles and 500 miles range<BR>4 independent electric motors<BR>Set of hardware sensors<BR>Soon-to-come autopilot mode</td>
-        <td><img src = "/images/tesla-semi.jpg"></td>
+        <td><img src = "/images/tesla-semi.jpg" ></td>
     </tr>
     <tr>
         <td>Tesla Roadster</td>
@@ -90,6 +102,6 @@ img {
 
 
 
->>#### Bibliography
+>>>>>>>#### Bibliography
 - [Wikipedia](https://en.wikipedia.org/wiki/Tesla,_Inc.)
-- [Tesla.com](tesla.com)
+- [Tesla.com](https://tesla.com)
