@@ -1,37 +1,53 @@
-## Family Night
-> Each evening family will meet.  Family nights are intended to build the Leuck family legacy.
+<style>
+  .inputform{
+    text-align:center;
+  }
 
-### Leuck Greet
-> Movie, Games, Popcorn.  As we slumber in from our travels, how about an unwinding night?
-- Start with Movie
-- Transition to games
-- Mom and Pop welcome, stories about there first family reunions.  Recap of some of the great Leuck get togethers. 
+  .mylist{
+    margin: 5rem;
+  }
+</style>
 
-Trivia, which one is Frank and Judith?  who are the others?
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/sherwood_glena.jpg" alt="Field" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/frank_judith.jpg" alt="Bocce" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/norville_erma.jpg" alt="Pool" style="width:100%">
-  </div>
-</div>
+<h1 style = "text-align: center"> CRUD </h1>
+ <form class = "inputform" id = "add-form">
+  <input type = "text" id = "new-text" placeholder = "add a car you liked">
+  <button type = "submit"> Submit </button>
+ </form>
+ <h2 style = "text-align: center"> Your Favourites </h2>
+ <ul class = "mylist" id = "new-list"></ul>
 
-### Tuesday Family Night
-> Family History night.  What better way to unite in reunion spirit then talk about us, explore our similarities and get excited about our differences.  A night of stories on how we all came together as Leuck's, plus some games on our similarities and differences.
-- Learn the "Leuck Song"
-- Kick off with some games to look at our similarities and differences.
-- Originals, plan 5 minute story and introduction on you and your clan.   Props and acting encouraged with your stories.  Stick to the 5 minute time line.
-- Frank and Judith love story
-- Encores and requests
-- Family prayer, 'Leuck style'
+<script>
+  const form = document.queryselector('#add-form')
+  const input = document.queryselector('#new-text')
+  const list = document.queryselector('#new-list')
 
-### Wednesday Family Night
+  let reminded = []
 
-### Thursday Family Night
+  function updatelist() {
+    list.innerHTML = '';
+    for (let remind of reminded){
+      const item = documet.creatElement('li');
+      item.innerHTML = <span>{remind.text}</span>;
+      list.appendChild(item);
+    }
+  }
 
-### Friday Family Night
+  function addremind(text) {
+    const newremind = {
+      text, 
+      completed: false
+    };
+
+    reminded.push(newremind);
+    updatelist();
+  }
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const text = input.value;
+    if (text){
+      addremind(text);
+      input.value = '';
+    }
+  });
+</script>

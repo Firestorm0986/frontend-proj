@@ -138,7 +138,7 @@ body{
 
 @keyframes car {
   0%   {background-color:lightgrey; left:0px; top:0px;}
-  25%  {background-color:lightgrey; left:50rem; top:0px;}
+  25%  {background-color:lightgrey; left:70%; top:0px;}
   50%  {background-color:lightgrey; left:0rem; top:0px;}
 }
 </style>
