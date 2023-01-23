@@ -65,37 +65,37 @@ img {
         <td class = "mytd">Tesla Model S</td>
         <td class = "mytd">June 22, 2012</td>
         <td class = "mytd">5 door sedan<BR>First Electric vehicle to top monthly sales<BR>Time Magazine's Best 25 inventions of 2012<BR>Bestselling plug-in car worldwide for 2015-16<BR>EPA Range of 402 miles<BR>Top speed of 149 mph<BR>670 hp with 3.1 s 0-60 mph</td>
-        <td class = "mytd"><img src = "/images/tesla-model-s.jpg"  /></td>
+        <td class = "mytd"><img src = "{{site.baseurl}}/images/tesla-model-s.jpg"  /></td>
     </tr>
     <tr>
         <td class = "mytd">Tesla Model X</td>
         <td class = "mytd">September 2015</td>
         <td class = "mytd">Mid-size crossover SUV<BR>Developed from full-sized sedan platform of Model S<BR>Falcon-wing design for back doors<BR>Ranked 7th among world's bestselling plug-in cars 2016<BR>EPA Range of 348 miles<BR>3.8 s 0-60 mph with 670 hp<BR>Top speed of 155 mph</td>
-        <td class = "mytd"><img src = "/images/tesla-model-x.jpg"></td>
+        <td class = "mytd"><img src = "{{site.baseurl}}/images/tesla-model-x.jpg"></td>
     </tr>
     <tr>
         <td class = "mytd">Tesla Model 3</td>
         <td class = "mytd">July 28, 2017</td>
         <td class = "mytd">4 door fastback sedan<BR>Over 325,000 reservations after unveiling<BR>World's best selling electric car in history<BR>Global sales passed 1 million<BR>3.1 s 0-60 mph<BR>EPA range of 315 miles<BR>Dual Motor All-Wheel Drive<BR>15" Center Touchscreen</td>
-        <td class = "mytd"><img src = "/images/tesla-model-3.jpg"></td>
+        <td class = "mytd"><img src = "{{site.baseurl}}/images/tesla-model-3.jpg"></td>
     </tr>
     <tr>
         <td class = "mytd">Tesla Model Y</td>
         <td class = "mytd">March 13, 2020</td>
         <td class = "mytd">Compact crossover utility vehicle<BR>Shares many components with Model 3<BR>EPA Range of 326 miles<BR>3.5s 0-60 mph with top speed of 155 mph<BR>Dual Motor All-Wheel Drive<BR>15" Center Touchscreen</td>
-        <td class = "mytd"><img src = "/images/tesla-model-y.jpg"></td>
+        <td class = "mytd"><img src = "{{site.baseurl}}/images/tesla-model-y.jpg"></td>
     </tr>
     <tr>
         <td class = "mytd">Tesla Semi</td>
         <td class = "mytd">December 2022</td>
         <td class = "mytd">All-electric Class 8 semi-trailer truck<BR>2 variants: 300 miles and 500 miles range<BR>4 independent electric motors<BR>Set of hardware sensors<BR>Soon-to-come autopilot mode</td>
-        <td class = "mytd"><img src = "/images/tesla-semi.jpg" ></td>
+        <td class = "mytd"><img src = "{{site.baseurl}}/images/tesla-semi.jpg" ></td>
     </tr>
     <tr>
         <td class = "mytd">Tesla Roadster</td>
         <td class = "mytd">Late 2023</td>
         <td class = "mytd">Range of 620 miles<BR>200 kilo-watt hours batter pack<BR>1.9 s 0-60 mph and 4/2 s 0-100 mph<BR>Top speed of over 250 mph<BR>Cold air thrusters and three electric motors<BR>All-wheel drive and torque vectoring during cornering</td>
-        <td class = "mytd"><img src = "/images/tesla-roadster.jpg"></td>
+        <td class = "mytd"><img src = "{{site.baseurl}}/images/tesla-roadster.jpg"></td>
     </tr>
 </table>
 
