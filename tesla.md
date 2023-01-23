@@ -10,13 +10,26 @@
 .myth{
     border: 1px solid black;
 }
+.mytd1 {
+    border: 1px solid black;
+}
+.myth1 {
+    border: 1px solid black;
+}
+.mytable1 {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
 img {
     width: 90%;
     height: 275%;
     object-fit: contain;
 }
 
-.mytable1 {
+.mytable {
   width:70%;
   margin:auto;
   text-align: center;
@@ -54,7 +67,7 @@ img {
 >>>>>>>>## Cars
 
 
-<table class = "mytable1">
+<table class = "mytable">
     <tr>
         <th class = "myth">Car</th>
         <th class = "myth">Release Date</th>
@@ -107,3 +120,18 @@ img {
 
 <button name="button" onclick="https://en.wikipedia.org/wiki/Tesla,_Inc.">Wikipedia</button>
 <button name="button" onclick="https://tesla.com">Tesla.com</button>
+
+
+>>>>>>>## Live Rankings
+<table class = "mytable1">
+    <tr>
+        <th class = "myth1">Car</th>
+        <th class = "myth1">Release Date</th>
+        <th class = "myth1">Facts/Features</th>
+        <th class = "myth1">Picture</th>
+    </tr>
+    <tr>
+        <td class = "mytd1">Tesla Model S</td>
+        <td class = "mytd1">June 22, 2012</td>
+        <td class = "mytd1">5 door sedan<BR>First Electric vehicle to top monthly sales<BR>Time Magazine's Best 25 inventions of 2012<BR>Bestselling plug-in car worldwide for 2015-16<BR>EPA Range of 402 miles<BR>Top speed of 149 mph<BR>670 hp with 3.1 s 0-60 mph</td>
+    </tr>
