@@ -17,18 +17,22 @@
  <ul class = "mylist" id = "new-list"></ul>
 
 <script>
-  const form = document.queryselector('#add-form')
-  const input = document.queryselector('#new-text')
-  const list = document.queryselector('#new-list')
+  const form = document.querySelector('#add-form')
+  const input = document.querySelector('#new-text')
+  const list = document.querySelector('#new-list')
 
   let reminded = []
 
   function updatelist() {
     list.innerHTML = '';
     for (let remind of reminded){
-      const item = documet.creatElement('li');
-      item.innerHTML = <span>{remind.text}</span>;
+      const item = document.createElement('li');
+      const item1 = document.createElement('li');
+     item1.innerHTML = remind.text;
+     item.innerHTML =`<button> edit </button> <button> delete </button>` ;
+      list.appendChild(item1);
       list.appendChild(item);
+      
     }
   }
 
