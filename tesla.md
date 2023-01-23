@@ -9,9 +9,12 @@
 }
 .myth{
     border: 1px solid black;
+    height: 30px;
 }
 .mytd1 {
     border: 1px solid black;
+    height: 60px;
+
 }
 .myth1 {
     border: 1px solid black;
@@ -35,6 +38,10 @@ img {
   text-align: center;
   background-color: lightgrey;  
   border-radius: 20px
+}
+.mytext {
+    font-size: 20px;
+    font-weight: bolder;
 }
 </style>
 
@@ -118,20 +125,45 @@ img {
 - [Wikipedia](https://en.wikipedia.org/wiki/Tesla,_Inc.)
 - [Tesla.com](https://tesla.com)
 
-<button name="button" onclick="https://en.wikipedia.org/wiki/Tesla,_Inc.">Wikipedia</button>
-<button name="button" onclick="https://tesla.com">Tesla.com</button>
+>>>>>>>><button name="wikipediabutton" onclick="https://en.wikipedia.org/wiki/Tesla,_Inc.">Wikipedia</button>
+>>>>>>>><button name="teslabutton" onclick="https://tesla.com">Tesla.com</button>
 
 
 >>>>>>>## Live Rankings
 <table class = "mytable1">
     <tr>
-        <th class = "myth1">Car</th>
-        <th class = "myth1">Release Date</th>
-        <th class = "myth1">Facts/Features</th>
-        <th class = "myth1">Picture</th>
+        <th class = "myth1">Car Model</th>
+        <th class = "myth1">Like</th>
+        <th class = "myth1">Dislike</th>
     </tr>
     <tr>
         <td class = "mytd1">Tesla Model S</td>
-        <td class = "mytd1">June 22, 2012</td>
-        <td class = "mytd1">5 door sedan<BR>First Electric vehicle to top monthly sales<BR>Time Magazine's Best 25 inventions of 2012<BR>Bestselling plug-in car worldwide for 2015-16<BR>EPA Range of 402 miles<BR>Top speed of 149 mph<BR>670 hp with 3.1 s 0-60 mph</td>
+        <td class = "mytd1"><button name="button1" onclick="">Like</button>
+</td>
+        <td class = "mytd1"><button name="button2" onclick="">Dislike</button>
+</td>
     </tr>
+    <tr>
+        <td class = "mytd1">Tesla Model Y</td>
+        <td class = "mytd1"><button name="button3" onclick="">Like</button></td>
+        <td class = "mytd1"><button name="button4" onclick="">Dislike</button></td>
+    </tr>
+    <tr>
+        <td class = "mytd1">Lucid Air</td>
+        <td class = "mytd1"><button name="button5" onclick="">Like</button></td>
+        <td class = "mytd1"><button name="button6" onclick="">Dislike</button></td>
+    </tr>
+    <tr>
+        <td class = "mytd1">Rivian R1S</td>
+        <td class = "mytd1"><button name="button7" onclick="">Like</button></td>
+        <td class = "mytd1"><button name="button8" onclick="">Dislike</button></td>
+    </tr>
+    <tr>
+        <td class = "mytd1">NIO EC6</td>
+        <<td class = "mytd1"><button name="button9" onclick="">Like</button></td>
+        <td class = "mytd1"><button name="button10" onclick="">Dislike</button></td>
+    </tr>
+</table>
+
+<p class = "mytext"><center>The most liked car is Tesla Model Y with 23 Likes!</center></p>
+<p class = "mytext"><center>The most disliked car is Rivian R1S with 12 Dislikes!</center></p>
