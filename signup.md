@@ -1,5 +1,7 @@
 <style>
-    
+.signupform {
+    background-color: white;
+}
 </style>
 
 <form class = "signupform" >
