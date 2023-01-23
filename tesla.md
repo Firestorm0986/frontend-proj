@@ -40,7 +40,6 @@ img {
   border-radius: 20px
 }
 .mytext {
-    font-size: 20px;
     font-weight: bolder;
 }
 </style>
@@ -165,5 +164,5 @@ img {
     </tr>
 </table>
 
-<p class = "mytext"><center>The most liked car is Tesla Model Y with 23 Likes!</center></p>
-<p class = "mytext"><center>The most disliked car is Rivian R1S with 12 Dislikes!</center></p>
+>>>>>>>>>>>>## The most liked car is Tesla Model Y with 23 Likes!
+>>>>>>>>>>>>## The most disliked car is Rivian R1S with 12 Dislikes!
