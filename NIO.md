@@ -4,7 +4,7 @@
 
 <div>
   <div class="container2">
-    <img src="/images/ni2-remove.png" alt="main" class = "anima">
+    <img src="{{site.baseurl}}/images/ni2-remove.png" alt="main" class = "anima">
   </div>
 </div>
 
