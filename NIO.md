@@ -1,5 +1,5 @@
 <div>
-  <img src="/images/nio.png" alt="main" style="width:100%">
+  <img src="{{site.baseurl}}/images/nio.png" alt="main" style="width:100%">
 </div>
 
 <div>

@@ -27,7 +27,7 @@ img {
 
 
 <div class = "img1">
-    <img src = "/images/tesla.jpg" style = "width:100%">
+    <img src = "{{site.baseurl}}/images/tesla.jpg" style = "width:100%">
 </div>
 
 >>>>>>># Tesla

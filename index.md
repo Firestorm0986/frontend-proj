@@ -4,7 +4,7 @@
 >>>>### Agile manifesto
 
 <div>
-  <img src="/images/agileteammanifesto.png" alt="main" style="width:90%; margin-left:4rem " >
+  <img src="{{site.baseurl}}/images/agileteammanifesto.png" alt="main" style="width:90%; margin-left:4rem " >
 </div>
 
 >>>>### start of code for databse

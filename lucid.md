@@ -10,7 +10,7 @@
 <html>
 <div>
 <br>
-<img src="images/gravity.png" alt="gravity.png" style="width:400px;height:400px;" class="imgMain">
+<img src="{{site.baseurl}}images/gravity.png" alt="gravity.png" style="width:400px;height:400px;" class="imgMain">
 </br>
 </div>
 </html>
