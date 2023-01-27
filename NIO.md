@@ -78,10 +78,18 @@
   border-radius: 7px
 }
 
+.box{
+margin-right: 20%;
+margin-left: 20%;
+height: 100px;
+width: 60%;
+background-color: white;
+}
+
+
 .mytd, th {
   border: 0.5px groove;
   background-color: lightgrey;
-  color:
 
 }
 
@@ -141,4 +149,16 @@ body{
   25%  {background-color:lightgrey; left:70%; top:0px;}
   50%  {background-color:lightgrey; left:0rem; top:0px;}
 }
+
+.subbox{
+  padding: 2px;
+}
 </style>
+
+<h1 class = "mytext"> Random Fact Generator </h1>
+<button class = "mytext"> Generate A Fact </button>
+<div class = "box">
+  <div class = "subbox">
+    <p> The random facts will display here </p>
+  </div>
+</div>
