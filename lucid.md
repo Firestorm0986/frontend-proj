@@ -8,11 +8,7 @@
 - Performance-oriented Grand Touring trim
 
 <html>
-<div>
-<br>
 <img src="{{site.baseurl}}images/gravity.png" alt="gravity.png" style="width:400px;height:400px;" class="imgMain">
-</br>
-</div>
 </html>
 
 | Model | Estimated Price | Horsepower |
@@ -76,3 +72,67 @@ function myFunction() {
   document.body.appendChild(z);
 }
 </script>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+      }
+      #piece {
+        width: 48px;
+        height: 48px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td id="cell-1"></td>
+        <td id="cell-2"></td>
+        <td id="cell-3"></td>
+        <td id="cell-4"></td>
+        <td id="cell-5"></td>
+      </tr>
+      <tr>
+        <td id="cell-6"></td>
+        <td id="cell-7"></td>
+        <td id="cell-8"></td>
+        <td id="cell-9"></td>
+        <td id="cell-10"></td>
+      </tr>
+      <tr>
+        <td id="cell-11"></td>
+        <td id="cell-12"></td>
+        <td id="cell-13"></td>
+        <td id="cell-14"></td>
+        <td id="cell-15"></td>
+      </tr>
+      <tr>
+        <td id="cell-16"></td>
+        <td id="cell-17"></td>
+        <td id="cell-18"></td>
+        <td id="cell-19"></td>
+        <td id="cell-20"></td>
+      </tr>
+      <tr>
+        <td id="cell-21"></td>
+        <td id="cell-22"></td>
+        <td id="cell-23"></td>
+        <td id="cell-24"></td>
+        <td id="cell-25"></td>
+      </tr>
+    </table>
+    <div id="piece"></div>
+  </body>
+</html>
