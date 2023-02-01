@@ -164,5 +164,9 @@ img {
     </tr>
 </table>
 
+<script>
+    
+</script>
+
 >>>>>>>>>>>>## The most liked car is Tesla Model Y with 23 Likes!
 >>>>>>>>>>>>## The most disliked car is Rivian R1S with 12 Dislikes!
