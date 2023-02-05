@@ -129,43 +129,118 @@ img {
 
 
 >>>>>>>## Live Rankings
-<table class = "mytable1">
-    <tr>
-        <th class = "myth1">Car Model</th>
-        <th class = "myth1">Like</th>
-        <th class = "myth1">Dislike</th>
-    </tr>
-    <tr>
-        <td class = "mytd1">Tesla Model S</td>
-        <td class = "mytd1"><button name="button1" onclick="">Like</button>
-</td>
-        <td class = "mytd1"><button name="button2" onclick="">Dislike</button>
-</td>
-    </tr>
-    <tr>
-        <td class = "mytd1">Tesla Model Y</td>
-        <td class = "mytd1"><button name="button3" onclick="">Like</button></td>
-        <td class = "mytd1"><button name="button4" onclick="">Dislike</button></td>
-    </tr>
-    <tr>
-        <td class = "mytd1">Lucid Air</td>
-        <td class = "mytd1"><button name="button5" onclick="">Like</button></td>
-        <td class = "mytd1"><button name="button6" onclick="">Dislike</button></td>
-    </tr>
-    <tr>
-        <td class = "mytd1">Rivian R1S</td>
-        <td class = "mytd1"><button name="button7" onclick="">Like</button></td>
-        <td class = "mytd1"><button name="button8" onclick="">Dislike</button></td>
-    </tr>
-    <tr>
-        <td class = "mytd1">NIO EC6</td>
-        <<td class = "mytd1"><button name="button9" onclick="">Like</button></td>
-        <td class = "mytd1"><button name="button10" onclick="">Dislike</button></td>
-    </tr>
+<table>
+  <thead>
+  <tr>
+    <th>Car</th>
+    <th>Like</th>
+    <th>Dislike</th>
+  </tr>
+  </thead>
+  <tbody id="result">
+    <!-- javascript generated data -->
+  </tbody>
 </table>
 
 <script>
+
+  const resultContainer = document.getElementById("result");
+
+  const LIKE = "like";
+  const DISLIKE = "dislike";
+
+  const url = "taal.nighthawkcodingteams.cf/api/rankings";
+  const like_url = url + "/like/"; 
+  const dislike_url = url + "/dislike/";
+
+  const options = {
+    method: 'GET',
+    mode: 'cors', 
+    cache: 'default', 
+    credentials: 'omit', 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  };
+  const put_options = {...options, method: 'PUT'}; 
+
+  fetch(url, options)
+    .then(response => {
+      if (response.status !== 200) {
+          error('GET API response failure: ' + response.status);
+          return;
+      }
+      response.json().then(data => {
+          console.log(data);
+          for (const row of data) {
+            const tr = document.createElement("tr");
+            
+            const car = document.createElement("td");
+              car.innerHTML = row.id + ". " + row.car;  
+
+            const like = document.createElement("td");
+              const like_but = document.createElement('button');
+              like_but.id = LIKE+row.id  
+              like_but.innerHTML = row.like;  
+              like_but.onclick = function () {
+                reaction(LIKE, like_url+row.id, like_but.id);  
+              };
+              like.appendChild(like_but); 
+
+            const dislike = document.createElement("td");
+              const dislike_but = document.createElement('button');
+              dislike_but.id = DISLIKE+row.id 
+              dislike_but.innerHTML = row.dislike; 
+              dislike_but.onclick = function () {
+                reaction(DISLIKE, dislike_url+row.id, dislike_but.id);  
+              };
+              dislike.appendChild(dislike_but);  
+             
+            tr.appendChild(car);
+            tr.appendChild(like);
+            tr.appendChild(dislike);
+
+            resultContainer.appendChild(tr);
+          }
+      })
+  })
+  .catch(err => {
+    error(err + " " + url);
+  });
+
+  function reaction(type, put_url, elemID) {
+
+    fetch(put_url, put_options)
+    .then(response => {
+      if (response.status !== 200) {
+          error("PUT API response failure: " + response.status)
+          return; 
+      }
+      response.json().then(data => {
+          console.log(data);
+          if (type === HAHA) 
+            document.getElementById(elemID).innerHTML = data.haha;  
+          else if (type === BOOHOO) 
+            document.getElementById(elemID).innerHTML = data.boohoo; 
+          else
+            error("unknown type: " + type); 
+      })
+    })
+    .catch(err => {
+      error(err + " " + put_url);
+    });
     
+  }
+
+  function error(err) {
+    console.error(err);
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.innerHTML = err;
+    tr.appendChild(td);
+    resultContainer.appendChild(tr);
+  }
+
 </script>
 
 >>>>>>>>>>>>## The most liked car is Tesla Model Y with 23 Likes!
