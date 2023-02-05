@@ -149,7 +149,7 @@ img {
   const LIKE = "like";
   const DISLIKE = "dislike";
 
-  const url = "taal.nighthawkcodingteams.cf/api/rankings";
+  const url = "https://taal.nighthawkcodingteams.cf/api/rankings/";
   const like_url = url + "/like/"; 
   const dislike_url = url + "/dislike/";
 
@@ -218,9 +218,9 @@ img {
       }
       response.json().then(data => {
           console.log(data);
-          if (type === HAHA) 
+          if (type === LIKE) 
             document.getElementById(elemID).innerHTML = data.haha;  
-          else if (type === BOOHOO) 
+          else if (type === DISLIKE) 
             document.getElementById(elemID).innerHTML = data.boohoo; 
           else
             error("unknown type: " + type); 
@@ -240,7 +240,9 @@ img {
     tr.appendChild(td);
     resultContainer.appendChild(tr);
   }
-
+  function click() {
+    
+  }
 </script>
 
 >>>>>>>>>>>>## The most liked car is Tesla Model Y with 23 Likes!
