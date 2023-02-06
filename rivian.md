@@ -1,42 +1,38 @@
+<html>
+<img src="{{site.baseurl}}images/rivianlogo.png" alt="rivianlogo.png" style="width:600px;height:600px;" class="imgMain">
+</html>
 ## Rivian
-> The Alpine lodge extra-large kitchen seats 44 people.  The kitchens are perfect for large group meals and all come equipped with appropriate appliances and utensils. There is an outdoor barbecue!  There is a fridge and individual kitchens in the homes.   So there is a place to store snacks, make sure you stock up for the little ones.
+> Rivian is an American electric car manufacturing company which builds all-electric, high-end vehicles for many purposes. It was founded in 2009 in Irvine, California. They build SUVs and pickup trucks on "skateboard platforms" which they hope to use on future vehicle types.
 
-### Monday Dinner
+### Cars in Their Lineup
+> Rivian has two cars in their lineup, the R1S and the R1T. The R1S is their luxury, multipurpose SUV, and the R1T is their luxury, multipurpose pickup truck. Deliveries of the R1S and R1T first started in 2021. So far, Rivian has delivered over 21,000 combined units. 
 
  
-### Tuesday Breakfast (8-9:30am)
-> Grits and Sausage Links in the main hall
+## Rivian R1S
+<html>
+<img src="{{site.baseurl}}images/Rivian.png" alt="Rivian.png" style="width:400px;height:400px;" class="imgMain">
+</html>
 
-### Tuesday Lunch
-> Make lunch at dinning room.  Pack and Go.  Eat outside or at your housing, pick up trash and leave no mess in dinning hall or grounds.
+> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats for a total of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
 
-### Tuesday Dinner
+### R1S Features
+> The interior of the R1S has a screen which supports bluetooth connections, CarPlay, and other features. The vehicle has LTE and Wi-Fi connectivity inside, which may allow for connectivity in remote areas. Amazon Alexa is also built-in. There are up to 8 USB ports, 2 12V ports, and 2 120V outlets. Based on customization, leather seats are available. There are many driver-assist features, some of which allow for hands-free driving. 
 
+## Rivian R1T
+<html>
+<img src="{{site.baseurl}}images/r1t.jpg" alt="r1t.jpg" style="width:400px;height:400px;" class="imgMain">
+</html>
 
-### Wednesday Breakfast (8-9:30am)
+> The Rivian R1T is Rivian's all-electric luxury pickup truck. The R1T has two rows of seats for a total of 5 passengers. Depending on the motor and wheels, the range is anywhere between 260 and 400 miles. It takes up to 13 hours to charge at 220 Volts. The R1T can tow up to 11,000 pounds, and can accelerate from 0-60 in up to three seconds. It sports an All-Wheel-Drive drivetrain.
 
-### Wednesday Lunch
-> Make lunch at dinning room.  Pack and Go.  Leave no mess please.  There is option to purchase food at the caverns, there is a picnic are at the site.
+### R1T Features
+> The interior of the R1T has a screen which supports bluetooth connections, CarPlay, and other features. The vehicle has LTE and Wi-Fi connectivity inside, which may allow for connectivity in remote areas. Amazon Alexa is also built-in. There are up to 6 USB ports and 4 120V outlets. Based on customization, leather seats are available. There are many driver-assist features, some of which allow for hands-free driving. There are multiple storage spaces in the R1T, which allows for an additional 62 cubic feet of storage space.
 
+### R1S and R1T At A Glance
 
-### Wednesday Dinner
+| Car | Seating | Range | 0-60 | Towing Capacity | Storage | Additional Features | Safety | Price | 
+| --- | ------- | ----- | ---- | --------------- | ------- | ------------------- | ------ | ----- | ---------------- |
+| R1S | 7 (three rows) | 260-315 miles | 7700 pounds | 105 cubic feet | Amazon Alexa Built-in, bluetooth, LTE / Wi-Fi | Low Center of Gravity, Carbon-fiber, and high-strength steel and aluminum, Driver Assistance | $78,000 | 
+| R1T | 5 (two rows) | 260-400 miles | 11,000 pounds | 74 cubic feet | Amazon Alexa Built-in, bluetooth, LTE / Wi-Fi | Low Center of Gravity, Carbon-fiber, and high-strength steel and aluminum, Driver Assistance | $73,000 | 
 
-
-### Thursday Breakfast (8-9:30am)
-
-### Thursday Lunch
-> Make lunch at dinning room.  Pack and Go.  Leave no mess please.  There will likely be some down time and extra snacks will be wanted while boating.
-
-### Thursday Dinner
-
-
-### Friday Breakfast (8-9:30am)
-
-### Friday Lunch
-> Make lunch at dinning room.  Pack and Go.  There are lots of places to explore and eat in the community of Shasta Lakes and Redding.
-
-### Friday Dinner
-
-
-### Saturday Breakfast (8-9:30am)
-
+Visit their website [here](https://rivian.com/)
