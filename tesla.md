@@ -137,188 +137,140 @@ td {
 
 >>>>>>>## Live Rankings
 
-<table class = "mytable1">
+<table class="mytable1">
   <thead>
   <tr>
-    <th class = "myth">Car</th>
-    <th class = "myth">Like</th>
-    <th class = "myth">Dislike</th>
+    <th class="myth">Car</th>
+    <th class="myth">Like</th>
+    <th class="myth">Dislike</th>
   </tr>
   </thead>
-  <tbody class = "mytd">
-  <tr>
-    <td id = "car1"></td>
-    <td><button>Like</button></td>
-    <td><button>Dislike</button></td>
-  </tr>
-  <tr>
-    <td id = "car2"></td>
-    <td><button>Like</button></td>
-    <td><button>Dislike</button></td>
-  </tr>
-  <tr>
-    <td id = "car3"></td>
-    <td><button>Like</button></td>
-    <td><button>Dislike</button></td>
-  </tr>
-  <tr>
-    <td id = "car4"></td>
-    <td><button>Like</button></td>
-    <td><button>Dislike</button></td>
-  </tr>
-  <tr>
-    <td id = "car5"></td>
-    <td><button>Like</button></td>
-    <td><button>Dislike</button></td>
-  </tr>
-  </tbody>
   <tbody id="result">
+    <!-- javascript generated data -->
   </tbody>
 </table>
 
-<p><center>Add Your Own Car!</center></p>
+<p><center>Add your Own Car!</center></p>
 
 <form action="javascript:create_user()"><center>
-  <p><label>
-    Car Name:
-    <input type = "text" name="car" id="car" required>
-  </label></p>
-  <p>
-    <button>Create</button>
-  </p>
+    <p><label>
+        Car
+        <input type="text" name="car" id="car" required>
+    </label></p>
+    <p>
+        <button>Create</button>
+    </p>
 </center></form>
-
 
 <script>
   const resultContainer = document.getElementById("result");
-  /*const LIKE = "like";
-  const DISLIKE = "dislike";
+  const url = "http://zesty.nighthawkcodingsociety.com/api/schemas/"
+  const create_fetch = url + '/create';
+  const read_fetch = url + '/';
 
-  const url = "http://zesty.nighthawkcodingsociety.com/api/schemas/";
-  const like_url = url + "/like/"; 
-  const dislike_url = url + "/dislike/";
+  // Load users on page entry
+  read_cars();
 
-  const options = {
-    method: 'GET',
-    mode: 'cors', 
-    cache: 'default', 
-    credentials: 'omit', 
-    headers: {
-      'Content-Type': 'application/json'
-    },
-  };
-  const put_options = {...options, method: 'PUT'}; 
 
-  fetch(url, options)
-    .then(response => {
-      if (response.status !== 200) {
-          error('GET API response failure: ' + response.status);
-          return;
-      }
-      response.json().then(data => {
-          console.log(data);
-          for (const row of data) {
+  // Display User Table, data is fetched from Backend Database
+  function read_cars() {
+    // prepare fetch options
+    const read_options = {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'omit', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    };
+
+    // fetch the data from API
+    fetch(read_fetch, read_options)
+      // response is a RESTful "promise" on any successful fetch
+      .then(response => {
+        // check for response errors
+        if (response.status !== 200) {
+            const errorMsg = 'Database read error: ' + response.status;
+            console.log(errorMsg);
             const tr = document.createElement("tr");
-            
-            const car = document.createElement("td");
-              car.innerHTML = row.car;  
-
-            const like = document.createElement("td");
-              const like_but = document.createElement('button');
-              like_but.id = LIKE+row.id  
-              like_but.innerHTML = row.like;  
-              like_but.onclick = function () {
-                reaction(LIKE, like_url+row.id, like_but.id);  
-              };
-              like.appendChild(like_but); 
-
-            const dislike = document.createElement("td");
-              const dislike_but = document.createElement('button');
-              dislike_but.id = DISLIKE+row.id 
-              dislike_but.innerHTML = row.dislike; 
-              dislike_but.onclick = function () {
-                reaction(DISLIKE, dislike_url+row.id, dislike_but.id);  
-              };
-              dislike.appendChild(dislike_but);  
-             
-            tr.appendChild(car);
-            tr.appendChild(like);
-            tr.appendChild(dislike);
-
+            const td = document.createElement("td");
+            td.innerHTML = errorMsg;
+            tr.appendChild(td);
             resultContainer.appendChild(tr);
-          }
-      })
-  })
-  .catch(err => {
-    error(err + " " + url);
-  });
-
-  function reaction(type, put_url, elemID) {
-
-    fetch(put_url, put_options)
-    .then(response => {
-      if (response.status !== 200) {
-          error("PUT API response failure: " + response.status)
-          return; 
-      }
-      response.json().then(data => {
-          console.log(data);
-          if (type === LIKE) 
-            document.getElementById(elemID).innerHTML = data.like;  
-          else if (type === DISLIKE) 
-            document.getElementById(elemID).innerHTML = data.dislike; 
-          else
-            error("unknown type: " + type); 
-      })
-    })
-    .catch(err => {
-      error(err + " " + put_url);
-    });
-    
-  }
-
-  function error(err) {
-    console.error(err);
-    const tr = document.createElement("tr");
-    const td = document.createElement("td");
-    td.innerHTML = err;
-    tr.appendChild(td);
-    resultContainer.appendChild(tr);
-    
-  }*/
-  const apiurl = "http://zesty.nighthawkcodingsociety.com/api/schemas/"
-    window.onload = APIsync()
-    
-    function APIsync(){
-        fetch(apiurl)
-        .then(response => {
-            response.json().then(data => {
-                console.log(data)
-                console.log(data.results)
-                TableCreate(data)
+            return;
+        }
+        // valid response will have json data
+        response.json().then(data => {
+            console.log(data);
+            for (let row in data) {
+              console.log(data[row]);
+              add_row(data[row]);
+            }
         })
     })
-    }
-    function TableCreate(data){
-      document.getElementById("car1").innerHTML = data[0]["car"];
-      document.getElementById("car2").innerHTML = data[1]["car"];
-      document.getElementById("car3").innerHTML = data[2]["car"];
-      document.getElementById("car4").innerHTML = data[3]["car"];
-      document.getElementById("car5").innerHTML = data[4]["car"];
-    }
+    // catch fetch errors (ie ACCESS to server blocked)
+    .catch(err => {
+      console.error(err);
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.innerHTML = err;
+      tr.appendChild(td);
+      resultContainer.appendChild(tr);
+    });
+  }
 
-    read_cars();
+  function create_car(){
+    //Validate Password (must be 6-20 characters in len)
+    //verifyPassword("click");
+    const body = {
+        car: document.getElementById("car").value,
 
-    function read_cars() {
-      const read_options = {
-        method: 'GET',
-        mode: 'cors',
-        cache: 'default',
-        credentials: 'omit',
+    };
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(body),
         headers: {
-          'Content-Type': 'application/json'
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
         },
-      };
-    }
+    };
+
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+            //add a table row for the new/created userid
+            add_row(data);
+        })
+    })
+  }
+
+  function add_row(data) {
+    const tr = document.createElement("tr");
+    const car = document.createElement("td");
   
+    // obtain data that is specific to the API
+    car.innerHTML = data.car;
+
+    // add HTML to container
+    tr.appendChild(car);
+
+    resultContainer.appendChild(tr);
+  }
+
 </script>
