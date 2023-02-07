@@ -2,7 +2,7 @@
 title: Rivian Game
 layout: default
 description: description 
-permalink: /games/riviangames
+permalink: /games/riviangame
 image: /images/dart.png
 type: pbl
 ---
