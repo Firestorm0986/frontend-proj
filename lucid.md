@@ -5,9 +5,9 @@
 <table>
   <tr>
     <td><img src="{{site.baseurl}}//images/dart.png" height="150"></td>
-    <td style="font-size: 40px; background-color: green;"><a href="{{site.baseurl}}/games/teslagame">Tesla</a></td>
-    <td style="font-size: 40px; background-color: green;"><a href="{{site.baseurl}}/games/riviangame">Rivian</a></td>
-    <td style="font-size: 40px; background-color: green;"><a href="{{site.baseurl}}/games/lucidgame">Lucid</a></td>
-    <td style="font-size: 40px; background-color: green;"><a href="{{site.baseurl}}/games/niogame">Nio</a></td>
+    <td style="font-size: 40px; background-color: #8FBC8F;"><a href="{{site.baseurl}}/games/teslagame">Tesla</a></td>
+    <td style="font-size: 40px; background-color: #8FBC8F;"><a href="{{site.baseurl}}/games/riviangame">Rivian</a></td>
+    <td style="font-size: 40px; background-color: #8FBC8F;"><a href="{{site.baseurl}}/games/lucidgame">Lucid</a></td>
+    <td style="font-size: 40px; background-color: #8FBC8F;"><a href="{{site.baseurl}}/games/niogame">Nio</a></td>
   </tr>
 </table>

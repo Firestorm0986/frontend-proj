@@ -1,23 +1,22 @@
 ---
 title: Lucid Game
-layout: default
-description: description 
+layout: default 
 permalink: /games/lucidgame
-image: /images/dart.png
 type: pbl
 ---
 
-# lucid test
+# Select what Lucid Model you would like to play on
 
-<select id="myList">
-  <option value="item1">Item 1</option>
-  <option value="item2">Item 2</option>
-  <option value="item3">Item 3</option>
-  <option value="item4">Item 4</option>
-</select>
+<div style="text-align: center;">
+  <select id="Lucidlist" style="font-size: 20px; padding: 10px;">
+    <option value="model1">Lucid Air</option>
+    <option value="model2">Lucid Gravity</option>
+  </select>
+</div>
 
 <script>
-    document.getElementById("myList").onchange = function() {
+    document.getElementById("Lucidlist").onchange = function() {
         var selectedValue = this.value;
     };
 </script>
+
