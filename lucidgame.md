@@ -2,7 +2,7 @@
 title: Lucid Game
 layout: default
 description: description 
-permalink: /frontend/lucidgame
+permalink: /games/lucidgame
 image: /images/dart.png
 type: pbl
 ---
