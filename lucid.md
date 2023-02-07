@@ -1,6 +1,7 @@
-<h1 style="text-align: center; font-size: 70px;">Welcome to DART Electric</h1>
+<h1 style="text-align: center; font-size: 50px; color: darkblue;">Welcome to the DART Electric Car Charging Game</h1>
+<p style="text-align: center; font-size: 20px;">To play this game, you will simply input the time in minutes you think the car will take to charge to 100% based on what the percentage was at the start.</p>
 
-<p style="text-align: center; font-size: 20px;">Please select you favorite car brand you want to play the game on</p>
+<p style="text-align: center; font-size: 25px;">Please select you favorite car brand you want to play the game on</p>
 
 <table>
   <tr>
