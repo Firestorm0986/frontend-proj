@@ -136,6 +136,7 @@ td {
 
 
 >>>>>>>## Live Rankings
+
 <table class = "mytable1">
   <thead>
   <tr>
@@ -144,19 +145,56 @@ td {
     <th class = "myth">Dislike</th>
   </tr>
   </thead>
-  <tbody class = "mytd" id="result">
-    <!-- javascript generated data -->
+  <tbody class = "mytd">
+  <tr>
+    <td id = "car1"></td>
+    <td><button>Like</button></td>
+    <td><button>Dislike</button></td>
+  </tr>
+  <tr>
+    <td id = "car2"></td>
+    <td><button>Like</button></td>
+    <td><button>Dislike</button></td>
+  </tr>
+  <tr>
+    <td id = "car3"></td>
+    <td><button>Like</button></td>
+    <td><button>Dislike</button></td>
+  </tr>
+  <tr>
+    <td id = "car4"></td>
+    <td><button>Like</button></td>
+    <td><button>Dislike</button></td>
+  </tr>
+  <tr>
+    <td id = "car5"></td>
+    <td><button>Like</button></td>
+    <td><button>Dislike</button></td>
+  </tr>
+  </tbody>
+  <tbody id="result">
   </tbody>
 </table>
 
+<p><center>Add Your Own Car!</center></p>
+
+<form action="javascript:create_user()"><center>
+  <p><label>
+    Car Name:
+    <input type = "text" name="car" id="car" required>
+  </label></p>
+  <p>
+    <button>Create</button>
+  </p>
+</center></form>
+
+
 <script>
-
   const resultContainer = document.getElementById("result");
-
-  const LIKE = "like";
+  /*const LIKE = "like";
   const DISLIKE = "dislike";
 
-  const url = "http://zesty.nighthawkcodingsociety.com/api/rankings/";
+  const url = "http://zesty.nighthawkcodingsociety.com/api/schemas/";
   const like_url = url + "/like/"; 
   const dislike_url = url + "/dislike/";
 
@@ -247,8 +285,40 @@ td {
     tr.appendChild(td);
     resultContainer.appendChild(tr);
     
-  }
-</script>
+  }*/
+  const apiurl = "http://zesty.nighthawkcodingsociety.com/api/schemas/"
+    window.onload = APIsync()
+    
+    function APIsync(){
+        fetch(apiurl)
+        .then(response => {
+            response.json().then(data => {
+                console.log(data)
+                console.log(data.results)
+                TableCreate(data)
+        })
+    })
+    }
+    function TableCreate(data){
+      document.getElementById("car1").innerHTML = data[0]["car"];
+      document.getElementById("car2").innerHTML = data[1]["car"];
+      document.getElementById("car3").innerHTML = data[2]["car"];
+      document.getElementById("car4").innerHTML = data[3]["car"];
+      document.getElementById("car5").innerHTML = data[4]["car"];
+    }
 
->>>>>>>>>>>>## The most liked car is Tesla Model Y with 23 Likes!
->>>>>>>>>>>>## The most disliked car is Rivian R1S with 12 Dislikes!
+    read_cars();
+
+    function read_cars() {
+      const read_options = {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default',
+        credentials: 'omit',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      };
+    }
+  
+</script>
