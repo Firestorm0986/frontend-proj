@@ -20,11 +20,11 @@
     border: 1px solid black;
 }
 .mytable1 {
-    width: 75%;
+    width: 85%;
     margin: auto;
     text-align: center;
-    border-radius: 20px;
     background-color: aliceblue;
+    border: 1px solid black;
 }
 img {
     width: 90%;
@@ -41,6 +41,13 @@ img {
 }
 .mytext {
     font-weight: bolder;
+}
+
+
+td {
+  border: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 </style>
 
@@ -129,15 +136,15 @@ img {
 
 
 >>>>>>>## Live Rankings
-<table>
+<table class = "mytable1">
   <thead>
   <tr>
-    <th>Car</th>
-    <th>Like</th>
-    <th>Dislike</th>
+    <th class = "myth">Car</th>
+    <th class = "myth">Like</th>
+    <th class = "myth">Dislike</th>
   </tr>
   </thead>
-  <tbody id="result">
+  <tbody class = "mytd" id="result">
     <!-- javascript generated data -->
   </tbody>
 </table>
@@ -149,7 +156,7 @@ img {
   const LIKE = "like";
   const DISLIKE = "dislike";
 
-  const url = "https://taal.nighthawkcodingteams.cf/api/rankings/";
+  const url = "http://zesty.nighthawkcodingsociety.com/api/rankings/";
   const like_url = url + "/like/"; 
   const dislike_url = url + "/dislike/";
 
@@ -176,7 +183,7 @@ img {
             const tr = document.createElement("tr");
             
             const car = document.createElement("td");
-              car.innerHTML = row.id + ". " + row.car;  
+              car.innerHTML = row.car;  
 
             const like = document.createElement("td");
               const like_but = document.createElement('button');
@@ -219,9 +226,9 @@ img {
       response.json().then(data => {
           console.log(data);
           if (type === LIKE) 
-            document.getElementById(elemID).innerHTML = data.haha;  
+            document.getElementById(elemID).innerHTML = data.like;  
           else if (type === DISLIKE) 
-            document.getElementById(elemID).innerHTML = data.boohoo; 
+            document.getElementById(elemID).innerHTML = data.dislike; 
           else
             error("unknown type: " + type); 
       })
@@ -239,8 +246,6 @@ img {
     td.innerHTML = err;
     tr.appendChild(td);
     resultContainer.appendChild(tr);
-  }
-  function click() {
     
   }
 </script>
