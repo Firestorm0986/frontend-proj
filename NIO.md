@@ -153,21 +153,35 @@ body{
 .subbox{
   padding: 2px;
 }
+
+<style>
+  .inputform{
+    text-align:center;
+  }
 </style>
 
 
 
 <h1 class = "mytext"> Random Fact Generator </h1>
-<button id = "generarte"class = "mytext"> Generate A Fact </button>
+<button id = "generarte" class = "mytext"> Generate A Fact </button>
 <button id = "car_fact" class = "mytext"> Generate A car fact </button>
 <button id = "industry_fact" class = "mytext"> Generate A industry fact </button>
-<br> </br>
-<br> </br>
+<br> 
+<br> 
 <div class = "box">
   <div id = "read-box" class = "subbox">
     <p id = "read"> The random facts will display here </p>
   </div>
 </div>
+
+
+<form class = "inputform" id = "creat_form">
+  <input type = "text" id = "car_query" placeholder = "the car fact">
+  <input type = "text" id = "industry_query" placeholder = "The industry fact">
+  <input type = "text" id = "knew_query" placeholder = "did you know it?">
+
+  <button type = "submit"> Submit </button>
+</form>
 
 
 <script>
@@ -220,7 +234,7 @@ body{
         })
     })
 
-/*
+
     // catch fetch errors (ie ACCESS to server blocked)
     .catch(err => {
       console.error(err);
@@ -231,13 +245,15 @@ body{
       readContainer.appendChild(tr);
     });
   } 
-  function create_user(){
+
+
+  function create_fact(){
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
     const body = {
         uid: document.getElementById("uid").value,
         name: document.getElementById("name").value,
-        password: document.getElementById("password").value,
+        password: document.getElementById("password").value,  
         dob: document.getElementById("dob").value
     };
     const requestOptions = {
