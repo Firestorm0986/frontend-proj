@@ -175,16 +175,20 @@ body{
 </div>
 
 
-<form class = "inputform" id = "creat_form">
+<form class = "inputform" id = "create_form">
   <input type = "text" id = "car_query" placeholder = "the car fact">
   <input type = "text" id = "industry_query" placeholder = "The industry fact">
-  <input type = "text" id = "knew_query" placeholder = "did you know it?">
+
 
   <button type = "submit"> Submit </button>
 </form>
 
 
 <script>
+  const car = document.getElementById('car_query')
+  const industry = document.getElementById('industry_query')
+  const form = document.getElementById('create_car')
+ 
   // prepare HTML read container for new output
   const readContainer = document.getElementById("read");
   // prepare URL's to allow easy switch from deployment and localhost
@@ -217,11 +221,9 @@ body{
         if (response.status !== 200) {
             const errorMsg = 'Database read error: ' + response.status;
             console.log(errorMsg);
-            const tr = document.createElement("tr");
-            const td = document.createElement("td");
-            td.innerHTML = errorMsg;
-            tr.appendChild(td);
-            readContainer.appendChild(tr);
+            
+            car.innerHTML = errorMsg;
+            industry.innerHTML = errorMsg;
             return;
         }
         // valid response will have json data
@@ -236,25 +238,15 @@ body{
 
 
     // catch fetch errors (ie ACCESS to server blocked)
-    .catch(err => {
-      console.error(err);
-      const tr = document.createElement("tr");
-      const td = document.createElement("td");
-      td.innerHTML = err;
-      tr.appendChild(td);
-      readContainer.appendChild(tr);
-    });
-  } 
+    
 
 
   function create_fact(){
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
     const body = {
-        uid: document.getElementById("uid").value,
-        name: document.getElementById("name").value,
-        password: document.getElementById("password").value,  
-        dob: document.getElementById("dob").value
+        car: document.getElementById("car_query").value,
+        industry: document.getElementById("industry_query").value,  
     };
     const requestOptions = {
         method: 'POST',
@@ -273,11 +265,9 @@ body{
         if (response.status !== 200) {
           const errorMsg = 'Database create error: ' + response.status;
           console.log(errorMsg);
-          const tr = document.createElement("tr");
-          const td = document.createElement("td");
-          td.innerHTML = errorMsg;
-          tr.appendChild(td);
-          readContainer.appendChild(tr);
+          
+          car.innerHTML = errorMsg;
+          industry.innerHTML = errorMsg;
           return;
         }
         // response contains valid read
@@ -290,28 +280,13 @@ body{
   }
 
   function add_row(data) {
-    const tr = document.createElement("tr");
-    const uid = document.createElement("td");
-    const name = document.createElement("td");
-    const posts = document.createElement("td")
-    const dob = document.createElement("td");
-    const age = document.createElement("td");
+    
   
 
     // obtain data that is specific to the API
-    uid.innerHTML = data.uid; 
-    name.innerHTML = data.name; 
-    posts.innerHTML = data.posts.length;
-    dob.innerHTML = data.dob; 
-    age.innerHTML = data.age; 
+    car.innerHTML = data.car; 
+    industry.innerHTML = data.industry; 
 
     // add HTML to container
-    tr.appendChild(uid);
-    tr.appendChild(name);
-    tr.appendChild(posts);
-    tr.appendChild(dob);
-    tr.appendChild(age);
-
-    readContainer.appendChild(tr);
   }
 </script>
