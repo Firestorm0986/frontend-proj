@@ -79,7 +79,6 @@ type: pbl
     event.preventDefault();
     const data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
-    draggableImage.style.display = "none";
     question.style.display = "block";
   });
 </script>
