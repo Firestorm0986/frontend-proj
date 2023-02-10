@@ -32,21 +32,21 @@ type: pbl
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: 900px;
-    height: 900px;
+    width: 666px;
+    height: 666px;
     background-color: black;
     margin: 0 auto;
   }
 
   .grid-cell {
     border: 1px solid white;
-    width: 300px;
-    height: 300px;
+    width: 222px;
+    height: 222px;
   }
 
   #draggableImage {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
   }
 </style>
