@@ -9,7 +9,7 @@ type: pbl
 <div style="text-align:center;">
   <a style="font-size: 40px; color: lightblue; display:inline-block; width:100%;" href="{{site.baseurl}}/lucidinfo">Learn About Lucid</a>
 </div>
-
+<br>
 <div style="text-align:center;">
 
 <button style="text-align: center; font-size: 50px; color: darkgreen;" id="playButton">Play</button>
@@ -79,10 +79,8 @@ type: pbl
     event.preventDefault();
     const data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
-    draggableImage.style.display = "none";
     question.style.display = "block";
   });
 </script>
-
 </div>
 
