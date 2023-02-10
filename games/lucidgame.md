@@ -25,7 +25,7 @@ type: pbl
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
 </div>
-<img id="draggableImage" src="lucidcar.webp" draggable="true" style="display: none;">
+<img id="draggableImage" src="{{site.baseurl}}images/lucidcar.webp" draggable="true" style="display: none;">
 
 <style>
   #gridContainer {
