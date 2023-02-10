@@ -1,7 +1,7 @@
 ---
 title: Lucid Info
 layout: default 
-permalink: /games/lucidinfo
+permalink: /lucidinfo
 type: pbl
 ---
 
