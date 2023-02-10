@@ -17,7 +17,7 @@ type: pbl
 <div id="gridContainer" style="display: none;">
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
-  <div class="grid-cell"></div>
+  <div class="grid-cell">Park Here</div>
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
@@ -45,8 +45,9 @@ type: pbl
   }
 
   #draggableImage {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
   }
 </style>
 
