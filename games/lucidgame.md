@@ -27,7 +27,7 @@ type: pbl
 </div>
 <img id="draggableImage" src="{{site.baseurl}}images/lucidcar.webp" draggable="true" style="display: none;">
 <div id="question" style="display: none;">
-  <p style="text-align: center; font-size: 30px; color: darkblue;">How does the Lucid Air compare to other electric vehicles?</p>
+  <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
   <textarea style="width: 400px; height: 200px; margin: 0 auto;"></textarea>
 </div>
 
