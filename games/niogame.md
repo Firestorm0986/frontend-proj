@@ -25,7 +25,7 @@ type: pbl
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
 </div>
-<img id="draggableImage" src="niocar.png" draggable="true" style="display: none;">
+<img id="draggableImage" src="images/niocar.png" draggable="true" style="display: none;">
 
 <style>
   #gridContainer {
