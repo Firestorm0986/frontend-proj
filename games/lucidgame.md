@@ -10,6 +10,8 @@ type: pbl
   <a style="font-size: 40px; color: lightblue; display:inline-block; width:100%;" href="{{site.baseurl}}/lucidinfo">Learn About Lucid</a>
 </div>
 
+<div style="text-align:center;">
+
 <button style="text-align: center; font-size: 50px; color: darkgreen;" id="playButton">Play</button>
 
 <div id="gridContainer" style="display: none;">
@@ -32,10 +34,11 @@ type: pbl
     grid-template-rows: repeat(3, 1fr);
     width: 300px;
     height: 300px;
+    background-color: black;
   }
 
   .grid-cell {
-    border: 1px solid black;
+    border: 1px solid white;
     width: 100px;
     height: 100px;
   }
@@ -71,3 +74,5 @@ type: pbl
     event.target.appendChild(element);
   });
 </script>
+
+</div>
