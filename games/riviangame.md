@@ -25,7 +25,7 @@ type: pbl
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
 </div>
-<img id="draggableImage" src="{{site.baseurl}}images/riviancar.webp" draggable="true" style="display: none;">
+<img id="draggableImage" src="https://firestorm0986.github.io/frontend-proj/images/riviancar.webp" draggable="true" style="display: none;">
 <div id="question" style="display: none;">
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Rivian R1T?</p>
   <textarea style="width: 200px; height: 20px; margin: 0 auto;"></textarea>
