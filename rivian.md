@@ -30,40 +30,42 @@
 >>>> ### R1T Features
 >>>> The interior of the R1T has a screen which supports bluetooth connections, CarPlay, and other features. The vehicle has LTE and Wi-Fi connectivity inside, which may allow for connectivity in remote areas. Amazon Alexa is also built-in. There are up to 6 USB ports and 4 120V outlets. Based on customization, leather seats are available. There are many driver-assist features, some of which allow for hands-free driving. There are multiple storage spaces in the R1T, which allows for an additional 62 cubic feet of storage space.
 
->>>> ### Rivian R1S and R1T At A Glance
-
-<table>
-    <tr>
-        <th>Car</th>
-        <th>Seating</th>
-        <th>Range</th>
-        <th>0-60</th>
-        <th>Towing Capacity</th>
-        <th>Storage</th>
-        <th>Safety</th>
-        <th>Additional Features</th>
-        <th>Starting Price</th>
-    </tr>
-    <tr>
-        <td>Rivian R1S</td>
-        <td>7 People (Three Rows)</td>
-        <td>260-315 Miles</td>
-        <td>7700 Pounds</td>
-        <td>105 Cubic Feet</td>
-        <td>Low Center of Gravity, Carbon-fiber material for additional strength, high-strength steel and aluminum, Driver-Assist</td>
-        <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
-        <td>$78,000</td>
-    </tr>
-    <tr>
-        <td>Rivian R1T</td>
-        <td>5 People (Two Rows)</td>
-        <td>260-400 Miles</td>
-        <td>11000 Pounds</td>
-        <td>74 Cubic Feet</td>
-        <td>Low Center of Gravity, Carbon-fiber material for additional strength, high-strength steel and aluminum, Driver-Assist</td>
-        <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
-        <td>$73,000</td>
-    </tr>
-
 >>>> Visit their website [here](https://rivian.com/)
 >>>> Want to find your ideal car? Head to the "Build Your Car" tab in the menu!
+
+>>>> ### Rivian R1S and R1T At A Glance
+
+<html>
+    <table>
+        <tr>
+            <th>Car</th>
+            <th>Seating</th>
+            <th>Range</th>
+            <th>0-60</th>
+            <th>Towing Capacity</th>
+            <th>Storage</th>
+            <th>Safety</th>
+            <th>Additional Features</th>
+            <th>Starting Price</th>
+        </tr>
+        <tr>
+            <td>Rivian R1S</td>
+            <td>7 People (Three Rows)</td>
+            <td>260-315 Miles</td>
+            <td>7700 Pounds</td>
+            <td>105 Cubic Feet</td>
+            <td>Low Center of Gravity, Carbon-fiber material for additional strength, high-strength steel and aluminum, Driver-Assist</td>
+            <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
+            <td>$78,000</td>
+        </tr>
+        <tr>
+            <td>Rivian R1T</td>
+            <td>5 People (Two Rows)</td>
+            <td>260-400 Miles</td>
+            <td>11000 Pounds</td>
+            <td>74 Cubic Feet</td>
+            <td>Low Center of Gravity, Carbon-fiber material for additional strength, high-strength steel and aluminum, Driver-Assist</td>
+            <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
+            <td>$73,000</td>
+        </tr>
+</html>
