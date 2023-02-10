@@ -10,10 +10,14 @@ type: pbl
   <a style="font-size: 40px; color: lightblue; display:inline-block; width:100%;" href="{{site.baseurl}}/lucidinfo">Learn About Lucid</a>
 </div>
 
+<div style="text-align:center;">
+
+<button style="text-align: center; font-size: 50px; color: darkgreen;" id="playButton">Play</button>
+
 <div id="gridContainer" style="display: none;">
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
-  <div id="parkHere" style="color: white;" class="grid-cell">Park Here</div>
+  <div style="color: white;" class="grid-cell">Park Here</div>
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
@@ -22,10 +26,7 @@ type: pbl
   <div class="grid-cell"></div>
 </div>
 <img id="draggableImage" src="{{site.baseurl}}images/lucidcar.webp" draggable="true" style="display: none;">
-<div id="question" style="display: none;">
-  <p style="text-align: center; font-size: 30px; color: darkblue;">How long will this car take to charge?</p>
-  <textarea style="width: 400px; height: 200px; margin: 0 auto;"></textarea>
-</div>
+
 <style>
   #gridContainer {
     display: grid;
