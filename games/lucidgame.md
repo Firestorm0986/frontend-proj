@@ -40,13 +40,13 @@ type: pbl
 
   .grid-cell {
     border: 1px solid white;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
   }
 
   #draggableImage {
-    width: 500px;
-    height: 500px;
+    width: 200px;
+    height: 200px;
   }
 </style>
 
