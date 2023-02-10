@@ -10,7 +10,9 @@ type: pbl
   <a style="font-size: 40px; color: lightblue; display:inline-block; width:100%;" href="{{site.baseurl}}/lucidinfo">Learn About Lucid</a>
 </div>
 
-<div id="gridContainer">
+<button style="text-align: center; font-size: 50px; color: darkgreen;" id="playButton">Play</button>
+
+<div id="gridContainer" style="display: none;">
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
@@ -21,7 +23,7 @@ type: pbl
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
 </div>
-<img id="draggableImage" src="dart.png" draggable="true">
+<img id="draggableImage" src="dart.png" draggable="true" style="display: none;">
 
 <style>
   #gridContainer {
@@ -45,8 +47,14 @@ type: pbl
 </style>
 
 <script>
+  const playButton = document.getElementById("playButton");
   const gridContainer = document.getElementById("gridContainer");
   const draggableImage = document.getElementById("draggableImage");
+
+  playButton.addEventListener("click", function() {
+    gridContainer.style.display = "grid";
+    draggableImage.style.display = "block";
+  });
 
   draggableImage.addEventListener("dragstart", function(event) {
     event.dataTransfer.setData("text/plain", event.target.id);
