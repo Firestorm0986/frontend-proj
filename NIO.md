@@ -163,16 +163,13 @@ body{
 
 
 <h1 class = "mytext"> Random Fact Generator </h1>
-<button id = "generarte" class = "mytext"> Generate A Fact </button>
-<button id = "car_fact" class = "mytext"> Generate A car fact </button>
-<button id = "industry_fact" class = "mytext"> Generate A industry fact </button>
+<button  class = "mytext" > Generate A Fact </button>
 <br> 
 <br> 
-<div class = "box">
-  <div id = "read-box" class = "subbox">
-    <p id = "read"> The random facts will display here </p>
-  </div>
-</div>
+
+<p id = "read" onclick="fact_generate()"> The random facts will display here </p>
+<p id = "read2"> </p>
+  
 
 
 <form class = "inputform" id = "create_form">
@@ -185,6 +182,35 @@ body{
 
 
 <script>
+  /*
+    const apiurl = "http://172.29.204.228:8086/"
+    window.onload = APIsync()
+    
+    function APIsync(){
+        fetch(apiurl)
+        .then(response => {
+            response.json().then(data => {
+                console.log(data)
+                console.log(data.car)
+               
+                
+        })
+    })
+    }
+  */
+  function fact_generate(){
+      document.getElementById("read").innerHTML = "/ My name "; 
+  } 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*
   const car = document.getElementById('car_query')
   const industry = document.getElementById('industry_query')
   const form = document.getElementById('create_car')
