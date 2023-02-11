@@ -17,7 +17,7 @@ type: pbl
 <div id="gridContainer" style="display: none;">
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
-  <div style="color: white;" class="grid-cell">Park Here</div>
+  <div id="parkHere" style="color: white;" class="grid-cell">Park Here</div>
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
@@ -25,7 +25,11 @@ type: pbl
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
 </div>
-<img id="draggableImage" src="niocar.png" draggable="true" style="display: none;">
+<img id="draggableImage" src="https://firestorm0986.github.io/frontend-proj/images/niocar.png" draggable="true" style="display: none;">
+<div id="question" style="display: none;">
+  <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the NIO ET5?</p>
+  <textarea style="width: 200px; height: 20px; margin: 0 auto;"></textarea>
+</div>
 
 <style>
   #gridContainer {
@@ -55,6 +59,8 @@ type: pbl
   const playButton = document.getElementById("playButton");
   const gridContainer = document.getElementById("gridContainer");
   const draggableImage = document.getElementById("draggableImage");
+  const question = document.getElementById("question");
+  const parkHere = document.getElementById("parkHere");
 
   playButton.addEventListener("click", function() {
     gridContainer.style.display = "grid";
@@ -62,19 +68,20 @@ type: pbl
   });
 
   draggableImage.addEventListener("dragstart", function(event) {
-    event.dataTransfer.setData("text/plain", event.target.id);
+    event.dataTransfer.setData("text", event.target.id);
   });
 
-  gridContainer.addEventListener("dragover", function(event) {
+  parkHere.addEventListener("dragover", function(event) {
     event.preventDefault();
   });
 
-  gridContainer.addEventListener("drop", function(event) {
+  parkHere.addEventListener("drop", function(event) {
     event.preventDefault();
-    const data = event.dataTransfer.getData("text/plain");
-    const element = document.getElementById(data);
-    event.target.appendChild(element);
+    const data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+    question.style.display = "block";
   });
 </script>
 
 </div>
+
