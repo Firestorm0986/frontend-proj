@@ -74,7 +74,7 @@ type: pbl
   parkHere.addEventListener("dragover", function(event) {
     event.preventDefault();
   });
-  parkHere.addEventListener("drop", function(event) {
+parkHere.addEventListener("drop", function(event) {
   event.preventDefault();
   const data = event.dataTransfer.getData("text");
   event.target.appendChild(document.getElementById(data));
@@ -92,7 +92,29 @@ type: pbl
     {"P90": "59"}
   ];
   const randomIndex = Math.floor(Math.random() * percentage_list.length);
-  const randomPercentage = Object.values(percentage_list[randomIndex])[0];
+  const randomKey = Object.keys(percentage_list[randomIndex])[0];
+  let randomPercentage;
+  if (randomKey === "P00") {
+    randomPercentage = "0";
+  } else if (randomKey === "P10") {
+    randomPercentage = "10";
+  } else if (randomKey === "P20") {
+    randomPercentage = "20";
+  } else if (randomKey === "P30") {
+    randomPercentage = "30";
+  } else if (randomKey === "P40") {
+    randomPercentage = "40";
+  } else if (randomKey === "P50") {
+    randomPercentage = "50";
+  } else if (randomKey === "P60") {
+    randomPercentage = "60";
+  } else if (randomKey === "P70") {
+    randomPercentage = "70";
+  } else if (randomKey === "P80") {
+    randomPercentage = "80";
+  } else if (randomKey === "P90") {
+    randomPercentage = "90";
+  }
   const message = document.createElement("p");
   message.textContent = "How long will it take to charge the car from " + randomPercentage + "%";
   question.insertBefore(message, question.firstChild);
