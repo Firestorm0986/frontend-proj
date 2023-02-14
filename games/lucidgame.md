@@ -28,10 +28,9 @@ type: pbl
 <img id="draggableImage" src="https://firestorm0986.github.io/frontend-proj/images/lucidcar.webp" draggable="true" style="display: none;">
 <div id="question" style="display: none;">
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
-  <textarea style="width: 200px; height: 50px; margin: 0 auto;"></textarea>
   <br>
   <form>
-  <label for="input">Enter a number:</label>
+  <label style="width: 200px; height: 50px; margin: 0 auto;" for="input">Enter your prediction (in minutes):</label>
   <input type="number" id="input" name="input">
   <button type="submit" id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 0 auto;">Submit</button>
   </form>
@@ -143,10 +142,11 @@ parkHere.addEventListener("drop", function(event) {
     const input = parseInt(document.getElementById("input").value);
     if (isNaN(input)) {
       alert("Please enter a valid number.");
+      message.textContent = "Please enter a number";
       return;
     }
     const score = 1000 - Math.abs(ans - input);
-    alert("Your score is: " + score);
+    message.textContent = "Your score is: " + score + " points";
   });
 </script>
 </div>
