@@ -150,6 +150,7 @@ parkHere.addEventListener("drop", function(event) {
     const score = 1000 - Math.abs(ans - input);
     const scoreText = document.createElement("p");
     scoreText.textContent = "You scored: " + score + " points";
+    submitButton.style.display = "block";
     submitButton.parentNode.insertBefore(scoreText, submitButton.nextSibling);
   });
 </script>
