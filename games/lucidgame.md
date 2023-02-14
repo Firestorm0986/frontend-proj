@@ -74,13 +74,29 @@ type: pbl
   parkHere.addEventListener("dragover", function(event) {
     event.preventDefault();
   });
-
   parkHere.addEventListener("drop", function(event) {
-    event.preventDefault();
-    const data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data));
-    question.style.display = "block";
-  });
+  event.preventDefault();
+  const data = event.dataTransfer.getData("text");
+  event.target.appendChild(document.getElementById(data));
+  question.style.display = "block";
+  const percentage_list = [
+    {"P00": "588"},
+    {"P10": "529"},
+    {"P20": "471"},
+    {"P30": "412"},
+    {"P40": "353"},
+    {"P50": "294"},
+    {"P60": "235"},
+    {"P70": "176"},
+    {"P80": "118"},
+    {"P90": "59"}
+  ];
+  const randomIndex = Math.floor(Math.random() * percentage_list.length);
+  const randomPercentage = Object.values(percentage_list[randomIndex])[0];
+  const message = document.createElement("p");
+  message.textContent = "How long will it take to charge the car from " + randomPercentage + "%";
+  question.insertBefore(message, question.firstChild);
+});
+
 </script>
 </div>
-
