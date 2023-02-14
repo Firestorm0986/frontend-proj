@@ -30,6 +30,7 @@ type: pbl
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
   <textarea style="width: 200px; height: 20px; margin: 0 auto;"></textarea>
 </div>
+<button id="submitButton" style="text-align: center; font-size: 50px; color: darkred; display: none;">Submit</button>
 
 <style>
   #gridContainer {
@@ -116,9 +117,19 @@ parkHere.addEventListener("drop", function(event) {
     randomPercentage = "90";
   }
   const message = document.createElement("p");
-  message.textContent = "How long will it take to charge the car from " + randomPercentage + "%";
+  message.textContent = "The car is at " + randomPercentage + "%";
   question.insertBefore(message, question.firstChild);
-});
+  });
+
+  const submitButton = document.getElementById("submitButton");
+  submitButton.addEventListener("click", function() {
+    const answer = document.querySelector("textarea").value;
+    if (answer.toLowerCase() === "30 minutes") {
+      alert("Correct!");
+    } else {
+      alert("Incorrect. Please try again.");
+    }
+  });
 
 </script>
 </div>
