@@ -30,7 +30,7 @@ type: pbl
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
   <textarea style="width: 200px; height: 50px; margin: 0 auto;"></textarea>
   <br>
-  <button id="submitButton" style="text-align: center; font-size: 40px; color: darkblue; display: none;">Submit</button>
+  <button id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 0 auto;">Submit</button>
 </div>
 
 <style>
@@ -98,24 +98,34 @@ parkHere.addEventListener("drop", function(event) {
   let randomPercentage;
   if (randomKey === "P00") {
     randomPercentage = "0";
+    ans = 588;
   } else if (randomKey === "P10") {
     randomPercentage = "10";
+    ans = 529;
   } else if (randomKey === "P20") {
     randomPercentage = "20";
+    ans = 471;
   } else if (randomKey === "P30") {
     randomPercentage = "30";
+    ans = 412;
   } else if (randomKey === "P40") {
     randomPercentage = "40";
+    ans = 353;
   } else if (randomKey === "P50") {
     randomPercentage = "50";
+    ans = 294;
   } else if (randomKey === "P60") {
     randomPercentage = "60";
+    ans = 235;
   } else if (randomKey === "P70") {
     randomPercentage = "70";
+    ans = 176;
   } else if (randomKey === "P80") {
     randomPercentage = "80";
+    ans = 118;
   } else if (randomKey === "P90") {
     randomPercentage = "90";
+    ans = 50;
   }
   const message = document.createElement("p");
   message.textContent = "The car is at " + randomPercentage + "%";
@@ -123,7 +133,15 @@ parkHere.addEventListener("drop", function(event) {
   });
 
   const submitButton = document.getElementById("submitButton");
-    submitButton.style.display = "block";
-
+  submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    const input = parseInt(document.getElementById("input").value);
+    if (isNaN(input)) {
+      alert("Please enter a valid number.");
+      return;
+    }
+    const score = 1000 - Math.abs(ans - input);
+    alert("Your score is: " + score);
+  });
 </script>
 </div>
