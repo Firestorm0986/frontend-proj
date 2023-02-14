@@ -6,18 +6,11 @@
     text-align: center;
     vertical-align: middle;
     border: 1px solid black;
+    
 }
 .myth{
     border: 1px solid black;
     height: 30px;
-}
-.mytd1 {
-    border: 1px solid black;
-    height: 60px;
-
-}
-.myth1 {
-    border: 1px solid black;
 }
 .mytable1 {
     width: 85%;
@@ -42,9 +35,7 @@ img {
 .mytext {
     font-weight: bolder;
 }
-
-
-td {
+ td {
   border: 1px solid black;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -126,47 +117,49 @@ td {
 </table>
 
 
-
->>>>>>>#### Bibliography
-- [Wikipedia](https://en.wikipedia.org/wiki/Tesla,_Inc.)
-- [Tesla.com](https://tesla.com)
-
->>>>>>>><button name="wikipediabutton" onclick="https://en.wikipedia.org/wiki/Tesla,_Inc.">Wikipedia</button>
->>>>>>>><button name="teslabutton" onclick="https://tesla.com">Tesla.com</button>
-
-
 >>>>>>>## Live Rankings
 
-<table class="mytable1">
+<table class="mytable1" id="cars_table">
   <thead>
   <tr>
+    <th class="myth">ID</th>
     <th class="myth">Car</th>
     <th class="myth">Like</th>
-    <th class="myth">Dislike</th>
+    <th class="myth"># of Likes</th>
+    <th class="myth">Delete</th>
   </tr>
   </thead>
-  <tbody id="result">
+  <tbody class="mytd" id="result">
     <!-- javascript generated data -->
   </tbody>
 </table>
 
 <p><center>Add your Own Car!</center></p>
 
-<form action="javascript:create_user()"><center>
+<form action="javascript:create_car()"><center>
     <p><label>
         Car
         <input type="text" name="car" id="car" required>
     </label></p>
+    <p><label>
+      ID
+      <input type="text" name="id" id="id">
+    </label></p>
     <p>
-        <button>Create</button>
+        <button id="add_car" onclick='create_car()'>Create</button>
     </p>
 </center></form>
+<p ><center><strong>
+  Please input ID as a number that is one greater than the last ID on the table - so if the last ID is 6, then input 7 for ID.
+</strong></center></p>
 
 <script>
   const resultContainer = document.getElementById("result");
-  const url = "http://zesty.nighthawkcodingsociety.com/api/schemas/"
+  const url = "http://172.21.215.122:8086/api/schemas"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
+  const delete_fetch = url + '/delete';
+  const update_fetch = url + '/patch';
 
   // Load users on page entry
   read_cars();
@@ -225,6 +218,8 @@ td {
     //verifyPassword("click");
     const body = {
         car: document.getElementById("car").value,
+        like: 0,
+        id: document.getElementById("id").value,
 
     };
     const requestOptions = {
@@ -235,6 +230,7 @@ td {
             'Authorization': 'Bearer my-token',
         },
     };
+    
 
     // URL for Create API
     // Fetch API call to the database to create a new user
@@ -259,18 +255,123 @@ td {
         })
     })
   }
+  
+  function delete_car(car_id){
+
+    //Validate Password (must be 6-20 characters in len)
+    //verifyPassword("click");
+    const body = {
+        id: car_id,
+
+    };
+    const requestOptions = {
+        method: 'DELETE',
+        mode: 'cors',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+    
+
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(delete_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+            //add a table row for the new/created userid
+            add_row(data);
+        })
+    })
+  }
+
+  function like_car(car_id, num_like) {
+    const body = {
+        id: car_id,
+        like: num_like,
+
+    };
+    const requestOptions = {
+        method: 'PATCH',
+        mode: 'cors',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+    
+
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(update_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+            //add a table row for the new/created userid
+            add_row(data);
+        })
+    })
+  }
 
   function add_row(data) {
     const tr = document.createElement("tr");
     const car = document.createElement("td");
+    const id = document.createElement("td");
+    const col2 = document.createElement("td");
+    const col4 = document.createElement("td");
+    const like_button = document.createElement('input');
+    like_button.type = "button";
+    like_button.value = "Like";
+    like_button.onclick = function() {like_car(data.id, data.like+1)};
+    const num_like = document.createElement('td');
+    const delete_button = document.createElement('input');
+    delete_button.type = "button";
+    delete_button.value = "Delete";
+    delete_button.onclick = function() {delete_car(data.id)};
+
+    col2.appendChild(like_button);
+    col4.appendChild(delete_button);
   
     // obtain data that is specific to the API
     car.innerHTML = data.car;
+    id.innerHTML = data.id;
+    num_like.innerHTML = data.like;
 
     // add HTML to container
+    tr.appendChild(id);
     tr.appendChild(car);
+    tr.appendChild(col2);
+    tr.appendChild(num_like);
+    tr.appendChild(col4);
 
+    //resultContainer.appendChild(td);
     resultContainer.appendChild(tr);
   }
-
 </script>
