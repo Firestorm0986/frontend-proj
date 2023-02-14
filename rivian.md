@@ -12,7 +12,7 @@
 
 >>>> ## Rivian R1S
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.png" alt="Rivian.png" style="width:100%" class="imgMain">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.png" style="width:100%" class="imgMain">
 </html>
 
 >>>> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats for a total of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
@@ -31,7 +31,6 @@
 >>>> The interior of the R1T has a screen which supports bluetooth connections, CarPlay, and other features. The vehicle has LTE and Wi-Fi connectivity inside, which may allow for connectivity in remote areas. Amazon Alexa is also built-in. There are up to 6 USB ports and 4 120V outlets. Based on customization, leather seats are available. There are many driver-assist features, some of which allow for hands-free driving. There are multiple storage spaces in the R1T, which allows for an additional 62 cubic feet of storage space.
 
 >>>> Visit their website [here](https://rivian.com/)
->>>> Want to find your ideal car? Head to the "Build Your Car" tab in the menu!
 
 >>>> ### Rivian R1S and R1T At A Glance
 
@@ -69,7 +68,3 @@
             <td>$73,000</td>
         </tr>
 </html>
-
-
-<p style="text-align: center; font-size: 40px; color: purple;">Which car best matches your preferences?</p>
-<p style="text-align: center; font-size: 20px; color: black;">Click the check boxes to find out!</p>
