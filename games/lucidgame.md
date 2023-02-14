@@ -28,9 +28,10 @@ type: pbl
 <img id="draggableImage" src="https://firestorm0986.github.io/frontend-proj/images/lucidcar.webp" draggable="true" style="display: none;">
 <div id="question" style="display: none;">
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
-  <textarea style="width: 200px; height: 20px; margin: 0 auto;"></textarea>
+  <textarea style="width: 200px; height: 50px; margin: 0 auto;"></textarea>
+  <br>
+  <button id="submitButton" style="text-align: center; font-size: 40px; color: darkblue; display: none;">Submit</button>
 </div>
-<button id="submitButton" style="text-align: center; font-size: 50px; color: darkred; display: none;">Submit</button>
 
 <style>
   #gridContainer {
@@ -122,14 +123,7 @@ parkHere.addEventListener("drop", function(event) {
   });
 
   const submitButton = document.getElementById("submitButton");
-  submitButton.addEventListener("click", function() {
-    const answer = document.querySelector("textarea").value;
-    if (answer.toLowerCase() === "30 minutes") {
-      alert("Correct!");
-    } else {
-      alert("Incorrect. Please try again.");
-    }
-  });
+    submitButton.style.display = "block";
 
 </script>
 </div>
