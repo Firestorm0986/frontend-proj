@@ -30,8 +30,9 @@ type: pbl
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
   <br>
   <form>
-  <label style="width: 50px; height: 50px; margin: 0 auto;" for="input">Enter your prediction (in minutes): </label>
+  <label style="width: 50px; height: 50px; margin: 0 auto; color: blue;" for="input">Enter your prediction (in minutes): </label>
   <input type="number" id="input" name="input">
+  <br>
   <button type="submit" id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 0 auto;">Submit</button>
   </form>
 </div>
@@ -147,7 +148,7 @@ parkHere.addEventListener("drop", function(event) {
     }
     const score = 1000 - Math.abs(ans - input);
     const scoreText = document.createElement("p");
-    scoreText.textContent = "Your score is: " + score + " points";
+    scoreText.textContent = "You scored: " + score + " points";
     submitButton.parentNode.insertBefore(scoreText, submitButton.nextSibling);
   });
 </script>
