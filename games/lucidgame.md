@@ -29,12 +29,13 @@ type: pbl
 <div id="question" style="display: none;">
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
   <br>
-  <form>
+<form>
   <label style="width: 50px; height: 50px; margin: 0 auto; color: blue;" for="input">Enter your prediction (in minutes): </label>
-  <input type="number" id="input" name="input">
   <br>
-  <button type="submit" id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 0 auto;">Submit</button>
-  </form>
+  <input type="number" id="input" name="input" style="margin-bottom: 20px;">
+  <br>
+  <button type="submit" id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 20px auto 0;">Submit</button>
+</form>
 </div>
 
 <style>
