@@ -1,5 +1,5 @@
 <html>
-<img src="{{site.baseurl}}images/rivianlogo.png" alt="rivianlogo.png" style="width:100%" class="imgMain">
+    <img src="/images/rivianlogo.png" alt="rivianlogo.png" style="width:100%" class="imgMain">
 </html>
 
 >>>> # Rivian
@@ -10,9 +10,9 @@
 
 >>>> Rivian has two cars in their lineup, the R1S and the R1T. The R1S is their luxury, multipurpose SUV, and the R1T is their luxury, multipurpose pickup truck. Deliveries of the R1S and R1T first started in 2021. So far, Rivian has delivered over 21,000 combined units. 
 
- >>>>  ## Rivian R1S
+>>>> ## Rivian R1S
 <html>
-<img src="{{site.baseurl}}images/Rivian.png" alt="Rivian.png" style="width:100%" class="imgMain">
+    <img src="/images/Rivian.png" alt="Rivian.png" style="width:100%" class="imgMain">
 </html>
 
 >>>> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats for a total of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
@@ -22,7 +22,7 @@
 
 >>>> ## Rivian R1T
 <html>
-<img src="{{site.baseurl}}images/r1t.jpg" alt="r1t.jpg" style="width:100%" class="imgMain">
+    <img src="/images/r1t.jpg" alt="r1t.jpg" style="width:100%" class="imgMain">
 </html>
 
 >>>> The Rivian R1T is Rivian's all-electric luxury pickup truck. The R1T has two rows of seats for a total of 5 passengers. Depending on the motor and wheels, the range is anywhere between 260 and 400 miles. It takes up to 13 hours to charge at 220 Volts. The R1T can tow up to 11,000 pounds, and can accelerate from 0-60 in up to three seconds. It sports an All-Wheel-Drive drivetrain.
@@ -69,3 +69,7 @@
             <td>$73,000</td>
         </tr>
 </html>
+
+
+<p style="text-align: center; font-size: 40px; color: purple;">Which car best matches your preferences?</p>
+<p style="text-align: center; font-size: 20px; color: black;">Click the check boxes to find out!</p>
