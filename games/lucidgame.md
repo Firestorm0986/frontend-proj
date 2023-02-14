@@ -133,6 +133,7 @@ parkHere.addEventListener("drop", function(event) {
   });
 
   const submitButton = document.getElementById("submitButton");
+  submitButton.style.display = "block";
   submitButton.addEventListener("click", function(event) {
     event.preventDefault();
     const input = parseInt(document.getElementById("input").value);
@@ -143,5 +144,6 @@ parkHere.addEventListener("drop", function(event) {
     const score = 1000 - Math.abs(ans - input);
     alert("Your score is: " + score);
   });
+</script>
 </script>
 </div>
