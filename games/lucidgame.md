@@ -30,7 +30,11 @@ type: pbl
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
   <textarea style="width: 200px; height: 50px; margin: 0 auto;"></textarea>
   <br>
-  <button id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 0 auto;">Submit</button>
+  <form>
+  <label for="input">Enter a number:</label>
+  <input type="number" id="input" name="input">
+  <button type="submit" id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 0 auto;">Submit</button>
+  </form>
 </div>
 
 <style>
@@ -144,6 +148,5 @@ parkHere.addEventListener("drop", function(event) {
     const score = 1000 - Math.abs(ans - input);
     alert("Your score is: " + score);
   });
-</script>
 </script>
 </div>
