@@ -102,22 +102,22 @@
         <button id="button3"> Find out which car matches your search</button>
     </p>
         <p> Select your desired Price:</p>
-    <label for="f1"><input type="checkbox" name="price" value="40000" id="f1" onclick="myFuction()"> $40,000 </label>
+    <label for="f1"><input type="checkbox" name="price" value="40000" id="f1" onclick="price()"> $40,000 </label>
     <p id="text" style="display:none">Tesla Model 3</p>
-    <label for="f2"><input type="checkbox" name="price" value="60000" id="f2" onclick="myFuction()"> $60,000 </label>
+    <label for="f2"><input type="checkbox" name="price" value="60000" id="f2" onclick="price()"> $60,000 </label>
     <p id="text" style="display:none">NIO ET7</p>
-    <label for="f3"><input type="checkbox" name="price" value="70000" id="f3" onclick="myFuction()"> $70,000 </label>
+    <label for="f3"><input type="checkbox" name="price" value="70000" id="f3" onclick="price()"> $70,000 </label>
     <p id="text" style="display:none">NIO ES6</p>
-    <label for="f4"><input type="checkbox" name="price" value="80000" id="f4" onclick="myFuction()"> $80,000 </label>
+    <label for="f4"><input type="checkbox" name="price" value="80000" id="f4" onclick="price()"> $80,000 </label>
     <p id="text" style="display:none">Rivian R1S</p>
-    <label for="f5"><input type="checkbox" name="price" value="100000" id="f5" onclick="myFuction()"> $100,000+ </label>
+    <label for="f5"><input type="checkbox" name="price" value="100000" id="f5" onclick="price()"> $100,000+ </label>
     <p id="text" style="display:none">Tesla Roadster</p>
     <p>
         <button id="button4"> Find out which car matches your search</button>
     </p>
 <script>
-    function myFunction() {
-  var checkBox = document.getElementById("myCheck");
+    function price() {
+  var checkBox = document.getElementById("price");
   var text = document.getElementById("text");
   if (checkBox.checked == true){
     text.style.display = "block";
