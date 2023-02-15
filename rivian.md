@@ -65,7 +65,8 @@
         <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
         <td>$73,000</td>
     </tr>
-    <br>
+    
+<br>
 
 <p style="text-align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
 <p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
