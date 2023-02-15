@@ -113,8 +113,7 @@
     <p>
         <button id="clear"> Clear All Selections</button>
     </p>
-
-<script>
+    <script>
         function check(checked = true){
             const checkboxes = document.querySelectorAll('input[name="price"]');
             checkboxes.forEach((checkbox) => {
@@ -131,5 +130,6 @@
     }
     const clear = document.querySelector('#clear');
     clear.onclick = uncheckAll;
-</script>
+    </script>
+    
 </body>
