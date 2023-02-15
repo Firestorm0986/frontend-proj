@@ -141,10 +141,6 @@ img {
         Car
         <input type="text" name="car" id="car" required>
     </label></p>
-    <p><label>
-      ID
-      <input type="text" name="id" id="id">
-    </label></p>
     <p>
         <button id="add_car" onclick='create_car()'>Create</button>
     </p>
@@ -219,7 +215,6 @@ img {
     const body = {
         car: document.getElementById("car").value,
         like: 0,
-        id: document.getElementById("id").value,
 
     };
     const requestOptions = {
