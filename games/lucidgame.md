@@ -87,49 +87,49 @@ parkHere.addEventListener("drop", function(event) {
   event.target.appendChild(document.getElementById(data));
   question.style.display = "block";
   const percentage_list = [
-    {"P00": "588"},
-    {"P10": "529"},
-    {"P20": "471"},
-    {"P30": "412"},
-    {"P40": "353"},
-    {"P50": "294"},
-    {"P60": "235"},
-    {"P70": "176"},
-    {"P80": "118"},
-    {"P90": "59"}
+    {"00": "588"},
+    {"10": "529"},
+    {"20": "471"},
+    {"30": "412"},
+    {"40": "353"},
+    {"50": "294"},
+    {"60": "235"},
+    {"70": "176"},
+    {"80": "118"},
+    {"90": "59"}
   ];
   const randomIndex = Math.floor(Math.random() * percentage_list.length);
   const randomKey = Object.keys(percentage_list[randomIndex])[0];
   let randomPercentage;
-  if (randomKey === "P00") {
+  if (randomKey === "00") {
     randomPercentage = "0";
     ans = 588;
-  } else if (randomKey === "P10") {
-    randomPercentage = "10";
+  } else if (randomKey === "10") {
+    randomPercentage = randomKey;
     ans = 529;
-  } else if (randomKey === "P20") {
-    randomPercentage = "20";
+  } else if (randomKey === "20") {
+    randomPercentage = randomKey;
     ans = 471;
-  } else if (randomKey === "P30") {
-    randomPercentage = "30";
+  } else if (randomKey === "30") {
+    randomPercentage = randomKey;
     ans = 412;
-  } else if (randomKey === "P40") {
-    randomPercentage = "40";
+  } else if (randomKey === "40") {
+    randomPercentage = randomKey;
     ans = 353;
-  } else if (randomKey === "P50") {
-    randomPercentage = "50";
+  } else if (randomKey === "50") {
+    randomPercentage = randomKey;
     ans = 294;
-  } else if (randomKey === "P60") {
-    randomPercentage = "60";
+  } else if (randomKey === "60") {
+    randomPercentage = randomKey;
     ans = 235;
-  } else if (randomKey === "P70") {
-    randomPercentage = "70";
+  } else if (randomKey === "70") {
+    randomPercentage = randomKey;
     ans = 176;
-  } else if (randomKey === "P80") {
-    randomPercentage = "80";
+  } else if (randomKey === "80") {
+    randomPercentage = randomKey;
     ans = 118;
-  } else if (randomKey === "P90") {
-    randomPercentage = "90";
+  } else if (randomKey === "90") {
+    randomPercentage = randomKey;
     ans = 50;
   }
   const message = document.createElement("p");
@@ -164,50 +164,128 @@ parkHere.addEventListener("drop", function(event) {
 
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
-function read_users() {
-  const read_options = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-  };
 
-  fetch('https://example.com/api/leaderboard', read_options)
-    .then(response => {
-      if (response.status !== 200) {
-        throw new Error(`Error fetching leaderboard: ${response.status}`);
-      }
-      return response.json();
+  // Load users on page entry
+  const read_button = document.getElementById("read_button");
+  
+
+
+  // Display User Table, data is fetched from Backend Database
+  function read_users() {
+    // prepare fetch options
+    
+    const read_options = {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'omit', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    };
+
+    // fetch the data from API
+    fetch(read_fetch, read_options)
+      // response is a RESTful "promise" on any successful fetch
+      .then(response => {
+        // check for response errors
+        if (response.status !== 200) {
+            const errorMsg = 'Database read error: ' + response.status;
+            console.log(errorMsg);
+            const tr = document.createElement("tr");
+            const td = document.createElement("td");
+            td.innerHTML = errorMsg;
+            tr.appendChild(td);
+            resultContainer.appendChild(tr);
+            return;
+        }
+        // valid response will have json data
+        response.json().then(data => {
+            console.log(data);
+            length = data.length;
+            number = Math.floor(Math.random() * length );
+            for (let row in data) {
+              console.log(data[row]);
+              
+              add_row(data[number]);
+              break;
+            }
+        })
     })
-    .then(data => {
-      const table = document.createElement('table');
-      const headerRow = document.createElement('tr');
-      const userHeader = document.createElement('th');
-      userHeader.textContent = 'User';
-      const scoreHeader = document.createElement('th');
-      scoreHeader.textContent = 'Score';
-      headerRow.appendChild(userHeader);
-      headerRow.appendChild(scoreHeader);
-      table.appendChild(headerRow);
-      for (const item of data) {
-        const row = document.createElement('tr');
-        const userCell = document.createElement('td');
-        userCell.textContent = item.user;
-        const scoreCell = document.createElement('td');
-        scoreCell.textContent = item.score;
-        row.appendChild(userCell);
-        row.appendChild(scoreCell);
-        table.appendChild(row);
-      }
-      resultContainer.innerHTML = '';
-      resultContainer.appendChild(table);
-    })
-    .catch(error => {
-      console.error(error);
-      const errorMessage = `Error fetching leaderboard: ${error.message}`;
-      resultContainer.textContent = errorMessage;
+    // catch fetch errors (ie ACCESS to server blocked)
+    .catch(err => {
+      console.error(err);
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.innerHTML = err;
+      tr.appendChild(td);
+      resultContainer.appendChild(tr);
     });
-}
+  }
 
+  
+
+  function add_row(data) {
+    const tr = document.createElement("tr");
+    const car = document.createElement("td");
+    const industry = document.createElement("td");
+    
+    const id = document.createElement("td");
+    
+  
+
+    // obtain data that is specific to the API
+    car.innerHTML = data.car; 
+    industry.innerHTML = data.industry; 
+      
+    id.innerHTML = data.id; 
+    
+
+    // add HTML to container
+    tr.appendChild(car);
+    tr.appendChild(industry);
+    
+    tr.appendChild(id);
+    
+
+    resultContainer.appendChild(tr);
+  }
+
+
+  function create_user(){
+    //Validate Password (must be 6-20 characters in len)
+    //verifyPassword("click");
+    const body = {
+        car: document.getElementById("car").value,
+        industry: document.getElementById("industry").value,
+    };
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+    })
+  }
+  
 </script>
 
