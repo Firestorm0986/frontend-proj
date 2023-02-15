@@ -168,6 +168,7 @@
   .form-tell{
     text-align: center;
     font-size: 40px;
+    margin-top: 5rem;
   }
 
   .input-boxes{
@@ -189,9 +190,26 @@
     font-size: 20px;
     font-weight: bold;
   }
+
+  .form-box{
+      
+      padding: 2%;
+      
+      width: 75%;
+      
+      background-color: bisque;
+      margin: auto;
+  }
+
+  .read-button{
+      width: 20%;
+      margin: auto;
+      align-self: center;
+  }
 </style>
 
 
+<button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Generate a Fact </button>
 <table class = "readtable">
   <thead>
   <tr>
@@ -209,36 +227,42 @@
 
 <p class = "form-tell">Add Your Own Fact</p>
 
-<form action="javascript:create_user()" class = "createForm">
-    <p><label class = "form-label">
-        User ID:
-        <input class = "input-boxes" type="text" industry="car" id="car" required>
-    </label></p>
-    <p><label class = "form-label">
-        industry:
-        <input class = "input-boxes" type="text" industry="industry" id="industry" required>
-    </label></p>
-    <p>
-        <button class = "form-button">Create</button>
-    </p>
-</form>
+<div class = "form-box">
+  <form action="javascript:create_user()" class = "createForm">
+      <p><label class = "form-label">
+          Car Fact:
+          <input class = "input-boxes" type="text" industry="car" id="car" required>
+      </label></p>
+      <p><label class = "form-label">
+          industry fact:
+          <input class = "input-boxes" type="text" industry="industry" id="industry" required>
+      </label></p>
+      <p>
+          <button class = "form-button">Create</button>
+      </p>
+  </form>
+</div>
+
+
 
 <script>
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
-  const url = "http://localhost:8086/api/facts"
+  const url = "https://zesty.nighthawkcodingsociety.com/api/facts/"
 
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
 
   // Load users on page entry
-  read_users();
+  const read_button = document.getElementById("read_button");
+  
 
 
   // Display User Table, data is fetched from Backend Database
   function read_users() {
     // prepare fetch options
+    
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
@@ -271,6 +295,7 @@
             number = Math.floor(Math.random() * length );
             for (let row in data) {
               console.log(data[row]);
+              
               add_row(data[number]);
               break;
             }
@@ -301,7 +326,7 @@
     // obtain data that is specific to the API
     car.innerHTML = data.car; 
     industry.innerHTML = data.industry; 
-     
+      
     id.innerHTML = data.id; 
     
 

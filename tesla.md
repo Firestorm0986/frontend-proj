@@ -342,6 +342,7 @@ img {
 
   function add_row(data) {
     const tr = document.createElement("tr");
+    tr.class="mytd"
     const car = document.createElement("td");
     const id = document.createElement("td");
     const col2 = document.createElement("td");
