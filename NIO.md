@@ -196,7 +196,7 @@
       padding: 2%;
       
       width: 75%;
-      
+      border-radius: 5px;
       background-color: bisque;
       margin: auto;
   }
