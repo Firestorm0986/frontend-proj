@@ -249,7 +249,7 @@
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
-  const url = "http://localhost:8086/api/facts"
+  const url = "https://zesty.nighthawkcodingsociety.com/api/facts/"
 
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
