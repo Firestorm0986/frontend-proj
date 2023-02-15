@@ -119,9 +119,9 @@
         checkboxes.forEach((checkbox) => {
             checkbox.checked = false;
         });
-    function checkAll() {
-        select();
-        this.onclick = uncheckAll;
+    function uncheckAll() {
+        select(false);
+        this.onclick = checkAll;
     }
     const clear = document.querySelector('#clear');
     clear.onclick = uncheckAll;
