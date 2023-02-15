@@ -1,18 +1,20 @@
 <div>
-  <img src="{{site.baseurl}}/images/nio.png" alt="main" style="width:100%">
+  <img src="{{site.baseurl}}/images/nio.png" alt="main" style="width:100%; position: absolute; z-index: -1;">
+  <img src="{{site.baseurl}}/images/nio-second.jpg  " alt="main" class = "image_back" >
 </div>
-
 <div>
   <div class="container2">
     <img src="{{site.baseurl}}/images/ni2-remove.png" alt="main" class = "anima">
   </div>
 </div>
 
->>>>>>## NIO
->>>>>>> __Nio Inc.__ is a Chinese multinational automobile manufacturer headquartered in Shanghai, specializing in designing and developing electric vehicles. The company is known for its development of battery-swapping stations for its vehicles, as an alternative to conventional charging stations
 
->>>>>>### Modles
->>>>>>> There are a total of 3 models of car with various versions of car in them 
+<div class = "description-box">
+  <h3 class = "body_text"> Description </h3>
+  <p class = "body_text"> Nio Inc. is a Chinese multinational automobile manufacturer headquartered in Shanghai, specializing in designing and developing electric vehicles. The company is known for its development of battery-swapping stations for its vehicles, as an alternative to conventional charging stations </p>
+  <h3 class = "body_text"> Models </h3>
+    <p class = "body_text"> There are a total of 3 models of car with various versions of car in them  </p>
+</div>
 
 <table class = "mytable">
   <tr>
@@ -46,9 +48,10 @@
     <button class = "mybutton" onclick = "location.href = 'https://www.nio.com/es8'"> ES </button>
     <button class = "mybutton" onclick = "location.href = 'https://www.nio.com/ec7'"> EC</button>
   </div>
+  <p class = "body_text2"> click the above links to buy them now </p>
 </div>
 
->>>>>>> - Click the above buttons to take you to the newest version of that modle of car.
+
 
 
 >>>>>> ### Price and specs
@@ -69,13 +72,40 @@
 <!--- This section is Cascading Style Sheet (CSS) and applies to HTML -->
 <style>
 /* "row style" is flexible size and aligns pictures in center */
+  .image_back{
+    position: absolute;
+    margin-top:50%;
+    z-index: -1;
+    width:100%;
+  }
   .mytable {
     width:50%;
     margin:auto;
-    text-align: center;
-    background-color: lightgrey;  
-    border-radius: 7px
+    text-align: center; 
+    border-radius: 7px;
+    background-color: none;
   }
+
+  .description-box{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2rem;
+    
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .body_text{
+    margin-left: 3rem; 
+    color: white;
+  }
+
+  .body_text2{
+    margin-left: 3rem; 
+    color: white;
+    text-align: center;
+  }
+
 
   .readtable {
     width:70%;
@@ -96,13 +126,14 @@
 
   .mytd, th {
     border: 0.5px groove;
-    background-color: lightgrey;
+    background-color: none;
 
   }
 
   .secondary{
     margin-top: 1rem;
     text-align:center;
+    margin-bottom: 1rem;
   }
 
   .mybutton{
@@ -121,7 +152,7 @@
   .container2{
     height: 10%;
     width:100%;
-    background:lightgrey;
+
   }
 
   .image1 {
@@ -141,7 +172,7 @@
   .anima{
     width: 10%;
     height: 5%;
-    background-color: lightgrey;
+    
     position: relative;
     animation-name: car;
     animation-duration: 4s;
@@ -152,9 +183,9 @@
 
 
   @keyframes car {
-    0%   {background-color:lightgrey; left:0px; top:0px;}
-    25%  {background-color:lightgrey; left:70%; top:0px;}
-    50%  {background-color:lightgrey; left:0rem; top:0px;}
+    0%   { left:0px; top:0px;}
+    25%  { left:70%; top:0px;}
+    50%  { left:0rem; top:0px;}
   }
 
   .subbox{
@@ -169,6 +200,7 @@
     text-align: center;
     font-size: 40px;
     margin-top: 5rem;
+    color: white;
   }
 
   .input-boxes{
@@ -202,14 +234,15 @@
   }
 
   .read-button{
-      width: 20%;
+      width: auto;
       margin: auto;
       align-self: center;
   }
 </style>
 
-
+<div class = "secondary">
 <button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Generate a Fact </button>
+</div>
 <table class = "readtable">
   <thead>
   <tr>
