@@ -1,7 +1,7 @@
 <div>
   <img src="{{site.baseurl}}/images/nio.png" alt="main" style="width:100%; position: absolute; z-index: -1;">
   <img src="{{site.baseurl}}/images/nio-second.jpg  " alt="main" class = "image_back" >
-  <img src="{{site.baseurl}}/images/nio-second.jpg  " alt="main" class = "image_back" >
+  <img src="{{site.baseurl}}/images/back-image2.png" alt="main" class = "image_back2" >
 </div>
 <div>
   <div class="container2">
@@ -82,7 +82,7 @@
 
   .image_back2{
     position: absolute;
-    margin-top:50%;
+    margin-top:100%;
     z-index: -1;
     width:100%;
   }
