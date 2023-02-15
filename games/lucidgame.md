@@ -174,12 +174,12 @@ parkHere.addEventListener("drop", function(event) {
 </script>
 
 <table id="leaderboardTable">
-  <thead>
+  <th>
     <tr>
       <th>User</th>
       <th>Score</th>
     </tr>
-  </thead>
-  <tbody>
-  </tbody>
+  </th>
+  <tb>
+  </tb>
 </table>
