@@ -155,3 +155,31 @@ parkHere.addEventListener("drop", function(event) {
   });
 </script>
 </div>
+<script>
+  const resultContainer = document.getElementById("result");
+  const url = "http://127.0.0.1:8086/api/leaderboard/"
+  fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const leaderboardTable = document.getElementById("leaderboardTable");
+        for (const item of data) {
+          const row = leaderboardTable.insertRow(-1);
+          const userCell = row.insertCell(0);
+          const scoreCell = row.insertCell(1);
+          userCell.textContent = item.user;
+          scoreCell.textContent = item.score;
+        }
+      })
+      .catch(error => console.error(error));
+</script>
+
+<table id="leaderboardTable">
+  <th>
+    <tr>
+      <th>User</th>
+      <th>Score</th>
+    </tr>
+  </th>
+  <tb>
+  </tb>
+</table>
