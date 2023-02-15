@@ -110,26 +110,19 @@
     <p>
         <button id="button4"> Find out which car matches your search</button>
     </p>
-    <p>
-        <button id="clear"> Clear All Selections</button>
-    </p>
-    <script>
-        function check(checked = true){
-            const checkboxes = document.querySelectorAll('input[name="price"]');
-            checkboxes.forEach((checkbox) => {
-                checkbox.checked=checked;
-            });
-        }
-    function checkAll() {
-        select();
-        this.onclick = uncheckAll;
-    }
-    function uncheckAll() {
-        select(false);
-        this.onclick = checkAll;
-    }
-    const clear = document.querySelector('#clear');
-    clear.onclick = uncheckAll;
-    </script>
-    
+
+Checkbox: <input type="checkbox" id="myCheck" onclick="myFunction()">
+<p id="text" style="display:none">testing</p>
+<script>
+    function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+</script>
+
 </body>
