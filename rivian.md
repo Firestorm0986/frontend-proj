@@ -33,6 +33,8 @@
 >>>> Visit their website [here](https://rivian.com/)
 
 >>>> ### Rivian R1S and R1T At A Glance
+<!DOCTYPE html>
+<html lang="en">
 <table>
     <tr>
         <th>Car</th>
@@ -67,3 +69,8 @@
     </tr>
 </table>
     
+<p style="text-align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
+<p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
+
+
+</html>
