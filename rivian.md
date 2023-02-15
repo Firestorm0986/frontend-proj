@@ -71,4 +71,19 @@
 <p style="text-align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
 <p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find which car will match your preferences!</title>
+</head>
 
+<body>
+    <p>Select your desired range:</p>
+    <label for="c1"><input type="checkbox" name="range" value="200 Miles" id="c1">200 Miles</label>
+    <label for="c2"><input type="checkbox" name="range" value="300 Miles" id="c2">300 Miles</label>
+    <label for="c3"><input type="checkbox" name="range" value="400 Miles" id="c3">400 Miles</label>
+    <label for="c4"><input type="checkbox" name="range" value="500 Miles" id="c4">500 Miles</label>
+    <p>
+        <button id="btn">Find out which car matches your search</button>
+    </p>
+</body>
