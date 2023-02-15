@@ -1,6 +1,7 @@
 <div>
   <img src="{{site.baseurl}}/images/nio.png" alt="main" style="width:100%; position: absolute; z-index: -1;">
   <img src="{{site.baseurl}}/images/nio-second.jpg  " alt="main" class = "image_back" >
+  <img src="{{site.baseurl}}/images/nio-second.jpg  " alt="main" class = "image_back" >
 </div>
 <div>
   <div class="container2">
@@ -73,6 +74,13 @@
 <style>
 /* "row style" is flexible size and aligns pictures in center */
   .image_back{
+    position: absolute;
+    margin-top:50%;
+    z-index: -1;
+    width:100%;
+  }
+
+  .image_back2{
     position: absolute;
     margin-top:50%;
     z-index: -1;
