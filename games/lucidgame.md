@@ -155,31 +155,59 @@ parkHere.addEventListener("drop", function(event) {
   });
 </script>
 </div>
+
 <script>
+  // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
-  const url = "http://127.0.0.1:8086/api/leaderboard/"
-  fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        const leaderboardTable = document.getElementById("leaderboardTable");
-        for (const item of data) {
-          const row = leaderboardTable.insertRow(-1);
-          const userCell = row.insertCell(0);
-          const scoreCell = row.insertCell(1);
-          userCell.textContent = item.user;
-          scoreCell.textContent = item.score;
-        }
-      })
-      .catch(error => console.error(error));
+  // prepare URL's to allow easy switch from deployment and localhost
+  const url = "https://zesty.nighthawkcodingsociety.com/api/leaderboard/"
+
+  const create_fetch = url + '/create';
+  const read_fetch = url + '/';
+function read_users() {
+  const read_options = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  };
+
+  fetch('https://example.com/api/leaderboard', read_options)
+    .then(response => {
+      if (response.status !== 200) {
+        throw new Error(`Error fetching leaderboard: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      const table = document.createElement('table');
+      const headerRow = document.createElement('tr');
+      const userHeader = document.createElement('th');
+      userHeader.textContent = 'User';
+      const scoreHeader = document.createElement('th');
+      scoreHeader.textContent = 'Score';
+      headerRow.appendChild(userHeader);
+      headerRow.appendChild(scoreHeader);
+      table.appendChild(headerRow);
+      for (const item of data) {
+        const row = document.createElement('tr');
+        const userCell = document.createElement('td');
+        userCell.textContent = item.user;
+        const scoreCell = document.createElement('td');
+        scoreCell.textContent = item.score;
+        row.appendChild(userCell);
+        row.appendChild(scoreCell);
+        table.appendChild(row);
+      }
+      resultContainer.innerHTML = '';
+      resultContainer.appendChild(table);
+    })
+    .catch(error => {
+      console.error(error);
+      const errorMessage = `Error fetching leaderboard: ${error.message}`;
+      resultContainer.textContent = errorMessage;
+    });
+}
+
 </script>
 
-<table id="leaderboardTable">
-  <th>
-    <tr>
-      <th>User</th>
-      <th>Score</th>
-    </tr>
-  </th>
-  <tb>
-  </tb>
-</table>
