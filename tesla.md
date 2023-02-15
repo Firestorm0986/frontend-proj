@@ -170,7 +170,7 @@ img {
     // prepare fetch options
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
-      mode: 'cors', // no-cors, *cors, same-origin
+      mode: 'no-cors', // no-cors, *cors, same-origin
       cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
       credentials: 'omit', // include, *same-origin, omit
       headers: {
@@ -224,6 +224,7 @@ img {
     };
     const requestOptions = {
         method: 'POST',
+        mode: 'no-cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
@@ -266,7 +267,7 @@ img {
     };
     const requestOptions = {
         method: 'DELETE',
-        mode: 'cors',
+        mode: 'no-cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
@@ -307,7 +308,7 @@ img {
     };
     const requestOptions = {
         method: 'PATCH',
-        mode: 'cors',
+        mode: 'no-cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
