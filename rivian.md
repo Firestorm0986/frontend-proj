@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <html>
     <img src="https://firestorm0986.github.io/frontend-proj/images/rivianlogo.png" alt="rivianlogo.png" style="width:100%" class="imgMain">
 </html>
@@ -35,6 +33,7 @@
 >>>> Visit their website [here](https://rivian.com/)
 
 >>>> ### Rivian R1S and R1T At A Glance
+
 <table>
     <tr>
         <th>Car</th>
@@ -73,4 +72,3 @@
 <p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
 
 
-</html>
