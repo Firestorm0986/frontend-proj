@@ -155,7 +155,7 @@ img {
 
 <script>
   const resultContainer = document.getElementById("result");
-  const url = "http://172.21.215.122:8086/api/schemas"
+  const url = "https://zesty.nighthawkcodingsociety.com/api/schemas"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
   const delete_fetch = url + '/delete';
