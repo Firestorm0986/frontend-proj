@@ -114,11 +114,12 @@
         <button id="clear"> Clear All Selections</button>
     </p>
     <script>
-        const checkboxNames = ["range", "seating", "zero", "price"];
-        const checkboxes = document.querySelectorAll(`input[type="checkbox"][name="${checkboxNames.join('"],[name="')}"]`);
-        checkboxes.forEach((checkbox) => {
-            checkbox.checked = false;
-        });
+        function check(checked = true){
+            const checkboxes = document.querySelectorAll('input[name="price"]');
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked=checked;
+            });
+        }
     function checkAll() {
         select();
         this.onclick = uncheckAll;
