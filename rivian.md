@@ -73,61 +73,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <title> Find which car will match your preferences!</title>
 </head>
 
 <body>
     <p> Select your desired range:</p>
-    <label for="c1"><input type="checkbox" name="range" value="200 Miles" id="c1"> 200 Miles </label>
-    <label for="c2"><input type="checkbox" name="range" value="300 Miles" id="c2"> 300 Miles </label>
-    <label for="c3"><input type="checkbox" name="range" value="400 Miles" id="c3"> 400 Miles </label>
-    <label for="c4"><input type="checkbox" name="range" value="500 Miles" id="c4"> 500 Miles </label>
+    <label for="c1"><input type="checkbox" id="range" value="200 Miles" id="c1"> 200 Miles </label>
+    <label for="c2"><input type="checkbox" id="range" value="300 Miles" id="c2"> 300 Miles </label>
+    <label for="c3"><input type="checkbox" id="range" value="400 Miles" id="c3"> 400 Miles </label>
+    <label for="c4"><input type="checkbox" id="range" value="500 Miles" id="c4"> 500 Miles </label>
     <p>
         <button id="button1"> Find out which car matches your search</button>
     </p>
     <p> Select your desired seating capacity:</p>
-    <label for="d1"><input type="checkbox" name="seating" value="200 Miles" id="d1"> 2 People </label>
-    <label for="d2"><input type="checkbox" name="seating" value="300 Miles" id="d2"> 5 People </label>
-    <label for="d3"><input type="checkbox" name="seating" value="400 Miles" id="d3"> 7 People </label>
+    <label for="d1"><input type="checkbox" id="seating" value="200 Miles" id="d1"> 2 People </label>
+    <label for="d2"><input type="checkbox" id="seating" value="300 Miles" id="d2"> 5 People </label>
+    <label for="d3"><input type="checkbox" id="seating" value="400 Miles" id="d3"> 7 People </label>
     <p>
         <button id="button2"> Find out which car matches your search</button>
     </p>
     <p> Select your desired 0-60 time:</p>
-    <label for="e1"><input type="checkbox" name="zero" value="2 Seconds" id="e1"> 2 Seconds </label>
-    <label for="e2"><input type="checkbox" name="zero" value="3 Seconds" id="e2"> 3 Seconds </label>
-    <label for="e3"><input type="checkbox" name="zero" value="4 Seconds" id="e3"> 4 Seconds </label>
-    <label for="e4"><input type="checkbox" name="zero" value="5 Seconds" id="e4"> 5 Seconds </label>
+    <label for="e1"><input type="checkbox" id="zero" value="2 Seconds" id="e1"> 2 Seconds </label>
+    <label for="e2"><input type="checkbox" id="zero" value="3 Seconds" id="e2"> 3 Seconds </label>
+    <label for="e3"><input type="checkbox" id="zero" value="4 Seconds" id="e3"> 4 Seconds </label>
+    <label for="e4"><input type="checkbox" id="zero" value="5 Seconds" id="e4"> 5 Seconds </label>
     <p>
         <button id="button3"> Find out which car matches your search</button>
     </p>
         <p> Select your desired Price:</p>
-    <label for="f1"><input type="checkbox" name="price" value="40000" id="f1"> $40,000 </label>
-    <label for="f2"><input type="checkbox" name="price" value="60000" id="f2"> $60,000 </label>
-    <label for="f3"><input type="checkbox" name="price" value="70000" id="f3"> $70,000 </label>
-    <label for="f4"><input type="checkbox" name="price" value="80000" id="f4"> $80,000 </label>
-    <label for="f5"><input type="checkbox" name="price" value="100000" id="f5"> $100,000+ </label>
+    <label for="f1"><input type="checkbox" id="price" value="40000" id="f1" onclick="price()"> $40,000 </label>
+    <p id="text" style="display:none"> Tesla Model 3</p>
+    <label for="f2"><input type="checkbox" id="price" value="60000" id="f2" onclick="price()"> $60,000 </label>
+    <p id="text" style="display:none"> NIO ET7</p>
+    <label for="f3"><input type="checkbox" id="price" value="70000" id="f3" onclick="price()"> $70,000 </label>
+    <p id="text" style="display:none"> NIO ES6</p>
+    <label for="f4"><input type="checkbox" id="price" value="80000" id="f4" onclick="price()"> $80,000 </label>
+    <p id="text" style="display:none"> Rivian R1S</p>
+    <label for="f5"><input type="checkbox" id="price" value="100000" id="f5" onclick="price()"> $100,000+ </label>
+    <p id="text" style="display:none"> Tesla Roadster</p>
     <p>
         <button id="button4"> Find out which car matches your search</button>
     </p>
-    <p>
-        <button id="clear"> Clear All Selections</button>
-    </p>
-    <script>
-        const checkboxNames = ["range", "seating", "zero", "price"];
-        const checkboxes = document.querySelectorAll(`input[type="checkbox"][name="${checkboxNames.join('"],[name="')}"]`);
-        checkboxes.forEach((checkbox) => {
-            checkbox.checked = false;
-        });
-    function checkAll() {
-        select();
-        this.onclick = uncheckAll;
-    }
-    function uncheckAll() {
-        select(false);
-        this.onclick = checkAll;
-    }
-    const clear = document.querySelector('#clear');
-    clear.onclick = uncheckAll;
-    </script>
+<script>
+    function price() {
+  var checkBox = document.getElementById("price");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+}
+</script>
+
 </body>
