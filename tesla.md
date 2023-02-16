@@ -145,9 +145,6 @@ img {
         <button id="add_car" onclick='create_car()'>Create</button>
     </p>
 </center></form>
-<p ><center><strong>
-  Please input ID as a number that is one greater than the last ID on the table - so if the last ID is 6, then input 7 for ID.
-</strong></center></p>
 
 <script>
   const resultContainer = document.getElementById("result");
