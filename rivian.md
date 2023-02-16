@@ -139,9 +139,17 @@
         var l2 = document.getElementById("range2");
         var l3 = document.getElementById("range3");
         var l4 = document.getElementById("range4");
-        if (l1.checked==true){
-            var rl1 = document.getElementById("range1").value;
+        if (l1.checked == true){
             document.getElementById("range1").innerHTML = "Tesla Roadster";
+        }
+        else if (l2.checked == true){
+            document.getElementById("range2").innerHTML = "Rivian R1S";
+        }
+        else if (l3.checked == true){
+            document.getElementById("range3").innerHTML = "Lucid Air Grand Touring";
+        }
+        else if (l4.checked == true){
+            document.getElementById("range4").innerHTML = "NIO EC7";
         }
     }  
 
