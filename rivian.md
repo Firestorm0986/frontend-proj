@@ -4,7 +4,7 @@
 
 >>>> # Rivian
 
->>>> Rivian is an American electric car manufacturing company which builds all-electric, high-end vehicles for many purposes. It was founded in 2009 in Irvine, California. They build SUVs and pickup trucks on "skateboard platforms" which they hope to use on future vehicle types.
+>>>> Rivian is an American electric car manufacturing company which builds all-electric, high-end vehicles poses. It was founded in 2009 in Irvine, Cali build SUVs and pickup trucks on "skateboard plat they hope to use on future vehicle types.
 
 >>>> ### Cars in Their Lineup
 
@@ -15,20 +15,20 @@
     <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.png" style="width:100%" class="imgMain">
 </html>
 
->>>> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats for a total of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
+>>>> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
 
 >>>> ### R1S Features
->>>> The interior of the R1S has a screen which supports bluetooth connections, CarPlay, and other features. The vehicle has LTE and Wi-Fi connectivity inside, which may allow for connectivity in remote areas. Amazon Alexa is also built-in. There are up to 8 USB ports, 2 12V ports, and 2 120V outlets. Based on customization, leather seats are available. There are many driver-assist features, some of which allow for hands-free driving. 
+>>>> The interior of the R1S has a screen which supports bluetooth connections, CarPlay, and other features. The vehicle has LTE and Wi-Fi connectivity inside, which may allow vity in remote areas. Amazon Alexa is also built-in. There are up to 8 USB ports, 2 12V ports, and 2 120V outlets. Based on customization, leather seats are available. There are many driver-assist features, some of which allow ee driving. 
 
 >>>> ## Rivian R1T
 <html>
     <img src="https://firestorm0986.github.io/frontend-proj/images/r1t.jpg" alt="r1t.jpg" style="width:100%" class="imgMain">
 </html>
 
->>>> The Rivian R1T is Rivian's all-electric luxury pickup truck. The R1T has two rows of seats for a total of 5 passengers. Depending on the motor and wheels, the range is anywhere between 260 and 400 miles. It takes up to 13 hours to charge at 220 Volts. The R1T can tow up to 11,000 pounds, and can accelerate from 0-60 in up to three seconds. It sports an All-Wheel-Drive drivetrain.
+>>>> The Rivian R1T is Rivian's all-electric luxury pickup truck. The R1T has two rows of seats of 5 passengers. Depending on the motor and wheels, the range is anywhere between 260 and 400 miles. It takes up to 13 hours to charge at 220 Volts. The R1T can tow up to 11,000 pounds, and can accelerate from 0-60 in up to three seconds. It sports an All-Wheel-Drive drivetrain.
 
 >>>> ### R1T Features
->>>> The interior of the R1T has a screen which supports bluetooth connections, CarPlay, and other features. The vehicle has LTE and Wi-Fi connectivity inside, which may allow for connectivity in remote areas. Amazon Alexa is also built-in. There are up to 6 USB ports and 4 120V outlets. Based on customization, leather seats are available. There are many driver-assist features, some of which allow for hands-free driving. There are multiple storage spaces in the R1T, which allows for an additional 62 cubic feet of storage space.
+>>>> The interior of the R1T has a screen which supports bluetooth connections, CarPlay, and other features. The vehicle has LTE and Wi-Fi connectivity inside, which may allow vity in remote areas. Amazon Alexa is also built-in. There are up to 6 USB ports and 4 120V outlets. Based on customization, leather seats are available. There are many driver-assist features, some of which allow ee driving. There are multiple storage spaces in the R1T, which allows ional 62 cubic feet of storage space.
 
 >>>> Visit their website [here](https://rivian.com/)
 
@@ -52,7 +52,7 @@
         <td>260-315 Miles</td>
         <td>7700 Pounds</td>
         <td>105 Cubic Feet</td>
-        <td>Low Center of Gravity, Carbon-fiber material for additional strength, high-strength steel and aluminum, Driver-Assist</td>
+        <td>Low Center of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
         <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
         <td>$78,000</td>
     </tr>
@@ -62,7 +62,7 @@
         <td>260-400 Miles</td>
         <td>11000 Pounds</td>
         <td>74 Cubic Feet</td>
-        <td>Low Center of Gravity, Carbon-fiber material for additional strength, high-strength steel and aluminum, Driver-Assist</td>
+        <td>Low Center of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
         <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
         <td>$73,000</td>
     </tr>
@@ -73,52 +73,86 @@
 
 <body>
     <p> Select your desired range:</p>
-    <label for="c1"><input type="checkbox" id="range" value="200 Miles" id="c1"> 200 Miles </label>
-    <label for="c2"><input type="checkbox" id="range" value="300 Miles" id="c2"> 300 Miles </label>
-    <label for="c3"><input type="checkbox" id="range" value="400 Miles" id="c3"> 400 Miles </label>
-    <label for="c4"><input type="checkbox" id="range" value="500 Miles" id="c4"> 500 Miles </label>
+     <input type="checkbox" id="range1" class="range" value="200 Miles"> 200 Miles 
+     <input type="checkbox" id="range2" class="range" value="300 Miles"> 300 Miles 
+     <input type="checkbox" id="range3" class="range" value="400 Miles"> 400 Miles 
+     <input type="checkbox" id="range4" class="range" value="500 Miles"> 500 Miles 
     <p>
-        <button id="button1"> Find out which car matches your search</button>
+        <button onclick="checkAllOne()"> I do not have a preference </button>
+        <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
     <p> Select your desired seating capacity:</p>
-    <label for="d1"><input type="checkbox" id="seating" value="200 Miles" id="d1"> 2 People </label>
-    <label for="d2"><input type="checkbox" id="seating" value="300 Miles" id="d2"> 5 People </label>
-    <label for="d3"><input type="checkbox" id="seating" value="400 Miles" id="d3"> 7 People </label>
+     <input type="checkbox" id="seating1" class="seating" value="200 Miles"> 2 People 
+     <input type="checkbox" id="seating2" class="seating" value="300 Miles"> 5 People 
+     <input type="checkbox" id="seating3" class="seating" value="400 Miles"> 7 People 
     <p>
-        <button id="button2"> Find out which car matches your search</button>
+        <button onclick="checkAllTwo()"> I do not have a preference </button>
+        <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
     <p> Select your desired 0-60 time:</p>
-    <label for="e1"><input type="checkbox" id="zero" value="2 Seconds" id="e1"> 2 Seconds </label>
-    <label for="e2"><input type="checkbox" id="zero" value="3 Seconds" id="e2"> 3 Seconds </label>
-    <label for="e3"><input type="checkbox" id="zero" value="4 Seconds" id="e3"> 4 Seconds </label>
-    <label for="e4"><input type="checkbox" id="zero" value="5 Seconds" id="e4"> 5 Seconds </label>
+     <input type="checkbox" id="zero1" class="zero" value="2 Seconds"> 2 Seconds 
+     <input type="checkbox" id="zero2" class="zero" value="3 Seconds"> 3 Seconds 
+     <input type="checkbox" id="zero3" class="zero" value="4 Seconds"> 4 Seconds 
+     <input type="checkbox" id="zero4" class="zero" value="5 Seconds"> 5 Seconds 
     <p>
-        <button id="button3"> Find out which car matches your search</button>
+        <button onclick="checkAllThree()"> I do not have a preference </button>
+        <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
         <p> Select your desired Price:</p>
-    <label for="f1"><input type="checkbox" id="price1" value="40000" id="f1" onclick="price()"> $40,000 </label>
-    <p id="text1" style="display:none"> Tesla Model 3</p>
-    <label for="f2"><input type="checkbox" id="price2" value="60000" id="f2" onclick="price()"> $60,000 </label>
-    <p id="text2" style="display:none"> NIO ET7</p>
-    <label for="f3"><input type="checkbox" id="price3" value="70000" id="f3" onclick="price()"> $70,000 </label>
-    <p id="text3" style="display:none"> NIO ES6</p>
-    <label for="f4"><input type="checkbox" id="price4" value="80000" id="f4" onclick="price()"> $80,000 </label>
-    <p id="text4" style="display:none"> Rivian R1S</p>
-    <label for="f5"><input type="checkbox" id="price5" value="100000" id="f5" onclick="price()"> $100,000+ </label>
-    <p id="text5" style="display:none"> Tesla Roadster</p>
+     <input type="checkbox" id="price1" class="price" value="40000"> $40,000 
+     <input type="checkbox" id="price2" class="price" value="60000"> $60,000 
+     <input type="checkbox" id="price3" class="price" value="70000"> $70,000 
+     <input type="checkbox" id="price4" class="price" value="80000"> $80,000 
+     <input type="checkbox" id="price5" class="price" value="100000"> $100,000+ 
     <p>
-        <button id="button4"> Find out which car matches your search</button>
+        <button onclick="checkAllFour()"> I do not have a preference </button>
+        <button onclick="getPriceValue()"> Find out which car matches your search</button>
     </p>
-<script>
-    function price() {
-  var checkBox = document.getElementById("price1");
-  var text = document.getElementById("text1");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
-}
-</script>
+    <p id="button4"></p>
+    <script>
+    function checkAllOne() {
+        var selectAllRange = document.querySelectorAll('.range');
+         0; i < selectAllRange.length, i++) {
+            selectAllRange[i].checked = true;
+        }
+    }
+    function checkAllTwo() {
+        var selectAllSeating = document.querySelectorAll('.seating');
+         0; j < selectAllSeating.length, i++) {
+            selectAllSeating[j].checked = true;
+        }
+    }
+    function checkAllThree() {
+        var selectAllZero = document.querySelectorAll('.zero');
+         0; k < selectAllZero.length, i++) {
+            selectAllZero[k].checked = true; 
+        }
+    }
+    function checkAllFour() {
+        var selectAllPrice = document.querySelectorAll('.price');
+         0; l < selectAllPrice.length, i++) {
+            selectAllPrice[l].checked = true;
+        }
+    } 
+    function getRangeValue() {
+        var l1 = document.getElementById("range1");
+        var l2 = document.getElementById("range2");
+        var l3 = document.getElementById("range3");
+        var l4 = document.getElementById("range4");
+        if (l1.checked == true){
+            document.getElementById("range1").innerHTML = "Tesla Roadster";
+        }
+        else if (l2.checked == true){
+            document.getElementById("range2").innerHTML = "Rivian R1S";
+        }
+        else if (l3.checked == true){
+            document.getElementById("range3").innerHTML = "Lucid Air Grand Touring";
+        }
+        else if (l4.checked == true){
+            document.getElementById("range4").innerHTML = "NIO EC7";
+        }
+    }  
+
+ </script>
 
 </body>

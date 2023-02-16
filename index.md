@@ -34,14 +34,18 @@
 
   let reminded = []
 
-  function updatelist() {
+  function updateList() {
     list.innerHTML = '';
     for (let remind of reminded){
       const item = document.createElement('li');
       const item1 = document.createElement('li');
      item1.innerHTML = remind.text;
-     item.innerHTML =`<button> edit </button> <button> delete </button>` ;
+     item.innerHTML =`<button class = "complete-button" > edit </button> <button class = "delete-button"> delete </button>` ;
       list.appendChild(item1);
+      list.appendChild(item);
+      if (todo.completed) {
+        item.classList.add('completed');
+      }
       list.appendChild(item);
       
     }
@@ -54,7 +58,7 @@
     };
 
     reminded.push(newremind);
-    updatelist();
+    updateList();
   }
 
   form.addEventListener('submit', event => {
@@ -65,4 +69,17 @@
       input.value = '';
     }
   });
+
+  list.addEventListener('click', event => {
+    if (event.target.classList.contains('complete-button')){
+      const index = Array.from(list.children).indexOf(event.target.parentNode);
+      reminded[index].completed = !reminded[index].completed;
+      updateList();
+    }
+    else if (event.target.classList.contains('delete-button')){
+      const index = Array.from(list.children).indexOf(event.target.parentNode);
+      reminded.splice(index, 1);
+      updateList();
+    }
+  })
 </script>
