@@ -1,5 +1,5 @@
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/rivianlogo.png" alt="rivianlogo.png" style="width:100%" class="imgMain">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/rivianlogo.png" alt="rivianlogo.png" style="width:100%" n">
 </html>
 
 >>>> # Rivian
@@ -12,7 +12,7 @@
 
 >>>> ## Rivian R1S
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.png" style="width:100%" class="imgMain">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.png" style="width:100%" n">
 </html>
 
 >>>> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
@@ -22,7 +22,7 @@
 
 >>>> ## Rivian R1T
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/r1t.jpg" alt="r1t.jpg" style="width:100%" class="imgMain">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/r1t.jpg" alt="r1t.jpg" style="width:100%" n">
 </html>
 
 >>>> The Rivian R1T is Rivian's all-electric luxury pickup truck. The R1T has two rows of seats of 5 passengers. Depending on the motor and wheels, the range is anywhere between 260 and 400 miles. It takes up to 13 hours to charge at 220 Volts. The R1T can tow up to 11,000 pounds, and can accelerate from 0-60 in up to three seconds. It sports an All-Wheel-Drive drivetrain.
@@ -52,7 +52,7 @@
         <td>260-315 Miles</td>
         <td>7700 Pounds</td>
         <td>105 Cubic Feet</td>
-        <td>Low Center of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
+        <td>Low left of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
         <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
         <td>$78,000</td>
     </tr>
@@ -62,7 +62,7 @@
         <td>260-400 Miles</td>
         <td>11000 Pounds</td>
         <td>74 Cubic Feet</td>
-        <td>Low Center of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
+        <td>Low left of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
         <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
         <td>$73,000</td>
     </tr>
@@ -72,35 +72,35 @@
 <p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
 
 <body>
-    <p style="text-align: center; font-size: 20px; color: blue;">Select your desired range:</p>
-     <input type="checkbox" style="text-align: center;" id="range1" class="range" value="200 Miles"> 200 Miles 
-     <input type="checkbox" style="text-align: center;" id="range2" class="range" value="300 Miles"> 300 Miles 
-     <input type="checkbox" style="text-align: center;" id="range3" class="range" value="400 Miles"> 400 Miles 
-     <input type="checkbox" style="text-align: center;" id="range4" class="range" value="500 Miles"> 500 Miles 
+    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired range:</p>
+     <label class="range"><input type="checkbox" style="text-align: left;" id="range1" value="200 Miles"> 200 Miles </label>
+     <input type="checkbox" style="text-align: left;" id="range2" value="300 Miles"> 300 Miles 
+     <input type="checkbox" style="text-align: left;" id="range3" value="400 Miles"> 400 Miles 
+     <input type="checkbox" style="text-align: left;" id="range4" value="500 Miles"> 500 Miles 
     <p>
         <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: center; font-size: 20px; color: blue;">Select your desired seating:</p>
-     <input type="checkbox" style="text-align: center;" id="seating1" class="seating" value="2 People"> 2 People 
-     <input type="checkbox" style="text-align: center;" id="seating2" class="seating" value="5 People"> 5 People 
-     <input type="checkbox" style="text-align: center;" id="seating3" class="seating" value="7 People"> 7 People 
+    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired seating:</p>
+     <input type="checkbox" style="text-align: left;" id="seating1" value="2 People"> 2 People 
+     <input type="checkbox" style="text-align: left;" id="seating2" value="5 People"> 5 People 
+     <input type="checkbox" style="text-align: left;" id="seating3" value="7 People"> 7 People 
     <p>
         <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: center; font-size: 20px; color: blue;">Select your desired 0-60 time:</p>
-     <input type="checkbox" style="text-align: center;" id="zero1" class="zero" value="2 Seconds"> 2 Seconds 
-     <input type="checkbox" style="text-align: center;" id="zero2" class="zero" value="3 Seconds"> 3 Seconds 
-     <input type="checkbox" style="text-align: center;" id="zero3" class="zero" value="4 Seconds"> 4 Seconds 
-     <input type="checkbox" style="text-align: center;" id="zero4" class="zero" value="5 Seconds"> 5 Seconds 
+    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired 0-60 time:</p>
+     <input type="checkbox" style="text-align: left;" id="zero1" value="2 Seconds"> 2 Seconds 
+     <input type="checkbox" style="text-align: left;" id="zero2" value="3 Seconds"> 3 Seconds 
+     <input type="checkbox" style="text-align: left;" id="zero3" value="4 Seconds"> 4 Seconds 
+     <input type="checkbox" style="text-align: left;" id="zero4" value="5 Seconds"> 5 Seconds 
     <p>
         <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: center; font-size: 20px; color: blue;">Select your desired price:</p>
-     <input type="checkbox" style="text-align: center;" id="price1" class="price" value="40000"> $40,000 
-     <input type="checkbox" style="text-align: center;" id="price2" class="price" value="60000"> $60,000 
-     <input type="checkbox" style="text-align: center;" id="price3" class="price" value="70000"> $70,000 
-     <input type="checkbox" style="text-align: center;" id="price4" class="price" value="80000"> $80,000 
-     <input type="checkbox" style="text-align: center;" id="price5" class="price" value="100000"> $100,000+ 
+    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired price:</p>
+     <input type="checkbox" style="text-align: left;" id="price1" value="40000"> $40,000 
+     <input type="checkbox" style="text-align: left;" id="price2" value="60000"> $60,000 
+     <input type="checkbox" style="text-align: left;" id="price3" value="70000"> $70,000 
+     <input type="checkbox" style="text-align: left;" id="price4" value="80000"> $80,000 
+     <input type="checkbox" style="text-align: left;" id="price5" value="100000"> $100,000+ 
     <p>
         <button id="button4" onclick="getPriceValue()"> Find out which car matches your search</button>
     </p>
@@ -125,7 +125,7 @@
 .range {
   display: block;
   position: relative;
-  padding-center: 35px;
+  padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -137,7 +137,7 @@
 .seating {
   display: block;
   position: relative;
-  padding-center: 35px;
+  padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -149,7 +149,7 @@
 .zero {
   display: block;
   position: relative;
-  padding-center: 35px;
+  padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -161,7 +161,7 @@
 .price {
   display: block;
   position: relative;
-  padding-center: 35px;
+  padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
