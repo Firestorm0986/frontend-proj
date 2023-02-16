@@ -111,25 +111,25 @@
     <p id="button4"></p>
     <script>
     function checkAllOne() {
-        var inputs = document.querySelectorAll('range');
+        var inputs = document.querySelectorAll('.range');
         for (var i = 0; i < inputs.length, i++) {
             inputs[i].checked = true;
         }
     }
     function checkAllTwo() {
-        var inputs = document.querySelectorAll('seating');
+        var inputs = document.querySelectorAll('.seating');
         for (var j = 0; j < inputs.length, i++) {
             inputs[j].checked = true;
         }
     }
     function checkAllThree() {
-        var inputs = document.querySelectorAll('zero');
+        var inputs = document.querySelectorAll('.zero');
         for (var k = 0; k < inputs.length, i++) {
             inputs[k].checked = true; 
         }
     }
     function checkAllFour() {
-        var inputs = document.querySelectorAll('price');
+        var inputs = document.querySelectorAll('.price');
         for (var l = 0; l < inputs.length, i++) {
             inputs[l].checked = true;
         }
