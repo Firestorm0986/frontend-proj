@@ -111,27 +111,27 @@
     <p id="button4"></p>
     <script>
     function checkAllOne() {
-        var inputs = document.querySelectorAll('.range');
-        for (var i = 0; i < inputs.length, i++) {
-            inputs[i].checked = true;
+        var selectAllRange = document.querySelectorAll('.range');
+        for (var i = 0; i < selectAllRange.length, i++) {
+            selectAllRange[i].checked = true;
         }
     }
     function checkAllTwo() {
-        var inputs = document.querySelectorAll('.seating');
-        for (var j = 0; j < inputs.length, i++) {
-            inputs[j].checked = true;
+        var selectAllSeating = document.querySelectorAll('.seating');
+        for (var j = 0; j < selectAllSeating.length, i++) {
+            selectAllSeating[j].checked = true;
         }
     }
     function checkAllThree() {
-        var inputs = document.querySelectorAll('.zero');
-        for (var k = 0; k < inputs.length, i++) {
-            inputs[k].checked = true; 
+        var selectAllZero = document.querySelectorAll('.zero');
+        for (var k = 0; k < selectAllZero.length, i++) {
+            selectAllZero[k].checked = true; 
         }
     }
     function checkAllFour() {
-        var inputs = document.querySelectorAll('.price');
-        for (var l = 0; l < inputs.length, i++) {
-            inputs[l].checked = true;
+        var selectAllPrice = document.querySelectorAll('.price');
+        for (var l = 0; l < selectAllPrice.length, i++) {
+            selectAllPrice[l].checked = true;
         }
     } 
     function getRangeValue() {
