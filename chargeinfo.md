@@ -14,6 +14,7 @@ type: pbl
     <th>Charge Times</th>
   </tr>
   </thead>
+  <tbody id="result">
   </tbody>
 </table>
 
@@ -96,7 +97,7 @@ function add_row(data) {
     const id = document.createElement("td");
     car.innerHTML = data.car; 
     chargetime.innerHTML = data.chargetime; 
-      
+    
 
     tr.appendChild(car);
     tr.appendChild(chargetime);
