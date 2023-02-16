@@ -101,9 +101,8 @@
     <label for="f3"><input type="checkbox" id="price3" value="70000" id="f3"> $70,000 </label>
     <label for="f4"><input type="checkbox" id="price4" value="80000" id="f4"> $80,000 </label>
     <label for="f5"><input type="checkbox" id="price5" value="100000" id="f5"> $100,000+ </label>
-    <p>
-        <button id="button4" onclick="priceCar()"> Find out which car matches your search</button>
-    </p>
+    <button id="button4" onclick="priceCar()"> Find out which car matches your search</button>
+    <p id="button4"></p>
     <script>
         function priceCar() {
             document.getElementById("button4").outerHTML = "Tesla Model 3"
