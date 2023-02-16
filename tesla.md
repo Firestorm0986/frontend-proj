@@ -261,8 +261,8 @@ img {
     };
     const requestOptions = {
         method: 'DELETE',
-        mode: 'same-origin',
-        credentials: 'same-origin',
+        mode: 'cors',
+        credentials: 'omit',
         headers: {
             "content-type": "application/json",
             'Authorization': 'Bearer my-token',
