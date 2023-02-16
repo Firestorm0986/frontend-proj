@@ -96,29 +96,18 @@
         <button id="button3"> Find out which car matches your search</button>
     </p>
         <p> Select your desired Price:</p>
-    <label for="f1"><input type="checkbox" id="price1" value="40000" id="f1" onclick="price()"> $40,000 </label>
-    <p id="text1" style="display:none"> Tesla Model 3</p>
-    <label for="f2"><input type="checkbox" id="price2" value="60000" id="f2" onclick="price()"> $60,000 </label>
-    <p id="text2" style="display:none"> NIO ET7</p>
-    <label for="f3"><input type="checkbox" id="price3" value="70000" id="f3" onclick="price()"> $70,000 </label>
-    <p id="text3" style="display:none"> NIO ES6</p>
-    <label for="f4"><input type="checkbox" id="price4" value="80000" id="f4" onclick="price()"> $80,000 </label>
-    <p id="text4" style="display:none"> Rivian R1S</p>
-    <label for="f5"><input type="checkbox" id="price5" value="100000" id="f5" onclick="price()"> $100,000+ </label>
-    <p id="text5" style="display:none"> Tesla Roadster</p>
+    <label for="f1"><input type="checkbox" id="price1" value="40000" id="f1"> $40,000 </label>
+    <label for="f2"><input type="checkbox" id="price2" value="60000" id="f2"> $60,000 </label>
+    <label for="f3"><input type="checkbox" id="price3" value="70000" id="f3"> $70,000 </label>
+    <label for="f4"><input type="checkbox" id="price4" value="80000" id="f4"> $80,000 </label>
+    <label for="f5"><input type="checkbox" id="price5" value="100000" id="f5"> $100,000+ </label>
     <p>
-        <button id="button4"> Find out which car matches your search</button>
+        <button id="button4" onclick="priceCar()"> Find out which car matches your search</button>
     </p>
-<script>
-    function price() {
-  var checkBox = document.getElementById("price1");
-  var text = document.getElementById("text1");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
-}
-</script>
+    <script>
+        function priceCar() {
+            document.getElementById("button4").innerHTML = "Tesla Model 3"
+        }
+    </script>
 
 </body>
