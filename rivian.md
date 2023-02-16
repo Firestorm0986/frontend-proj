@@ -77,16 +77,16 @@
     <label for="range2"><input type="checkbox" id="range2" class="range" value="300 Miles"> 300 Miles </label>
     <label for="range3"><input type="checkbox" id="range3" class="range" value="400 Miles"> 400 Miles </label>
     <label for="range4"><input type="checkbox" id="range4" class="range" value="500 Miles"> 500 Miles </label>
-    <button onclick="checkAllOne()"> I do not have a preference </button>
     <p>
+        <button onclick="checkAllOne()"> I do not have a preference </button>
         <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
     <p> Select your desired seating capacity:</p>
     <label for="seating1"><input type="checkbox" id="seating1" class="seating" value="200 Miles"> 2 People </label>
     <label for="seating2"><input type="checkbox" id="seating2" class="seating" value="300 Miles"> 5 People </label>
     <label for="seating3"><input type="checkbox" id="seating3" class="seating" value="400 Miles"> 7 People </label>
-    <button onclick="checkAllTwo()"> I do not have a preference </button>
     <p>
+        <button onclick="checkAllTwo()"> I do not have a preference </button>
         <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
     <p> Select your desired 0-60 time:</p>
@@ -94,8 +94,8 @@
     <label for="zero2"><input type="checkbox" id="zero2" class="zero" value="3 Seconds"> 3 Seconds </label>
     <label for="zero3"><input type="checkbox" id="zero3" class="zero" value="4 Seconds"> 4 Seconds </label>
     <label for="zero4"><input type="checkbox" id="zero4" class="zero" value="5 Seconds"> 5 Seconds </label>
-    <button onclick="checkAllThree()"> I do not have a preference </button>
     <p>
+        <button onclick="checkAllThree()"> I do not have a preference </button>
         <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
         <p> Select your desired Price:</p>
@@ -104,9 +104,9 @@
     <label for="price3"><input type="checkbox" id="price3" class="price" value="70000"> $70,000 </label>
     <label for="price4"><input type="checkbox" id="price4" class="price" value="80000"> $80,000 </label>
     <label for="price5"><input type="checkbox" id="price5" class="price" value="100000"> $100,000+ </label>
-    <button onclick="checkAllFour()"> I do not have a preference </button>
     <p>
-    <button onclick="getPriceValue()"> Find out which car matches your search</button>
+        <button onclick="checkAllFour()"> I do not have a preference </button>
+        <button onclick="getPriceValue()"> Find out which car matches your search</button>
     </p>
     <p id="button4"></p>
     <script>
