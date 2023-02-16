@@ -78,7 +78,6 @@
      <input type="checkbox" id="range3" class="range" value="400 Miles"> 400 Miles 
      <input type="checkbox" id="range4" class="range" value="500 Miles"> 500 Miles 
     <p>
-        <button onclick="checkAllOne()"> I do not have a preference </button>
         <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
     <p> Select your desired seating capacity:</p>
@@ -86,7 +85,6 @@
      <input type="checkbox" id="seating2" class="seating" value="300 Miles"> 5 People 
      <input type="checkbox" id="seating3" class="seating" value="400 Miles"> 7 People 
     <p>
-        <button onclick="checkAllTwo()"> I do not have a preference </button>
         <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
     <p> Select your desired 0-60 time:</p>
@@ -95,7 +93,6 @@
      <input type="checkbox" id="zero3" class="zero" value="4 Seconds"> 4 Seconds 
      <input type="checkbox" id="zero4" class="zero" value="5 Seconds"> 5 Seconds 
     <p>
-        <button onclick="checkAllThree()"> I do not have a preference </button>
         <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
         <p> Select your desired Price:</p>
@@ -105,54 +102,21 @@
      <input type="checkbox" id="price4" class="price" value="80000"> $80,000 
      <input type="checkbox" id="price5" class="price" value="100000"> $100,000+ 
     <p>
-        <button onclick="checkAllFour()"> I do not have a preference </button>
-        <button onclick="getPriceValue()"> Find out which car matches your search</button>
+        <button id="button4" onclick="getPriceValue()"> Find out which car matches your search</button>
     </p>
     <p id="button4"></p>
     <script>
-    function checkAllOne() {
-        var selectAllRange = document.querySelectorAll('.range');
-         0; i < selectAllRange.length, i++) {
-            selectAllRange[i].checked = true;
+        function getRangeValue() {
+            document.getElementById("button1").innerHTML = "Tesla Roadster";
         }
-    }
-    function checkAllTwo() {
-        var selectAllSeating = document.querySelectorAll('.seating');
-         0; j < selectAllSeating.length, i++) {
-            selectAllSeating[j].checked = true;
+        function getSeatingValue() {
+            document.getElementById("button2").innerHTML = "Rivian R1S";
         }
-    }
-    function checkAllThree() {
-        var selectAllZero = document.querySelectorAll('.zero');
-         0; k < selectAllZero.length, i++) {
-            selectAllZero[k].checked = true; 
+        function getZeroValue(){
+            document.getElementById("button3").innerHTML = "NIO EC7";
         }
-    }
-    function checkAllFour() {
-        var selectAllPrice = document.querySelectorAll('.price');
-         0; l < selectAllPrice.length, i++) {
-            selectAllPrice[l].checked = true;
+        function getPriceValue(){
+            document.getElementById("button4").innerHTML = "Lucid Air Grand Touring";
         }
-    } 
-    function getRangeValue() {
-        var l1 = document.getElementById("range1");
-        var l2 = document.getElementById("range2");
-        var l3 = document.getElementById("range3");
-        var l4 = document.getElementById("range4");
-        if (l1.checked == true){
-            document.getElementById("range1").innerHTML = "Tesla Roadster";
-        }
-        else if (l2.checked == true){
-            document.getElementById("range2").innerHTML = "Rivian R1S";
-        }
-        else if (l3.checked == true){
-            document.getElementById("range3").innerHTML = "Lucid Air Grand Touring";
-        }
-        else if (l4.checked == true){
-            document.getElementById("range4").innerHTML = "NIO EC7";
-        }
-    }  
-
- </script>
-
+    </script>
 </body>
