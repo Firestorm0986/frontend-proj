@@ -253,8 +253,6 @@ img {
   
   function delete_car(car_id){
 
-    //Validate Password (must be 6-20 characters in len)
-    //verifyPassword("click");
     const body = {
         id: car_id,
 
@@ -262,19 +260,15 @@ img {
     const requestOptions = {
         method: 'DELETE',
         mode: 'cors',
-        credentials: 'omit',
+        body: JSON.stringify(body),
         headers: {
-            "content-type": "application/json",
+            'content-type': 'application/json',
             'Authorization': 'Bearer my-token',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',
-            'Access-Control-Allow-Methods': 'GET, HEAD, POST, PATCH, DELETE, OPTIONS'
         },
         body: JSON.stringify(body),
 
     };
 
-    // URL for Create API
     // Fetch API call to the database to create a new user
     fetch(delete_fetch, requestOptions)
       .then(response => {
@@ -290,7 +284,7 @@ img {
           return;
         }
         // response contains valid result
-        response.json().then(data => {
+          response.json().then(data => {
             console.log(data);
             //add a table row for the new/created userid
             add_row(data);
