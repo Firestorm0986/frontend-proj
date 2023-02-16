@@ -139,8 +139,8 @@
         var l2 = document.getElementById("range2");
         var l3 = document.getElementById("range3");
         var l4 = document.getElementById("range4");
-        var res = " ";
         if (l1.checked==true){
+            var rl1 = document.getElementById("range1").value;
             document.getElementById("range1").innerHTML = "Tesla Roadster";
         }
     }  
