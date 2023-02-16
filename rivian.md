@@ -106,7 +106,7 @@
     </p>
     <script>
         function priceCar() {
-            document.getElementById("button4").innerHTML = "Tesla Model 3"
+            document.getElementById("button4").outerHTML = "Tesla Model 3"
         }
     </script>
 
