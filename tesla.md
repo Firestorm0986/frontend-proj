@@ -152,7 +152,8 @@ img {
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
   const delete_fetch = url + '/delete';
-  const update_fetch = url + '/patch';
+  const update_fetch = url + '/update';
+
 
   // Load users on page entry
   read_cars();
@@ -163,7 +164,7 @@ img {
     // prepare fetch options
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
-      mode: 'no-cors', // no-cors, *cors, same-origin
+      mode: 'cors', // no-cors, *cors, same-origin
       cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
       credentials: 'omit', // include, *same-origin, omit
       headers: {
@@ -216,11 +217,12 @@ img {
     };
     const requestOptions = {
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
             'Authorization': 'Bearer my-token',
+            
         },
     };
     
@@ -259,14 +261,18 @@ img {
     };
     const requestOptions = {
         method: 'DELETE',
-        mode: 'no-cors',
-        body: JSON.stringify(body),
+        mode: 'same-origin',
+        credentials: 'same-origin',
         headers: {
             "content-type": "application/json",
             'Authorization': 'Bearer my-token',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',
+            'Access-Control-Allow-Methods': 'GET, HEAD, POST, PATCH, DELETE, OPTIONS'
         },
+        body: JSON.stringify(body),
+
     };
-    
 
     // URL for Create API
     // Fetch API call to the database to create a new user
@@ -300,11 +306,15 @@ img {
     };
     const requestOptions = {
         method: 'PATCH',
-        mode: 'no-cors',
+        mode: 'cors',
+        credentials: 'omit',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
             'Authorization': 'Bearer my-token',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',
+            'Access-Control-Allow-Methods': 'GET, HEAD, POST, PATCH, DELETE, OPTIONS'
         },
     };
     
