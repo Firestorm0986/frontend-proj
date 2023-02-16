@@ -72,7 +72,7 @@
 <p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
 
 <body>
-    <p> Select your desired range:</p>
+    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired range:</p>
      <input type="checkbox" id="range1" class="range" value="200 Miles"> 200 Miles 
      <input type="checkbox" id="range2" class="range" value="300 Miles"> 300 Miles 
      <input type="checkbox" id="range3" class="range" value="400 Miles"> 400 Miles 
@@ -80,14 +80,14 @@
     <p>
         <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
-    <p> Select your desired seating capacity:</p>
-     <input type="checkbox" id="seating1" class="seating" value="200 Miles"> 2 People 
-     <input type="checkbox" id="seating2" class="seating" value="300 Miles"> 5 People 
-     <input type="checkbox" id="seating3" class="seating" value="400 Miles"> 7 People 
+    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired seating:</p>
+     <input type="checkbox" id="seating1" class="seating" value="2 People"> 2 People 
+     <input type="checkbox" id="seating2" class="seating" value="5 People"> 5 People 
+     <input type="checkbox" id="seating3" class="seating" value="7 People"> 7 People 
     <p>
         <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
-    <p> Select your desired 0-60 time:</p>
+    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired 0-60 time:</p>
      <input type="checkbox" id="zero1" class="zero" value="2 Seconds"> 2 Seconds 
      <input type="checkbox" id="zero2" class="zero" value="3 Seconds"> 3 Seconds 
      <input type="checkbox" id="zero3" class="zero" value="4 Seconds"> 4 Seconds 
@@ -95,7 +95,7 @@
     <p>
         <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
-        <p> Select your desired Price:</p>
+    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired price:</p>
      <input type="checkbox" id="price1" class="price" value="40000"> $40,000 
      <input type="checkbox" id="price2" class="price" value="60000"> $60,000 
      <input type="checkbox" id="price3" class="price" value="70000"> $70,000 
@@ -121,3 +121,53 @@
         }
     </script>
 </body>
+<style>
+.range {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.seating {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.zero {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.price {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>
