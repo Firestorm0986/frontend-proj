@@ -72,35 +72,35 @@
 <p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
 
 <body>
-    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired range:</p>
-     <input type="checkbox" id="range1" class="range" value="200 Miles"> 200 Miles 
-     <input type="checkbox" id="range2" class="range" value="300 Miles"> 300 Miles 
-     <input type="checkbox" id="range3" class="range" value="400 Miles"> 400 Miles 
-     <input type="checkbox" id="range4" class="range" value="500 Miles"> 500 Miles 
+    <p style="text-align: center; font-size: 20px; color: blue;">Select your desired range:</p>
+     <input type="checkbox" style="text-align: center;" id="range1" class="range" value="200 Miles"> 200 Miles 
+     <input type="checkbox" style="text-align: center;" id="range2" class="range" value="300 Miles"> 300 Miles 
+     <input type="checkbox" style="text-align: center;" id="range3" class="range" value="400 Miles"> 400 Miles 
+     <input type="checkbox" style="text-align: center;" id="range4" class="range" value="500 Miles"> 500 Miles 
     <p>
         <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired seating:</p>
-     <input type="checkbox" id="seating1" class="seating" value="2 People"> 2 People 
-     <input type="checkbox" id="seating2" class="seating" value="5 People"> 5 People 
-     <input type="checkbox" id="seating3" class="seating" value="7 People"> 7 People 
+    <p style="text-align: center; font-size: 20px; color: blue;">Select your desired seating:</p>
+     <input type="checkbox" style="text-align: center;" id="seating1" class="seating" value="2 People"> 2 People 
+     <input type="checkbox" style="text-align: center;" id="seating2" class="seating" value="5 People"> 5 People 
+     <input type="checkbox" style="text-align: center;" id="seating3" class="seating" value="7 People"> 7 People 
     <p>
         <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired 0-60 time:</p>
-     <input type="checkbox" id="zero1" class="zero" value="2 Seconds"> 2 Seconds 
-     <input type="checkbox" id="zero2" class="zero" value="3 Seconds"> 3 Seconds 
-     <input type="checkbox" id="zero3" class="zero" value="4 Seconds"> 4 Seconds 
-     <input type="checkbox" id="zero4" class="zero" value="5 Seconds"> 5 Seconds 
+    <p style="text-align: center; font-size: 20px; color: blue;">Select your desired 0-60 time:</p>
+     <input type="checkbox" style="text-align: center;" id="zero1" class="zero" value="2 Seconds"> 2 Seconds 
+     <input type="checkbox" style="text-align: center;" id="zero2" class="zero" value="3 Seconds"> 3 Seconds 
+     <input type="checkbox" style="text-align: center;" id="zero3" class="zero" value="4 Seconds"> 4 Seconds 
+     <input type="checkbox" style="text-align: center;" id="zero4" class="zero" value="5 Seconds"> 5 Seconds 
     <p>
         <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired price:</p>
-     <input type="checkbox" id="price1" class="price" value="40000"> $40,000 
-     <input type="checkbox" id="price2" class="price" value="60000"> $60,000 
-     <input type="checkbox" id="price3" class="price" value="70000"> $70,000 
-     <input type="checkbox" id="price4" class="price" value="80000"> $80,000 
-     <input type="checkbox" id="price5" class="price" value="100000"> $100,000+ 
+    <p style="text-align: center; font-size: 20px; color: blue;">Select your desired price:</p>
+     <input type="checkbox" style="text-align: center;" id="price1" class="price" value="40000"> $40,000 
+     <input type="checkbox" style="text-align: center;" id="price2" class="price" value="60000"> $60,000 
+     <input type="checkbox" style="text-align: center;" id="price3" class="price" value="70000"> $70,000 
+     <input type="checkbox" style="text-align: center;" id="price4" class="price" value="80000"> $80,000 
+     <input type="checkbox" style="text-align: center;" id="price5" class="price" value="100000"> $100,000+ 
     <p>
         <button id="button4" onclick="getPriceValue()"> Find out which car matches your search</button>
     </p>
@@ -125,7 +125,7 @@
 .range {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-center: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -137,7 +137,7 @@
 .seating {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-center: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -149,7 +149,7 @@
 .zero {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-center: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -161,7 +161,7 @@
 .price {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-center: 35px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
