@@ -105,18 +105,19 @@
         <button id="button4" onclick="getPriceValue()"> Find out which car matches your search</button>
     </p>
     <p id="button4"></p>
+    <button id="save" onclick="window.location.reload()"> Save All Changes</button>
     <script>
         function getRangeValue() {
-            document.getElementById("button1").innerHTML = "Tesla Roadster";
+            document.getElementById("button1").outerHTML = "Tesla Roadster";
         }
         function getSeatingValue() {
-            document.getElementById("button2").innerHTML = "Rivian R1S";
+            document.getElementById("button2").outerHTML = "Rivian R1S";
         }
         function getZeroValue(){
-            document.getElementById("button3").innerHTML = "NIO EC7";
+            document.getElementById("button3").outerHTML = "NIO EC7";
         }
         function getPriceValue(){
-            document.getElementById("button4").innerHTML = "Lucid Air Grand Touring";
+            document.getElementById("button4").outerHTML = "Lucid Air Grand Touring";
         }
     </script>
 </body>
