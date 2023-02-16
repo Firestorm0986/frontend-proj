@@ -4,6 +4,41 @@ layout: default
 permalink: /info/charge
 type: pbl
 ---
+<div class = "secondary">
+<button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Generate a Fact </button>
+</div>
+<table class = "readtable">
+  <thead>
+  <tr>
+    <th>Car Fact</th>
+    <th>industry fact</th>
+    <th>id</th>
+
+  </tr>
+  </thead>
+  <tbody id="result">
+    <!-- javascript generated data -->
+  </tbody>
+</table>
+
+
+<p class = "form-tell">Add Your Own Fact</p>
+
+<div class = "form-box">
+  <form action="javascript:create_user()" class = "createForm">
+      <p><label class = "form-label">
+          Car Fact:
+          <input class = "input-boxes" type="text" industry="car" id="car" required>
+      </label></p>
+      <p><label class = "form-label">
+          industry fact:
+          <input class = "input-boxes" type="text" industry="industry" id="industry" required>
+      </label></p>
+      <p>
+          <button class = "form-button">Create</button>
+      </p>
+  </form>
+</div>
 
 <script>
   // prepare HTML result container for new output
