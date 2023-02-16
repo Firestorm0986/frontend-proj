@@ -333,7 +333,7 @@
 <p class = "form-tell">Add Your Own Fact</p>
 
 <div class = "form-box">
-  <form action="javascript:create_user()" class = "createForm">
+  <form action="javascript:create_fact()" class = "createForm">
       <p><label class = "form-label">
           Car Fact:
           <input class = "input-boxes" type="text" industry="car" id="car" required>
@@ -475,7 +475,7 @@
   }
 
 
-  function create_user(){
+  function create_fact(){
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
     const body = {
@@ -509,6 +509,41 @@
         // response contains valid result
     })
   }
+
+  function delete_fact(){
+  //Validate Password (must be 6-20 characters in len)
+  //verifyPassword("click");
+  const body = {
+      car: document.getElementById("car").value,
+      industry: document.getElementById("industry").value,
+  };
+  const requestOptions = {
+      method: 'DELETE',
+      body: JSON.stringify(body),
+      headers: {
+          "content-type": "application/json",
+          'Authorization': 'Bearer my-token',
+      },
+  };
+
+  // URL for Create API
+  // Fetch API call to the database to create a new user
+  fetch(create_fetch, requestOptions)
+    .then(response => {
+      // trap error response from Web API
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = errorMsg;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+        return;
+      }
+      // response contains valid result
+  })
+  }
   /// New for slideshow
 
   let slideIndex = 0;
@@ -530,4 +565,9 @@
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
+
+
+
+
+
 </script>
