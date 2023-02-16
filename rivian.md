@@ -73,37 +73,37 @@
 
 <body>
     <p> Select your desired range:</p>
-     <input type="checkbox" id="range1" class="range" value="200 Miles"> 200 Miles </label>
-     <input type="checkbox" id="range2" class="range" value="300 Miles"> 300 Miles </label>
-     <input type="checkbox" id="range3" class="range" value="400 Miles"> 400 Miles </label>
-     <input type="checkbox" id="range4" class="range" value="500 Miles"> 500 Miles </label>
+     <input type="checkbox" id="range1" class="range" value="200 Miles"> 200 Miles 
+     <input type="checkbox" id="range2" class="range" value="300 Miles"> 300 Miles 
+     <input type="checkbox" id="range3" class="range" value="400 Miles"> 400 Miles 
+     <input type="checkbox" id="range4" class="range" value="500 Miles"> 500 Miles 
     <p>
         <button onclick="checkAllOne()"> I do not have a preference </button>
         <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
     <p> Select your desired seating capacity:</p>
-     <input type="checkbox" id="seating1" class="seating" value="200 Miles"> 2 People </label>
-     <input type="checkbox" id="seating2" class="seating" value="300 Miles"> 5 People </label>
-     <input type="checkbox" id="seating3" class="seating" value="400 Miles"> 7 People </label>
+     <input type="checkbox" id="seating1" class="seating" value="200 Miles"> 2 People 
+     <input type="checkbox" id="seating2" class="seating" value="300 Miles"> 5 People 
+     <input type="checkbox" id="seating3" class="seating" value="400 Miles"> 7 People 
     <p>
         <button onclick="checkAllTwo()"> I do not have a preference </button>
         <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
     <p> Select your desired 0-60 time:</p>
-     <input type="checkbox" id="zero1" class="zero" value="2 Seconds"> 2 Seconds </label>
-     <input type="checkbox" id="zero2" class="zero" value="3 Seconds"> 3 Seconds </label>
-     <input type="checkbox" id="zero3" class="zero" value="4 Seconds"> 4 Seconds </label>
-     <input type="checkbox" id="zero4" class="zero" value="5 Seconds"> 5 Seconds </label>
+     <input type="checkbox" id="zero1" class="zero" value="2 Seconds"> 2 Seconds 
+     <input type="checkbox" id="zero2" class="zero" value="3 Seconds"> 3 Seconds 
+     <input type="checkbox" id="zero3" class="zero" value="4 Seconds"> 4 Seconds 
+     <input type="checkbox" id="zero4" class="zero" value="5 Seconds"> 5 Seconds 
     <p>
         <button onclick="checkAllThree()"> I do not have a preference </button>
         <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
         <p> Select your desired Price:</p>
-     <input type="checkbox" id="price1" class="price" value="40000"> $40,000 </label>
-     <input type="checkbox" id="price2" class="price" value="60000"> $60,000 </label>
-     <input type="checkbox" id="price3" class="price" value="70000"> $70,000 </label>
-     <input type="checkbox" id="price4" class="price" value="80000"> $80,000 </label>
-     <input type="checkbox" id="price5" class="price" value="100000"> $100,000+ </label>
+     <input type="checkbox" id="price1" class="price" value="40000"> $40,000 
+     <input type="checkbox" id="price2" class="price" value="60000"> $60,000 
+     <input type="checkbox" id="price3" class="price" value="70000"> $70,000 
+     <input type="checkbox" id="price4" class="price" value="80000"> $80,000 
+     <input type="checkbox" id="price5" class="price" value="100000"> $100,000+ 
     <p>
         <button onclick="checkAllFour()"> I do not have a preference </button>
         <button onclick="getPriceValue()"> Find out which car matches your search</button>
