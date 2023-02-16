@@ -26,6 +26,7 @@ type: pbl
   <div class="grid-cell"></div>
 </div>
 <img id="draggableImage" src="https://firestorm0986.github.io/frontend-proj/images/lucidcar.webp" draggable="true" style="display: none;">
+<a id="Info" style="font-size: 40px; color: lightblue; display:inline-block; width:100%; display: none;" href="{{site.baseurl}}/info/charge">Get information about charging times</a>
 <div id="question" style="display: none;">
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
   <br>
@@ -152,6 +153,8 @@ parkHere.addEventListener("drop", function(event) {
     scoreText.textContent = "You scored: " + score + " points";
     submitButton.parentNode.insertBefore(scoreText, submitButton.nextSibling);
     submitButton.style.display = "none";
+    const Info = document.getElementById("Info");
+    Info.style.display = "block";
   });
 </script>
 </div>
