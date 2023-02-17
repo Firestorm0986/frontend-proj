@@ -106,7 +106,6 @@ type: pbl
     tr.appendChild(car);
     tr.appendChild(chargetime);
     
-    tr.appendChild(id);
     
 
     resultContainer.appendChild(tr);
