@@ -90,26 +90,22 @@ type: pbl
       resultContainer.appendChild(tr);
     });
   }
-  function add_row(data) {
+function add_row(data) {
     const tr = document.createElement("tr");
     const car = document.createElement("td");
     const chargetime = document.createElement("td");
-    
+
     const id = document.createElement("td");
     car.innerHTML = data.car; 
     chargetime.innerHTML = data.chargetime; 
       
-    id.innerHTML = data.id; 
-    
-
 
     tr.appendChild(car);
     tr.appendChild(chargetime);
-    
-    
 
     resultContainer.appendChild(tr);
-  }
+}
+
 
   function create_fact(){
     const body = {
