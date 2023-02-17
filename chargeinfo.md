@@ -12,10 +12,8 @@ type: pbl
   <tr>
     <th>Car</th>
     <th>Charge Times</th>
-
   </tr>
   </thead>
-  <tbody id="result">
   </tbody>
 </table>
 
