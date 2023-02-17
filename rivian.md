@@ -12,7 +12,7 @@
 
 >>>> ## Rivian R1S
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.png" style="width:100%" n">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.jpg" style="width:100%" n">
 </html>
 
 >>>> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
