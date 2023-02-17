@@ -34,8 +34,6 @@ type: pbl
   <br>
   <input type="number" id="input" name="input" style="margin-bottom: 20px;">
   <br>
-  <button type="submit" id="resetButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 20px auto 0;">Reset</button>
-  <br>
    <button type="submit" id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 20px auto 0;">Submit</button>
    <br>
   <a id="Info" style="font-size: 40px; color: lightblue; display:inline-block; width:100%; display: none;" href="{{site.baseurl}}/info/charge">Get information about charging times</a>
@@ -158,19 +156,8 @@ parkHere.addEventListener("drop", function(event) {
     submitButton.style.display = "none";
     const Info = document.getElementById("Info");
     Info.style.display = "block";
-    resetButton.style.display = "block";
   });
 
-  const playButton = document.getElementById("resetButton");
-
-  resetButton.addEventListener("click", function(event) {
-    gridContainer.style.display = "grid";
-    draggableImage.style.display = "none";
-    submitButton.style.display = "block";
-    Info.style.display = "none";
-    resetButton.style.display = "none";
-    scoreText.style.display = "none";
-  });
 
 </script>
 </div>

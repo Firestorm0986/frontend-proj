@@ -4,9 +4,6 @@ layout: default
 permalink: /info/charge
 type: pbl
 ---
-<div class = "secondary">
-<button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Show The Different Charging Times for Electric Cars</button>
-</div>
 <table class = "readtable">
   <thead>
   <tr>
@@ -17,9 +14,17 @@ type: pbl
   <tbody id="result">
   </tbody>
 </table>
+<div class = "secondary">
+<button id = "read_button" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 40px auto 0;" type = "button" onclick="read_users()"  class = "read-button"> Show Different Charging Times for Electric Cars</button>
+</div>
 
+<style>
+.readtable {
+  background-color: #e0ffe0;
+}
+</style>
 
-<p class = "form-tell">Let us know if you drive an electric car!</p>
+<p style="text-align: center; font-size: 25px; color: blue; display: none; margin: 30px auto 0;" class = "form-tell">Let us know if you drive an electric car!</p>
 
 <div class = "form-box">
   <form action="javascript:create_user()" class = "createForm">
@@ -32,7 +37,7 @@ type: pbl
           <input class = "input-boxes" type="text" chargetime="chargetime" id="chargetime" required>
       </label></p>
       <p>
-          <button class = "form-button">Submit</button>
+          <button style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 20px auto 0;" class = "form-button">Submit</button>
       </p>
   </form>
 </div>
