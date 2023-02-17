@@ -4,6 +4,10 @@ layout: default
 permalink: /info/charge
 type: pbl
 ---
+<div class = "secondary">
+<button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Show The Different Charging Times for Electric Cars</button>
+</div>
+
 <table class = "readtable">
   <thead>
   <tr>
@@ -14,9 +18,6 @@ type: pbl
   <tbody id="result">
   </tbody>
 </table>
-<div class = "secondary">
-<button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Show The Different Charging Times for Electric Cars</button>
-</div>
 
 <style>
 .readtable {
