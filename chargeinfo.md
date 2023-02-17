@@ -12,7 +12,6 @@ type: pbl
   <tr>
     <th>Car</th>
     <th>Charge Times</th>
-    <th>ID</th>
 
   </tr>
   </thead>
