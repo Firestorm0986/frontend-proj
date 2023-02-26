@@ -1,7 +1,7 @@
 ---
-title: Game Charging Info
+title: Game Charging Infotest
 layout: default 
-permalink: /info/charge
+permalink: /info/chargetest
 type: pbl
 ---
 <div class = "secondary">
