@@ -50,41 +50,35 @@ type: pbl
     const read_fetch = url + '/';
     const read_button = document.getElementById("read_button");
     function read_users() {
-      const read_options = {
-      method: 'GET', 
-      mode: 'cors', 
-      cache: 'default', 
-      credentials: 'omit', 
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    };
-    fetch(read_fetch, read_options)
-   
-      .then(response => {
-
-        if (response.status !== 200) {
-            const errorMsg = 'Database read error: ' + response.status;
-            console.log(errorMsg);
-            const tr = document.createElement("tr");
-            const td = document.createElement("td");
-            td.innerHTML = errorMsg;
-            tr.appendChild(td);
-            resultContainer.appendChild(tr);
-            return;
+  const read_options = {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'default',
+    credentials: 'omit',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  };
+  fetch(read_fetch, read_options)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database read error: ' + response.status;
+        console.log(errorMsg);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = errorMsg;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+        return;
+      }
+      response.json().then(data => {
+        console.log(data);
+        resultContainer.innerHTML = ''; // Clear the table
+        for (let row in data) {
+          console.log(data[row]);
+          add_row(data[row]);
         }
- 
-        response.json().then(data => {
-            console.log(data);
-            length = data.length;
-            number = Math.floor(Math.random() * length );
-            for (let row in data) {
-              console.log(data[row]);
-              
-              add_row(data[number]);
-              break;
-            }
-        })
+      })
     })
     .catch(err => {
       console.error(err);
@@ -94,7 +88,8 @@ type: pbl
       tr.appendChild(td);
       resultContainer.appendChild(tr);
     });
-  }
+}
+
 function add_row(data) {
     const tr = document.createElement("tr");
     const car = document.createElement("td");
