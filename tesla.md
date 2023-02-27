@@ -252,46 +252,18 @@ img {
   }
   
   function delete_car(car_id){
-
     const body = {
         id: car_id,
 
     };
 
-    fetch(url, {
-      method: 'DELETE',
-    })
-      .then((response) => response.json())
-      response.json().then(data => {
-        console.log(data);
-        add_row(data);
-      })
-  };
-  const clearCars = async () => {
-	const list = await fetch(url, {
-		method: "DELETE",
-	}).then((r) => r.json());
-  };
-
-const removecar = async () => {
-	const todo = await fetch(url, {
-		method: "DELETE",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({ id:1 }),
-	}).then((r) => r.json());
-
-
-  };
-
-    /*const requestOptions = {
+    const requestOptions = {
         method: 'DELETE',
         mode: 'cors',
         body: JSON.stringify(body),
         headers: {
             'content-type': 'application/json',
-            'Authorization': 'Bearer my-token',
+            //'Authorization': 'Bearer my-token',
         },
         body: JSON.stringify(body),
 
@@ -317,7 +289,8 @@ const removecar = async () => {
             //add a table row for the new/created userid
             add_row(data);
         })
-    })*/
+    })
+  };
 
   function like_car(car_id, num_like) {
     const body = {
@@ -326,7 +299,7 @@ const removecar = async () => {
 
     };
     const requestOptions = {
-        method: 'PATCH',
+        method: 'PUT',
         mode: 'cors',
         credentials: 'omit',
         body: JSON.stringify(body),
@@ -397,4 +370,27 @@ const removecar = async () => {
     //resultContainer.appendChild(td);
     resultContainer.appendChild(tr);
   }
+
+(function(){
+  const t = document.createElement("link").relList;
+  if(t&&t.supports&&t.supports("modulepreload"))return;
+  for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);
+  new MutationObserver(e=>{for(const d of e)if(d.type==="childList")for(const r of d.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&s(r)}).observe(document,{childList:!0,subtree:!0});
+  function n(e){const d={};
+  return e.integrity&&(d.integrity=e.integrity),e.referrerpolicy&&(d.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?d.credentials="include":e.crossorigin==="anonymous"?d.credentials="omit":d.credentials="same-origin",d}function s(e){if(e.ep)return;
+  e.ep=!0;
+  const d=n(e);
+  fetch(e.href,d)}})();
+  const m=Boolean(window.location.hostname==="localhost"||window.location.hostname==="[::1]"||window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)),c=m?"http://localhost:8199":"https://saakd.nighthawkcodingsociety.com",u=document.getElementById("addTodo"),l=document.getElementById("todos"),p=document.getElementById("clear"),h=document.getElementById("todo");
+  let i=[];
+  const f=async()=>{i=await fetch(c+"/todoList").then(t=>t.json())},a=()=>{l.innerHTML="",i.forEach(o=>{const t=document.createElement("div"),n=document.createElement("p"),s=document.createElement("button"),e=document.createElement("div");
+  e.classList.add("todoCheckbox"),t.classList.add("todoDiv"),n.innerHTML=o.text,o.completed&&t.classList.add("todoComplete"),n.style.cursor="pointer",s.innerHTML="&#10005;",s.addEventListener("click",()=>{prompt("Are you sure you would like to remove this todo? [y/N]")==="y"&&g(o.id)}),e.addEventListener("click",()=>L(o.id)),l.appendChild(t),t.appendChild(e),t.appendChild(n),t.appendChild(s)})},y=async o=>{const t=await fetch(c+"/todo",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:o})}).then(n=>n.json());
+  i.push(t),a()},
+  g=async o=>{const t=await fetch(c+"/todo",{method:"DELETE",headers:{"Content-Type":"application/json"},body:JSON.stringify({id:o})}).then(n=>n.json());
+  i=i.filter(n=>n.id!==t.id),a()},L=async o=>{const t=await fetch(c+"/todo",{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({id:o})}).then(s=>s.json()),n=i.findIndex(s=>s.id===t.id);i[n].completed=t.completed,a()},E=async()=>{i=await fetch(c+"/todoList",{method:"DELETE"}).then(t=>t.json()),a()},w=async()=>{await f(),a()};u.addEventListener("submit",o=>{o.preventDefault(),o.stopImmediatePropagation();
+  const n=new FormData(o.target).get("todo");
+  n&&(y(n.toString()),h.value="")});
+  p.addEventListener("click",E);
+  w();
+
 </script>
