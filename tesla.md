@@ -263,7 +263,7 @@ img {
         body: JSON.stringify(body),
         headers: {
             'content-type': 'application/json',
-            //'Authorization': 'Bearer my-token',
+            'Authorization': 'Bearer my-token',
         },
         body: JSON.stringify(body),
 
@@ -283,12 +283,6 @@ img {
           resultContainer.appendChild(tr);
           return;
         }
-        // response contains valid result
-          response.json().then(data => {
-            console.log(data);
-            //add a table row for the new/created userid
-            add_row(data);
-        })
     })
   };
 
@@ -371,7 +365,7 @@ img {
     resultContainer.appendChild(tr);
   }
 
-(function(){
+/*(function(){
   const t = document.createElement("link").relList;
   if(t&&t.supports&&t.supports("modulepreload"))return;
   for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);
@@ -392,5 +386,6 @@ img {
   n&&(y(n.toString()),h.value="")});
   p.addEventListener("click",E);
   w();
+*/
 
 </script>
