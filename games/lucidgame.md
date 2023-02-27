@@ -89,51 +89,22 @@ parkHere.addEventListener("drop", function(event) {
   event.target.appendChild(document.getElementById(data));
   question.style.display = "block";
   const percentage_list = [
-    {"00": "588"},
-    {"10": "529"},
-    {"20": "471"},
-    {"30": "412"},
-    {"40": "353"},
-    {"50": "294"},
-    {"60": "235"},
-    {"70": "176"},
-    {"80": "118"},
-    {"90": "59"}
-  ];
-  const randomIndex = Math.floor(Math.random() * percentage_list.length);
-  const randomKey = Object.keys(percentage_list[randomIndex])[0];
-  let randomPercentage;
-  if (randomKey === "00") {
-    randomPercentage = "0";
-    ans = 588;
-  } else if (randomKey === "10") {
-    randomPercentage = randomKey;
-    ans = 529;
-  } else if (randomKey === "20") {
-    randomPercentage = randomKey;
-    ans = 471;
-  } else if (randomKey === "30") {
-    randomPercentage = randomKey;
-    ans = 412;
-  } else if (randomKey === "40") {
-    randomPercentage = randomKey;
-    ans = 353;
-  } else if (randomKey === "50") {
-    randomPercentage = randomKey;
-    ans = 294;
-  } else if (randomKey === "60") {
-    randomPercentage = randomKey;
-    ans = 235;
-  } else if (randomKey === "70") {
-    randomPercentage = randomKey;
-    ans = 176;
-  } else if (randomKey === "80") {
-    randomPercentage = randomKey;
-    ans = 118;
-  } else if (randomKey === "90") {
-    randomPercentage = randomKey;
-    ans = 50;
-  }
+  {"00": "588"},
+  {"10": "529"},
+  {"20": "471"},
+  {"30": "412"},
+  {"40": "353"},
+  {"50": "294"},
+  {"60": "235"},
+  {"70": "176"},
+  {"80": "118"},
+  {"90": "59"}
+];
+const randomIndex = Math.floor(Math.random() * percentage_list.length);
+const randomKey = Object.keys(percentage_list[randomIndex])[0];
+const randomPercentage = randomKey;
+const ans = parseInt(percentage_list[randomIndex][randomKey]);
+
   const message = document.createElement("p");
   message.textContent = "The car is at " + randomPercentage + "%";
   question.insertBefore(message, question.firstChild);
