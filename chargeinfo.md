@@ -28,7 +28,7 @@ type: pbl
 <p class = "form-tell">Let us know if you drive an electric car!</p>
 
 <div class = "form-box">
-  <form action="javascript:create_user()" class = "createForm">
+  <form action="javascript:create_charge()" class = "createForm">
       <p><label class = "form-label">
           Car:
           <input class = "input-boxes" type="text" chargetime="car" id="car" required>
@@ -50,30 +50,30 @@ type: pbl
     const read_fetch = url + '/';
     const read_button = document.getElementById("read_button");
     function read_users() {
-  const read_options = {
-    method: 'GET',
-    mode: 'cors',
-    cache: 'default',
-    credentials: 'omit',
-    headers: {
+      const read_options = {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default',
+        credentials: 'omit',
+        headers: {
       'Content-Type': 'application/json'
-    },
-  };
-  fetch(read_fetch, read_options)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database read error: ' + response.status;
-        console.log(errorMsg);
-        const tr = document.createElement("tr");
-        const td = document.createElement("td");
-        td.innerHTML = errorMsg;
-        tr.appendChild(td);
-        resultContainer.appendChild(tr);
-        return;
-      }
+      },
+    };
+    fetch(read_fetch, read_options)
+      .then(response => {
+        if (response.status !== 200) {
+          const errorMsg = 'Database read error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
       response.json().then(data => {
         console.log(data);
-        resultContainer.innerHTML = ''; // Clear the table
+        resultContainer.innerHTML = ''; 
         for (let row in data) {
           console.log(data[row]);
           add_row(data[row]);
@@ -107,7 +107,7 @@ function add_row(data) {
 }
 
 
-  function create_fact(){
+  function create_charge(){
     const body = {
         car: document.getElementById("car").value,
         chargetime: document.getElementById("chargetime").value,
@@ -150,7 +150,7 @@ function add_row(data) {
           'Authorization': 'Bearer my-token',
       },
   };
-  // URL for Create API
+
   fetch(create_fetch, requestOptions)
     .then(response => {
       if (response.status !== 200) {
@@ -165,7 +165,5 @@ function add_row(data) {
       }
   })
   }
-  let slideIndex = 0;
-  showSlides();
 
 </script>
