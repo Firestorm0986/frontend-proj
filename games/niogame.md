@@ -102,42 +102,12 @@ parkHere.addEventListener("drop", function(event) {
   ];
   const randomIndex = Math.floor(Math.random() * percentage_list.length);
   const randomKey = Object.keys(percentage_list[randomIndex])[0];
-  let randomPercentage;
-  if (randomKey === "00") {
-    randomPercentage = "0";
-    ans = 625;
-  } else if (randomKey === "10") {
-    randomPercentage = randomKey;
-    ans = 563;
-  } else if (randomKey === "20") {
-    randomPercentage = randomKey;
-    ans = 500;
-  } else if (randomKey === "30") {
-    randomPercentage = randomKey;
-    ans = 438;
-  } else if (randomKey === "40") {
-    randomPercentage = randomKey;
-    ans = 375;
-  } else if (randomKey === "50") {
-    randomPercentage = randomKey;
-    ans = 313;
-  } else if (randomKey === "60") {
-    randomPercentage = randomKey;
-    ans = 250;
-  } else if (randomKey === "70") {
-    randomPercentage = randomKey;
-    ans = 188;
-  } else if (randomKey === "80") {
-    randomPercentage = randomKey;
-    ans = 125;
-  } else if (randomKey === "90") {
-    randomPercentage = randomKey;
-    ans = 63;
-  }
+  const randomPercentage = randomKey;
+  const ans = parseInt(percentage_list[randomIndex][randomKey]);
+
   const message = document.createElement("p");
   message.textContent = "The car is at " + randomPercentage + "%";
   question.insertBefore(message, question.firstChild);
-  });
 
   const submitButton = document.getElementById("submitButton");
   submitButton.style.display = "block";
@@ -157,6 +127,6 @@ parkHere.addEventListener("drop", function(event) {
     const Info = document.getElementById("Info");
     Info.style.display = "block";
   });
+});
 </script>
 </div>
-
