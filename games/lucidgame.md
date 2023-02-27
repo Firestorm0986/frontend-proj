@@ -89,47 +89,46 @@ parkHere.addEventListener("drop", function(event) {
   event.target.appendChild(document.getElementById(data));
   question.style.display = "block";
   const percentage_list = [
-  {"00": "588"},
-  {"10": "529"},
-  {"20": "471"},
-  {"30": "412"},
-  {"40": "353"},
-  {"50": "294"},
-  {"60": "235"},
-  {"70": "176"},
-  {"80": "118"},
-  {"90": "59"}
-];
+    {"00": "588"},
+    {"10": "529"},
+    {"20": "471"},
+    {"30": "412"},
+    {"40": "353"},
+    {"50": "294"},
+    {"60": "235"},
+    {"70": "176"},
+    {"80": "118"},
+    {"90": "59"}
+  ];
+
+  const randomIndex = Math.floor(Math.random() * percentage_list.length);
+  const randomKey = Object.keys(percentage_list[randomIndex])[0];
+  const randomPercentage = randomKey;
+  const ans = parseInt(percentage_list[randomIndex][randomKey]);
+
+  const message = document.createElement("p");
+  message.textContent = "The car is at " + randomPercentage + "%";
+  question.insertBefore(message, question.firstChild);
+
+  const submitButton = document.getElementById("submitButton");
+  submitButton.style.display = "block";
+  submitButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    const input = parseInt(document.getElementById("input").value);
+    if (isNaN(input)) {
+      alert("Please enter a valid number.");
+      message.textContent = "Please enter a number";
+      return;
+    }
+    const score = 1000 - Math.abs(ans - input);
+    const scoreText = document.createElement("p");
+    scoreText.textContent = "You scored: " + score + " points, the best score you can get is 1000";
+    submitButton.parentNode.insertBefore(scoreText, submitButton.nextSibling);
+    submitButton.style.display = "none";
+    const Info = document.getElementById("Info");
+    Info.style.display = "block";
+  });
 });
-
-const randomIndex = Math.floor(Math.random() * percentage_list.length);
-const randomKey = Object.keys(percentage_list[randomIndex])[0];
-const randomPercentage = randomKey;
-const ans = parseInt(percentage_list[randomIndex][randomKey]);
-
-const message = document.createElement("p");
-message.textContent = "The car is at " + randomPercentage + "%";
-question.insertBefore(message, question.firstChild);
-
-const submitButton = document.getElementById("submitButton");
-submitButton.style.display = "block";
-submitButton.addEventListener("click", function(event) {
-  event.preventDefault();
-  const input = parseInt(document.getElementById("input").value);
-  if (isNaN(input)) {
-    alert("Please enter a valid number.");
-    message.textContent = "Please enter a number";
-    return;
-  }
-  const score = 1000 - Math.abs(ans - input);
-  const scoreText = document.createElement("p");
-  scoreText.textContent = "You scored: " + score + " points, the best score you can get is 1000";
-  submitButton.parentNode.insertBefore(scoreText, submitButton.nextSibling);
-  submitButton.style.display = "none";
-  const Info = document.getElementById("Info");
-  Info.style.display = "block";
-});
-
 </script>
 </div>
 
