@@ -34,8 +34,8 @@ type: pbl
   <br>
   <input type="number" id="input" name="input" style="margin-bottom: 20px;">
   <br>
-  <button type="submit" id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 20px auto 0;">Submit</button>
-  <br>
+   <button type="submit" id="submitButton" style="text-align: center; font-size: 25px; color: lightblue; display: none; margin: 20px auto 0;">Submit</button>
+   <br>
   <a id="Info" style="font-size: 40px; color: lightblue; display:inline-block; width:100%; display: none;" href="{{site.baseurl}}/info/charge">Get information about charging times</a>
 </form>
 </div>
@@ -100,44 +100,15 @@ parkHere.addEventListener("drop", function(event) {
     {"80": "118"},
     {"90": "59"}
   ];
+
   const randomIndex = Math.floor(Math.random() * percentage_list.length);
   const randomKey = Object.keys(percentage_list[randomIndex])[0];
-  let randomPercentage;
-  if (randomKey === "00") {
-    randomPercentage = "0";
-    ans = 588;
-  } else if (randomKey === "10") {
-    randomPercentage = randomKey;
-    ans = 529;
-  } else if (randomKey === "20") {
-    randomPercentage = randomKey;
-    ans = 471;
-  } else if (randomKey === "30") {
-    randomPercentage = randomKey;
-    ans = 412;
-  } else if (randomKey === "40") {
-    randomPercentage = randomKey;
-    ans = 353;
-  } else if (randomKey === "50") {
-    randomPercentage = randomKey;
-    ans = 294;
-  } else if (randomKey === "60") {
-    randomPercentage = randomKey;
-    ans = 235;
-  } else if (randomKey === "70") {
-    randomPercentage = randomKey;
-    ans = 176;
-  } else if (randomKey === "80") {
-    randomPercentage = randomKey;
-    ans = 118;
-  } else if (randomKey === "90") {
-    randomPercentage = randomKey;
-    ans = 50;
-  }
+  const randomPercentage = randomKey;
+  const ans = parseInt(percentage_list[randomIndex][randomKey]);
+
   const message = document.createElement("p");
   message.textContent = "The car is at " + randomPercentage + "%";
   question.insertBefore(message, question.firstChild);
-  });
 
   const submitButton = document.getElementById("submitButton");
   submitButton.style.display = "block";
@@ -151,12 +122,13 @@ parkHere.addEventListener("drop", function(event) {
     }
     const score = 1000 - Math.abs(ans - input);
     const scoreText = document.createElement("p");
-    scoreText.textContent = "You scored: " + score + " points";
+    scoreText.textContent = "You scored: " + score + " points, the best score you can get is 1000";
     submitButton.parentNode.insertBefore(scoreText, submitButton.nextSibling);
     submitButton.style.display = "none";
     const Info = document.getElementById("Info");
     Info.style.display = "block";
   });
+});
 </script>
 </div>
 

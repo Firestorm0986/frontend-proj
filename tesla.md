@@ -257,7 +257,35 @@ img {
         id: car_id,
 
     };
-    const requestOptions = {
+
+    fetch(url, {
+      method: 'DELETE',
+    })
+      .then((response) => response.json())
+      response.json().then(data => {
+        console.log(data);
+        add_row(data);
+      })
+  };
+  const clearCars = async () => {
+	const list = await fetch(url, {
+		method: "DELETE",
+	}).then((r) => r.json());
+  };
+
+const removecar = async () => {
+	const todo = await fetch(url, {
+		method: "DELETE",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({ id:1 }),
+	}).then((r) => r.json());
+
+
+  };
+
+    /*const requestOptions = {
         method: 'DELETE',
         mode: 'cors',
         body: JSON.stringify(body),
@@ -289,8 +317,7 @@ img {
             //add a table row for the new/created userid
             add_row(data);
         })
-    })
-  }
+    })*/
 
   function like_car(car_id, num_like) {
     const body = {
@@ -306,9 +333,7 @@ img {
         headers: {
             "content-type": "application/json",
             'Authorization': 'Bearer my-token',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Z-Key',
-            'Access-Control-Allow-Methods': 'GET, HEAD, POST, PATCH, DELETE, OPTIONS'
+            
         },
     };
     

@@ -1,7 +1,7 @@
 ---
-title: Game Charging Info
+title: Game Charging Infotest
 layout: default 
-permalink: /info/charge
+permalink: /info/chargetest
 type: pbl
 ---
 <div class = "secondary">
@@ -49,7 +49,6 @@ type: pbl
     const create_fetch = url + '/create';
     const read_fetch = url + '/';
     const read_button = document.getElementById("read_button");
-    // READ
     function read_users() {
       const read_options = {
         method: 'GET',
@@ -73,8 +72,10 @@ type: pbl
           return;
         }
       response.json().then(data => {
+        console.log(data);
         resultContainer.innerHTML = ''; 
         for (let row in data) {
+          console.log(data[row]);
           add_row(data[row]);
         }
       })
@@ -105,7 +106,7 @@ function add_row(data) {
     resultContainer.appendChild(tr);
 }
 
-// CREATE
+
   function create_charge(){
     const body = {
         car: document.getElementById("car").value,
@@ -134,8 +135,6 @@ function add_row(data) {
         }
     })
   }
-
-// DELETE
 
   function delete_fact(){
 

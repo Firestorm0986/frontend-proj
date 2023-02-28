@@ -1,5 +1,5 @@
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/rivianlogo.png" alt="rivianlogo.png" style="width:100%" n">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/rivianlogo.png" alt="rivianlogo.png" style="width:100%">
 </html>
 
 >>>> # Rivian
@@ -12,7 +12,7 @@
 
 >>>> ## Rivian R1S
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.png" style="width:100%" n">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.jpg" style="width:100%">
 </html>
 
 >>>> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
@@ -22,7 +22,7 @@
 
 >>>> ## Rivian R1T
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/r1t.jpg" alt="r1t.jpg" style="width:100%" n">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/r1t.jpg" alt="r1t.jpg" style="width:100%">
 </html>
 
 >>>> The Rivian R1T is Rivian's all-electric luxury pickup truck. The R1T has two rows of seats of 5 passengers. Depending on the motor and wheels, the range is anywhere between 260 and 400 miles. It takes up to 13 hours to charge at 220 Volts. The R1T can tow up to 11,000 pounds, and can accelerate from 0-60 in up to three seconds. It sports an All-Wheel-Drive drivetrain.
