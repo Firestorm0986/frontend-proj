@@ -73,10 +73,8 @@ type: pbl
           return;
         }
       response.json().then(data => {
-        console.log(data);
         resultContainer.innerHTML = ''; 
         for (let row in data) {
-          console.log(data[row]);
           add_row(data[row]);
         }
       })
