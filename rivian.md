@@ -67,40 +67,44 @@
         <td>$73,000</td>
     </tr>
 </table>
+
+<!--- code for the car builder -->
     
-<p style="text-align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
-<p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
+<p style="checkbox-align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
+<p style="checkbox-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
+
+<!---checkboxes for each category -->
 
 <body>
-    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired range:</p>
-     <label class="range"><input type="checkbox" style="text-align: left;" id="range1" value="200 Miles"> 200 Miles </label>
-     <label class="range"><input type="checkbox" style="text-align: left;" id="range2" value="300 Miles"> 300 Miles </label>
-     <label class="range"><input type="checkbox" style="text-align: left;" id="range3" value="400 Miles"> 400 Miles </label>
-     <label class="range"><input type="checkbox" style="text-align: left;" id="range4" value="500 Miles"> 500 Miles </label>
+    <p style="checkbox-align: left; font-size: 20px; color: blue;">Select your desired range:</p>
+     <label class="range"><input type="checkbox" style="checkbox-align: left;" id="range1" value="200 Miles"> 200 Miles </label>
+     <label class="range"><input type="checkbox" style="checkbox-align: left;" id="range2" value="300 Miles"> 300 Miles </label>
+     <label class="range"><input type="checkbox" style="checkbox-align: left;" id="range3" value="400 Miles"> 400 Miles </label>
+     <label class="range"><input type="checkbox" style="checkbox-align: left;" id="range4" value="500 Miles"> 500 Miles </label>
     <p>
         <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired seating:</p>
-     <label class="seating"><input type="checkbox" style="text-align: left;" id="seating1" value="2 People"> 2 People </label>
-     <label class="seating"><input type="checkbox" style="text-align: left;" id="seating2" value="5 People"> 5 People </label>
-     <label class="seating"><input type="checkbox" style="text-align: left;" id="seating3" value="7 People"> 7 People </label>
+    <p style="checkbox-align: left; font-size: 20px; color: blue;">Select your desired seating:</p>
+     <label class="seating"><input type="checkbox" style="checkbox-align: left;" id="seating1" value="2 People"> 2 People </label>
+     <label class="seating"><input type="checkbox" style="checkbox-align: left;" id="seating2" value="5 People"> 5 People </label>
+     <label class="seating"><input type="checkbox" style="checkbox-align: left;" id="seating3" value="7 People"> 7 People </label>
     <p>
         <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired 0-60 time:</p>
-     <label class="zero"><input type="checkbox" style="text-align: left;" id="zero1" value="2 Seconds"> 2 Seconds </label>
-     <label class="zero"><input type="checkbox" style="text-align: left;" id="zero2" value="3 Seconds"> 3 Seconds </label>
-     <label class="zero"><input type="checkbox" style="text-align: left;" id="zero3" value="4 Seconds"> 4 Seconds </label>
-     <label class="zero"><input type="checkbox" style="text-align: left;" id="zero4" value="5 Seconds"> 5 Seconds </label>
+    <p style="checkbox-align: left; font-size: 20px; color: blue;">Select your desired 0-60 time:</p>
+     <label class="zero"><input type="checkbox" style="checkbox-align: left;" id="zero1" value="2 Seconds"> 2 Seconds </label>
+     <label class="zero"><input type="checkbox" style="checkbox-align: left;" id="zero2" value="3 Seconds"> 3 Seconds </label>
+     <label class="zero"><input type="checkbox" style="checkbox-align: left;" id="zero3" value="4 Seconds"> 4 Seconds </label>
+     <label class="zero"><input type="checkbox" style="checkbox-align: left;" id="zero4" value="5 Seconds"> 5 Seconds </label>
     <p>
         <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
-    <p style="text-align: left; font-size: 20px; color: blue;">Select your desired price:</p>
-     <label class="price"><input type="checkbox" style="text-align: left;" id="price1" value="40000"> $40,000 </label>
-     <label class="price"><input type="checkbox" style="text-align: left;" id="price2" value="60000"> $60,000 </label>
-     <label class="price"><input type="checkbox" style="text-align: left;" id="price3" value="70000"> $70,000 </label>
-     <label class="price"><input type="checkbox" style="text-align: left;" id="price4" value="80000"> $80,000 </label>
-     <label class="price"><input type="checkbox" style="text-align: left;" id="price5" value="100000"> $100,000+ </label>
+    <p style="checkbox-align: left; font-size: 20px; color: blue;">Select your desired price:</p>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price1" value="40000"> $40,000 </label>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price2" value="60000"> $60,000 </label>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price3" value="70000"> $70,000 </label>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price4" value="80000"> $80,000 </label>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price5" value="100000"> $100,000+ </label>
     <p>
         <button id="button4" onclick="getPriceValue()"> Find out which car matches your search</button>
     </p>
@@ -119,8 +123,69 @@
         function getPriceValue(){
             document.getElementById("button4").outerHTML = "Lucid Air Grand Touring";
         }
+        function create_user(){
+    const body = {
+        car: document.getElementById("car").value,
+        range: document.getElementById("range").value,
+        seating: document.getElementbyId("seating").value,
+        zero: document.getElementbyId("zero").value,
+        price: document.getElementbyId("zero").value,
+    };
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+    })
+  } 
+     <div class = "form-box">
+  <form action="javascript:create_user()" class = "createForm">
+      <p><label class = "form-label">
+          To obtain car:
+          <input class = "input-boxes" type="checkbox" id="car" required>
+      </label></p>
+      <p><label class = "form-label">
+          <input class = "input-boxes" type="checkbox" id="range" required>
+      </label></p>
+      <p>
+    <p><label class = "form-label">
+          <input class = "input-boxes" type="checkbox" id="seating" required>
+      </label></p>
+      <p>
+            <p><label class = "form-label">
+          <input class = "input-boxes" type="checkbox" id="zero" required>
+      </label></p>
+      <p>
+            <p><label class = "form-label">
+          <input class = "input-boxes" type="checkbox" id="price" required>
+      </label></p>
+      <p>
+          <button class = "form-button">Create</button>
+      </p>
+  </form>
+</div> 
     </script>
 </body>
+
 <style>
 .range {
   display: block;
