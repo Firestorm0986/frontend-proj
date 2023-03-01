@@ -34,19 +34,13 @@ type: pbl
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
-}
-
-
+box-sizing: border-box;
 .column {
   float: left;
   width: 33.33%;
   padding: 10px;
   height: 258px; 
 }
-
-
 .row:after {
   content: "";
   display: table;
@@ -120,22 +114,22 @@ type: pbl
 
 
 
-    <fieldset id="question5" style="color:white;">
+  <fieldset id="question5" style="color:white;">
       <legend>Risk Tolerance</legend>
       <select id="risk_tolerance">
         <option value="Very Conservative">Very Conservative</option>
         <option value="Conservative">Conservative</option>
         <option value="Moderate">Moderate</option>
-        <option value="Aggressive">Aggressive</option>
-      </select>
-      <br>
-      <button class="btn default" onclick="getRecommendation()">Get Recommendation</button>
-    </fieldset>
-    <br>
-    <h4 style="color:rgb(223, 205, 205); font-family: gill sans, sans-serif;" id="recommendation"></h4>
+      <option value="Aggressive">Aggressive</option>
+  </select>
+  <br>
+    <button class="btn default" onclick="getRecommendation()">Get Recommendation</button>
+  </fieldset>
+  <br>
+  <h4 style="color:rgb(223, 205, 205); font-family: gill sans, sans-serif;" id="recommendation"></h4>
     
     
-    <script>
+  <script>
       function showQuestion2() {
           document.getElementById("question2").style.display = "block";
       }
@@ -148,8 +142,8 @@ type: pbl
       function showQuestion5() {
           document.getElementById("question5").style.display = "block";
       }
-    </script>
-    <br><br>
+  </script>
+  <br><br>
   </form>
   <script>
     function getRecommendation() {
@@ -160,20 +154,20 @@ type: pbl
         "Aggressive": [101, 150]
       };
   
-      var risk_level = document.getElementById("risk_tolerance").value;
-      var recommendation = "";
-  
-      var risk_range = risk_tolerance[risk_level];
-      if (risk_range[0] <= 33) {
-        recommendation = "Based on your risk tolerance, we recommend investing in bonds or index funds.";
-      } else if (risk_range[0] <= 67) {
-        recommendation = "Based on your risk tolerance, we recommend investing in a mix of stocks and bonds.";
-      } else {
-        recommendation = "Based on your risk tolerance, we recommend investing in growth stocks.";
+        var risk_level = document.getElementById("risk_tolerance").value;
+        var recommendation = "";
+    
+        var risk_range = risk_tolerance[risk_level];
+        if (risk_range[0] <= 33) {
+          recommendation = "Based on your risk tolerance, we recommend investing in bonds or index funds.";
+        } else if (risk_range[0] <= 67) {
+          recommendation = "Based on your risk tolerance, we recommend investing in a mix of stocks and bonds.";
+        } else {
+          recommendation = "Based on your risk tolerance, we recommend investing in growth stocks.";
+        }
+    
+        document.getElementById("recommendation").innerHTML = recommendation;
       }
-  
-      document.getElementById("recommendation").innerHTML = recommendation;
-    }
   </script>
   </head>
 
@@ -909,211 +903,165 @@ function closeOptionModal() {
   
   
   <script>
-   // prepare HTML result container for new output
-   const resultContainer = document.getElementById("result");
-   // prepare URL's to allow easy switch from deployment and localhost
-   const url = "https://zesty.nighthawkcodingsociety.com/api/stocks/"
-  
-  
-   const create_fetch = url + '/create';
-   const read_fetch = url + '/';
-  
-  
-   // Load users on page entry
-   const read_button = document.getElementById("read_button");
-  
-  
-  
-  
-   // Display User Table, data is fetched from Backend Database
-   function read_users() {
-     // prepare fetch options
-    
-     const read_options = {
-       method: 'GET', // *GET, POST, PUT, DELETE, etc.
-       mode: 'cors', // no-cors, *cors, same-origin
-       cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-       credentials: 'omit', // include, *same-origin, omit
-       headers: {
-         'Content-Type': 'application/json'
-       },
-     };
-  
-  
-     // fetch the data from API
-     fetch(read_fetch, read_options)
-       // response is a RESTful "promise" on any successful fetch
-       .then(response => {
-         // check for response errors
-         if (response.status !== 200) {
-             const errorMsg = 'Database read error: ' + response.status;
-             console.log(errorMsg);
-             const tr = document.createElement("tr");
-             const td = document.createElement("td");
-             td.innerHTML = errorMsg;
-             tr.appendChild(td);
-             resultContainer.appendChild(tr);
-             return;
-         }
-         // valid response will have json data
-         response.json().then(data => {
-             console.log(data);
-             length = data.length;
-             number = Math.floor(Math.random() * length );
-             for (let row in data) {
-               console.log(data[row]);
+    const resultContainer = document.getElementById("result");
+    const url = "https://zesty.nighthawkcodingsociety.com/api/stocks/"
+    const create_fetch = url + '/create';
+    const read_fetch = url + '/';
+    const read_button = document.getElementById("read_button");
+    // READ
+    function read_users() {
+      const read_options = {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default',
+        credentials: 'omit',
+        headers: {
+      'Content-Type': 'application/json'
+      },
+    };
+    fetch(read_fetch, read_options)
+      // response is a RESTful "promise" on any successful fetch
+      .then(response => {
+        // check for response errors
+        if (response.status !== 200) {
+            const errorMsg = 'Database read error: ' + response.status;
+            console.log(errorMsg);
+            const tr = document.createElement("tr");
+            const td = document.createElement("td");
+            td.innerHTML = errorMsg;
+            tr.appendChild(td);
+            resultContainer.appendChild(tr);
+            return;
+        }
+        // valid response will have json data
+        response.json().then(data => {
+            console.log(data);
+            length = data.length;
+            number = Math.floor(Math.random() * length );
+            for (let row in data) {
+              console.log(data[row]);
               
-               add_row(data[number]);
-               break;
-             }
-         })
-     })
-     // catch fetch errors (ie ACCESS to server blocked)
-     .catch(err => {
-       console.error(err);
-       const tr = document.createElement("tr");
-       const td = document.createElement("td");
-       td.innerHTML = err;
-       tr.appendChild(td);
-       resultContainer.appendChild(tr);
-     });
-   }
+              add_row(data[number]);
+              break;
+            }
+        })
+    })
+    // catch fetch errors (ie ACCESS to server blocked)
+    .catch(err => {
+      console.error(err);
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.innerHTML = err;
+      tr.appendChild(td);
+      resultContainer.appendChild(tr);
+    });
+  }
+
   
-  
-  
-  
-   function add_row(data) {
-     const tr = document.createElement("tr");
-     const stock = document.createElement("td");
-     const fact = document.createElement("td");
-    
-     const id = document.createElement("td");
+
+  function add_row(data) {
+    const tr = document.createElement("tr");
+    const stock = document.createElement("td");
+    const fact = document.createElement("td");
     
   
+    
   
-     // obtain data that is specific to the API
-     stock.innerHTML = data.stock;
-     fact.innerHTML = data.fact;
+
+    // obtain data that is specific to the API
+    stock.innerHTML = data.stock; 
+    fact.innerHTML = data.fact; 
       
-     id.innerHTML = data.id;
+  
     
-  
-  
-     // add HTML to container
-     tr.appendChild(stock);
-     tr.appendChild(fact);
+
+    // add HTML to container
+    tr.appendChild(stock);
+    tr.appendChild(fact);
     
-     tr.appendChild(id);
     
-  
-  
-     resultContainer.appendChild(tr);
-   }
-  
-  
-  
-  
-   function create_fact(){
-     //Validate Password (must be 6-20 characters in len)
-     //verifyPassword("click");
-     const body = {
-         stock: document.getElementById("stock").value,
-         fact: document.getElementById("fact").value,
-     };
-     const requestOptions = {
-         method: 'POST',
-         body: JSON.stringify(body),
-         headers: {
-             "content-type": "application/json",
-             'Authorization': 'Bearer my-token',
-         },
-     };
-  
-  
-     // URL for Create API
-     // Fetch API call to the database to create a new user
-     fetch(create_fetch, requestOptions)
-       .then(response => {
-         // trap error response from Web API
-         if (response.status !== 200) {
-           const errorMsg = 'Database create error: ' + response.status;
-           console.log(errorMsg);
-           const tr = document.createElement("tr");
-           const td = document.createElement("td");
-           td.innerHTML = errorMsg;
-           tr.appendChild(td);
-           resultContainer.appendChild(tr);
-           return;
-         }
-         // response contains valid result
-     })
-   }
-  
-  
-   function delete_fact(){
-   //Validate Password (must be 6-20 characters in len)
-   //verifyPassword("click");
-   const body = {
-       stock: document.getElementById("stock").value,
-       fact: document.getElementById("fact").value,
-   };
-   const requestOptions = {
-       method: 'DELETE',
-       body: JSON.stringify(body),
-       headers: {
-           "content-type": "application/json",
-           'Authorization': 'Bearer my-token',
-       },
-   };
-  
-  
-   // URL for Create API
-   // Fetch API call to the database to create a new user
-   fetch(create_fetch, requestOptions)
-     .then(response => {
-       // trap error response from Web API
-       if (response.status !== 200) {
-         const errorMsg = 'Database create error: ' + response.status;
-         console.log(errorMsg);
-         const tr = document.createElement("tr");
-         const td = document.createElement("td");
-         td.innerHTML = errorMsg;
-         tr.appendChild(td);
-         resultContainer.appendChild(tr);
-         return;
-       }
-       // response contains valid result
-   })
-   }
-   /// New for slideshow
-  
-  
-   let slideIndex = 0;
-   showSlides();
-  
-  
-   function showSlides() {
-   let i;
-   let slides = document.getElementsByClassName("mySlides");
-   let dots = document.getElementsByClassName("dot");
-   for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none"; 
-   }
-   slideIndex++;
-   if (slideIndex > slides.length) {slideIndex = 1}   
-   for (i = 0; i < dots.length; i++) {
-       dots[i].className = dots[i].className.replace(" active", "");
-   }
-   slides[slideIndex-1].style.display = "block"; 
-   dots[slideIndex-1].className += " active";
-   setTimeout(showSlides, 2000); // Change image every 2 seconds
-   }
-  
-  
-  
-  
-  
-  
+
+    resultContainer.appendChild(tr);
+  }
+
+
+function add_row(data) {
+    const tr = document.createElement("tr");
+    const stock = document.createElement("td");
+    const fact = document.createElement("td");
+
+    const id = document.createElement("td");
+    stock.innerHTML = data.stock; 
+    fact.innerHTML = data.fact; 
+    
+
+    tr.appendChild(stock);
+    tr.appendChild(fact);
+
+    resultContainer.appendChild(tr);
+}
+
+// CREATE
+  function create_charge(){
+    const body = {
+        stock: document.getElementById("stock").value,
+        fact: document.getElementById("fact").value,
+    };
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+    })
+  }
+
+// DELETE
+
+  function delete_fact(){
+
+  const body = {
+      stock: document.getElementById("stock").value,
+      fact: document.getElementById("fact").value,
+  };
+  const requestOptions = {
+      method: 'DELETE',
+      body: JSON.stringify(body),
+      headers: {
+          "content-type": "application/json",
+          'Authorization': 'Bearer my-token',
+      },
+  };
+
+  fetch(create_fetch, requestOptions)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = errorMsg;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+        return;
+      }
+  })
+  }
   
   
   
