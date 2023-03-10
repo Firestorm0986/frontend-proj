@@ -65,11 +65,11 @@ type: pbl
 </style>
 
 <script>
-  const parkHere = document.getElementById("parkHere");
   const playButton = document.getElementById("playButton");
   const gridContainer = document.getElementById("gridContainer");
   const draggableImage = document.getElementById("draggableImage");
   const question = document.getElementById("question");
+  const parkHere = document.getElementById("parkHere");
 
   playButton.addEventListener("click", function() {
     gridContainer.style.display = "grid";
@@ -115,7 +115,7 @@ type: pbl
     imageObj.onload = function(){
         drawImage(this);
     };
-    const imageObj = document.getElementById("draggableImage")
+    imageObj = document.getElementById("draggableImage")
 
     const data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
