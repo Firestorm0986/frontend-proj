@@ -65,11 +65,11 @@ type: pbl
 </style>
 
 <script>
+  const parkHere = document.getElementById("parkHere");
   const playButton = document.getElementById("playButton");
   const gridContainer = document.getElementById("gridContainer");
   const draggableImage = document.getElementById("draggableImage");
   const question = document.getElementById("question");
-  const parkHere = document.getElementById("parkHere");
 
   playButton.addEventListener("click", function() {
     gridContainer.style.display = "grid";
@@ -84,7 +84,7 @@ type: pbl
     event.preventDefault();
   });
   parkHere.addEventListener("drop", function(event) {
-    
+
     function drawImage(imageObj){
           var canvas = document.getElementById("mau");
           var context = canvas.getContext("2d");
@@ -115,7 +115,7 @@ type: pbl
     imageObj.onload = function(){
         drawImage(this);
     };
-    imageObj.src = 'https://firestorm0986.github.io/frontend-proj/images/lucidcar.webp'
+    const imageObj = document.getElementById("draggableImage")
 
     const data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
