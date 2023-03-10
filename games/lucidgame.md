@@ -84,14 +84,7 @@ type: pbl
     event.preventDefault();
   });
   parkHere.addEventListener("drop", function(event) {
-    window.onload = function(){
-        var imageObj = new Image();
-        imageObj.onload = function(){
-            drawImage(this);
-        };
-        imageObj.src = "https://firestorm0986.github.io/frontend-proj/images/lucidcar.webp";
-    };
-
+    
     function drawImage(imageObj){
           var canvas = document.getElementById("mau");
           var context = canvas.getContext("2d");
@@ -106,14 +99,24 @@ type: pbl
 
           for (var i = 0; i < data.length; i += 4) {
               var red = data[i]; // red
-              var green = data[i + 2]; // green
-              var blue = data[i]; // blue
+              var green = data[i + 1]; // green
+              var blue = data[i + 2]; // blue
               // i+3 is alpha (the fourth element)
+              data[i] = green;
+              data[i + 1] = blue;
+              data[i + 2] = red;
           }
 
           // overwrite original image
           context.putImageData(imageData, 0, 0);
     }
+
+    var imageObj = new Image();
+    imageObj.onload = function(){
+        drawImage(this);
+    };
+    imageObj.src = 'https://firestorm0986.github.io/frontend-proj/images/lucidcar.webp'
+
     const data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
     question.style.display = "block";
