@@ -83,52 +83,66 @@ type: pbl
   parkHere.addEventListener("dragover", function(event) {
     event.preventDefault();
   });
-parkHere.addEventListener("drop", function(event) {
-  event.preventDefault();
-  const data = event.dataTransfer.getData("text");
-  event.target.appendChild(document.getElementById(data));
-  question.style.display = "block";
-  const percentage_list = [
-    {"00": "588"},
-    {"10": "529"},
-    {"20": "471"},
-    {"30": "412"},
-    {"40": "353"},
-    {"50": "294"},
-    {"60": "235"},
-    {"70": "176"},
-    {"80": "118"},
-    {"90": "59"}
-  ];
+  parkHere.addEventListener("drop", function(event) {
+    // Get the CanvasPixelArray from the given coordinates and dimensions.
+    var imgd = context.getImageData(x, y, width, height);
+    var pix = imgd.data;
 
-  const randomIndex = Math.floor(Math.random() * percentage_list.length);
-  const randomKey = Object.keys(percentage_list[randomIndex])[0];
-  const randomPercentage = randomKey;
-  const ans = parseInt(percentage_list[randomIndex][randomKey]);
-
-  const message = document.createElement("p");
-  message.textContent = "The car is at " + randomPercentage + "%";
-  question.insertBefore(message, question.firstChild);
-
-  const submitButton = document.getElementById("submitButton");
-  submitButton.style.display = "block";
-  submitButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    const input = parseInt(document.getElementById("input").value);
-    if (isNaN(input)) {
-      alert("Please enter a valid number.");
-      message.textContent = "Please enter a number";
-      return;
+    // Loop over each pixel and invert the color.
+    for (var i = 0, n = pix.length; i < n; i += 4) {
+      pix[i  ] = 255 - pix[i  ]; // red
+      pix[i+2] = 255 - pix[i+2]; // green
+      pix[i  ] = 255 - pix[i  ]; // blue
+      // i+3 is alpha (the fourth element)
     }
-    const score = 1000 - Math.abs(ans - input);
-    const scoreText = document.createElement("p");
-    scoreText.textContent = "You scored: " + score + " points, the best score you can get is 1000";
-    submitButton.parentNode.insertBefore(scoreText, submitButton.nextSibling);
-    submitButton.style.display = "none";
-    const Info = document.getElementById("Info");
-    Info.style.display = "block";
+
+    // Draw the ImageData at the given (x,y) coordinates.
+    context.putImageData(imgd, x, y);
+    event.preventDefault();
+    const data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+    question.style.display = "block";
+    const percentage_list = [
+      {"00": "588"},
+      {"10": "529"},
+      {"20": "471"},
+      {"30": "412"},
+      {"40": "353"},
+      {"50": "294"},
+      {"60": "235"},
+      {"70": "176"},
+      {"80": "118"},
+      {"90": "59"}
+    ];
+    
+    const randomIndex = Math.floor(Math.random() * percentage_list.length);
+    const randomKey = Object.keys(percentage_list[randomIndex])[0];
+    const randomPercentage = randomKey;
+    const ans = parseInt(percentage_list[randomIndex][randomKey]);
+
+    const message = document.createElement("p");
+    message.textContent = "The car is at " + randomPercentage + "%";
+    question.insertBefore(message, question.firstChild);
+
+    const submitButton = document.getElementById("submitButton");
+    submitButton.style.display = "block";
+    submitButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      const input = parseInt(document.getElementById("input").value);
+      if (isNaN(input)) {
+        alert("Please enter a valid number.");
+        message.textContent = "Please enter a number";
+        return;
+      }
+      const score = 1000 - Math.abs(ans - input);
+      const scoreText = document.createElement("p");
+      scoreText.textContent = "You scored: " + score + " points, the best score you can get is 1000";
+      submitButton.parentNode.insertBefore(scoreText, submitButton.nextSibling);
+      submitButton.style.display = "none";
+      const Info = document.getElementById("Info");
+      Info.style.display = "block";
+    });
   });
-});
 </script>
 </div>
 
