@@ -106,8 +106,8 @@ type: pbl
 
           for (var i = 0; i < data.length; i += 4) {
               var red = data[i]; // red
-              var green = data[i + 1]; // green
-              var blue = data[i + 2]; // blue
+              var green = data[i + 2]; // green
+              var blue = data[i]; // blue
               // i+3 is alpha (the fourth element)
           }
 
