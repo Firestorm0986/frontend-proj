@@ -87,7 +87,7 @@ type: pbl
   parkHere.addEventListener("drop", function(event) {
 
 // add code
-    draggableImage.style.filter = "hue-rotate(150deg)";
+    draggableImage.style.filter = "hue-rotate(120deg)";
 
 
     event.preventDefault();
