@@ -26,6 +26,7 @@ type: pbl
   <div class="grid-cell"></div>
 </div>
 <img id="draggableImage" src="https://firestorm0986.github.io/frontend-proj/images/lucidcar.webp" draggable="true" style="display: none;">
+
 <div id="question" style="display: none;">
   <p style="text-align: center; font-size: 30px; color: darkblue;">How long will it take to charge the Lucid Air?</p>
   <br>
@@ -62,6 +63,7 @@ type: pbl
     height: 200px;
     margin: 0 auto;
   }
+
 </style>
 
 <script>
@@ -85,19 +87,7 @@ type: pbl
   });
 
   parkHere.addEventListener("drop", function(event) {
-
-// add code
-    function greenScaleImage(imageData) {
-      for (let i = 0; i < imageData.length; i++) {
-        for (let j = 0; j < imageData[i].length; j++) {
-          // Set red and blue values to 0
-          imageData[i][j][0] = 0; // red
-          imageData[i][j][2] = 0; // blue
-        }
-      }
-      return imageData;
-    }
-
+    draggableImage.src = "https://firestorm0986.github.io/frontend-proj/images/greenucidcar.png";
 
     event.preventDefault();
     const data = event.dataTransfer.getData("text");
