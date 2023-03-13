@@ -87,7 +87,7 @@ type: pbl
   });
 
   parkHere.addEventListener("drop", function(event) {
-    draggableImage.src = "https://firestorm0986.github.io/frontend-proj/images/greenucidcar.png";
+    draggableImage.src = "https://firestorm0986.github.io/frontend-proj/images/greenlucidcar.png";
 
     event.preventDefault();
     const data = event.dataTransfer.getData("text");
