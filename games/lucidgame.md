@@ -83,12 +83,14 @@ type: pbl
   parkHere.addEventListener("dragover", function(event) {
     event.preventDefault();
   });
-  parkHere.addEventListener("drop", function(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data));
-    draggableImage.style.backgroundColor = "green";
 
+  parkHere.addEventListener("drop", function(event) {
+
+// add code
+    draggableImage.style.filter = "hue-rotate(90deg)";
+
+
+    event.preventDefault();
     const data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
     question.style.display = "block";

@@ -83,6 +83,7 @@ type: pbl
   parkHere.addEventListener("dragover", function(event) {
     event.preventDefault();
   });
+  
   parkHere.addEventListener("drop", function(event) {
     event.preventDefault();
     const data = event.dataTransfer.getData("text");
