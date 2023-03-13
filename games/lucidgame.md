@@ -87,7 +87,16 @@ type: pbl
   parkHere.addEventListener("drop", function(event) {
 
 // add code
-    draggableImage.style.filter = "hue-rotate(120deg)";
+    function greenScaleImage(imageData) {
+      for (let i = 0; i < imageData.length; i++) {
+        for (let j = 0; j < imageData[i].length; j++) {
+          // Set red and blue values to 0
+          imageData[i][j][0] = 0; // red
+          imageData[i][j][2] = 0; // blue
+        }
+      }
+      return imageData;
+    }
 
 
     event.preventDefault();
