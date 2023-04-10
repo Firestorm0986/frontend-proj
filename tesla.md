@@ -293,7 +293,7 @@ img {
 
     };
     const requestOptions = {
-        method: 'PUT',
+        method: 'PATCH',
         mode: 'cors',
         credentials: 'omit',
         body: JSON.stringify(body),
