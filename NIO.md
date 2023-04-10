@@ -399,6 +399,7 @@
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
   const delete_fetch = url + '/delete';
+  const patch_fetch = url + '/update';
 
   // Load users on page entry
   const read_button = document.getElementById("read_button");
@@ -407,8 +408,6 @@
 
   // Display User Table, data is fetched from Backend Database
   function read_users() {
-    // prepare fetch options
-    
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
@@ -418,12 +417,9 @@
         'Content-Type': 'application/json'
       },
     };
-
-    // fetch the data from API
     fetch(read_fetch, read_options)
       // response is a RESTful "promise" on any successful fetch
       .then(response => {
-        // check for response errors
         if (response.status !== 200) {
             const errorMsg = 'Database read error: ' + response.status;
             console.log(errorMsg);
@@ -434,7 +430,6 @@
             resultContainer.appendChild(tr);
             return;
         }
-        // valid response will have json data
         response.json().then(data => {
             console.log(data);
             length = data.length;
@@ -447,7 +442,6 @@
             }
         })
     })
-    // catch fetch errors (ie ACCESS to server blocked)
     .catch(err => {
       console.error(err);
       const tr = document.createElement("tr");
@@ -506,6 +500,41 @@
     // URL for Create API
     // Fetch API call to the database to create a new fact
     fetch(create_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+    })
+  }
+  function update_fact(){
+    //Validate Password (must be 6-20 characters in len)
+    //verifyPassword("click");
+    const body = {
+        car: document.getElementById("car_u").value,
+        id: document.getElementById("id_u").value,
+        industry: document.getElementById("industry_u").value,
+    };
+    const requestOptions = {
+        method: 'PATCH',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+
+    // URL for Create API
+    // Fetch API call to the database to create a new fact
+    fetch(patch_fetch, requestOptions)
       .then(response => {
         // trap error response from Web API
         if (response.status !== 200) {
