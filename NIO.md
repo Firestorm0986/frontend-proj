@@ -343,29 +343,34 @@
           <input class = "input-boxes" type="text" industry="industry" id="industry" required>
       </label></p>
       <p>
-          <button class = "form-button">Create</button>
+          <button class = "form-button" type = "submit">Create</button>
       </p>
   </form>
 </div>
+
+<p class = "form-tell">Update a fact</p>
+
 <div class = "form-box">
   <form action = "javascript:update_fact()" class = "createForm">
     <p><label class = "form-label">
-      ID to delete:
+      ID to update:
       <input class = "input-boxes" type = "text" industry="id" id = "id_u" required>
     </label></p>
     <p><label class = "form-label">
-          Car Fact:
+          Car Fact to update:
           <input class = "input-boxes" type="text" industry="car" id="car_u" required>
       </label></p>
       <p><label class = "form-label">
-          industry fact:
+          industry fact to update:
           <input class = "input-boxes" type="text" industry="industry" id="industry_u" required>
       </label></p>
     <p>
-      <button class = "form-button">Delete</button>
+      <button class = "form-button" type = "submit" >Update</button>
     </p>
   </form>
 </div>
+
+<p class = "form-tell">Delete a fact</p>
 
 <div class = "form-box">
   <form action = "javascript:delete_fact()" class = "createForm">
