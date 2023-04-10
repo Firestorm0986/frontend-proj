@@ -217,7 +217,7 @@ img {
     };
     const requestOptions = {
         method: 'POST',
-        mode: 'cors',
+        //mode: 'cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
