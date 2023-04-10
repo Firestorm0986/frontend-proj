@@ -1,5 +1,5 @@
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/rivianlogo.png" alt="rivianlogo.png" style="width:100%" class="imgMain">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/rivianlogo.png" alt="rivianlogo.png" style="width:100%">
 </html>
 
 >>>> # Rivian
@@ -12,7 +12,7 @@
 
 >>>> ## Rivian R1S
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.png" style="width:100%" class="imgMain">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/Rivian.jpg" alt="Rivian.jpg" style="width:100%">
 </html>
 
 >>>> The Rivian R1S is their all-electric luxury SUV. The R1S has three rows of seats of 7 passengers. It has a 135 Kilowatt-hour battery, which takes up to 13 hours to charge at 220 Volts. The R1S gets anywhere from 260-315 miles of range, depending on the battery purchased. It can carry up to 7700 pounds of cargo, and it has an all-wheel-drive drivetrain. It can go from 0-60 in three seconds.
@@ -22,7 +22,7 @@
 
 >>>> ## Rivian R1T
 <html>
-    <img src="https://firestorm0986.github.io/frontend-proj/images/r1t.jpg" alt="r1t.jpg" style="width:100%" class="imgMain">
+    <img src="https://firestorm0986.github.io/frontend-proj/images/r1t.jpg" alt="r1t.jpg" style="width:100%">
 </html>
 
 >>>> The Rivian R1T is Rivian's all-electric luxury pickup truck. The R1T has two rows of seats of 5 passengers. Depending on the motor and wheels, the range is anywhere between 260 and 400 miles. It takes up to 13 hours to charge at 220 Volts. The R1T can tow up to 11,000 pounds, and can accelerate from 0-60 in up to three seconds. It sports an All-Wheel-Drive drivetrain.
@@ -52,7 +52,7 @@
         <td>260-315 Miles</td>
         <td>7700 Pounds</td>
         <td>105 Cubic Feet</td>
-        <td>Low Center of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
+        <td>Low left of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
         <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
         <td>$78,000</td>
     </tr>
@@ -62,97 +62,177 @@
         <td>260-400 Miles</td>
         <td>11000 Pounds</td>
         <td>74 Cubic Feet</td>
-        <td>Low Center of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
+        <td>Low left of Gravity, Carbon-fiber material al strength, high-strength steel and aluminum, Driver-Assist</td>
         <td>Amazon Alexa Built-in, Bluetooth, Built-in LTE / Wi-FI</td>
         <td>$73,000</td>
     </tr>
 </table>
+
+<!--- code for the car builder -->
     
-<p style="text-align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
-<p style="text-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
+<p style="checkbox-align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
+<p style="checkbox-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
+
+<!---checkboxes for each category -->
 
 <body>
-    <p> Select your desired range:</p>
-     <input type="checkbox" id="range1" class="range" value="200 Miles"> 200 Miles 
-     <input type="checkbox" id="range2" class="range" value="300 Miles"> 300 Miles 
-     <input type="checkbox" id="range3" class="range" value="400 Miles"> 400 Miles 
-     <input type="checkbox" id="range4" class="range" value="500 Miles"> 500 Miles 
+    <p style="checkbox-align: left; font-size: 20px; color: blue;">Select your desired range:</p>
+     <label class="range"><input type="checkbox" style="checkbox-align: left;" id="range1" value="200 Miles"> 200 Miles </label>
+     <label class="range"><input type="checkbox" style="checkbox-align: left;" id="range2" value="300 Miles"> 300 Miles </label>
+     <label class="range"><input type="checkbox" style="checkbox-align: left;" id="range3" value="400 Miles"> 400 Miles </label>
+     <label class="range"><input type="checkbox" style="checkbox-align: left;" id="range4" value="500 Miles"> 500 Miles </label>
     <p>
-        <button onclick="checkAllOne()"> I do not have a preference </button>
         <button id="button1" onclick="getRangeValue()"> Find out which car matches your search</button>
     </p>
-    <p> Select your desired seating capacity:</p>
-     <input type="checkbox" id="seating1" class="seating" value="200 Miles"> 2 People 
-     <input type="checkbox" id="seating2" class="seating" value="300 Miles"> 5 People 
-     <input type="checkbox" id="seating3" class="seating" value="400 Miles"> 7 People 
+    <p style="checkbox-align: left; font-size: 20px; color: blue;">Select your desired seating:</p>
+     <label class="seating"><input type="checkbox" style="checkbox-align: left;" id="seating1" value="2 People"> 2 People </label>
+     <label class="seating"><input type="checkbox" style="checkbox-align: left;" id="seating2" value="5 People"> 5 People </label>
+     <label class="seating"><input type="checkbox" style="checkbox-align: left;" id="seating3" value="7 People"> 7 People </label>
     <p>
-        <button onclick="checkAllTwo()"> I do not have a preference </button>
         <button id="button2" onclick="getSeatingValue()"> Find out which car matches your search</button>
     </p>
-    <p> Select your desired 0-60 time:</p>
-     <input type="checkbox" id="zero1" class="zero" value="2 Seconds"> 2 Seconds 
-     <input type="checkbox" id="zero2" class="zero" value="3 Seconds"> 3 Seconds 
-     <input type="checkbox" id="zero3" class="zero" value="4 Seconds"> 4 Seconds 
-     <input type="checkbox" id="zero4" class="zero" value="5 Seconds"> 5 Seconds 
+    <p style="checkbox-align: left; font-size: 20px; color: blue;">Select your desired 0-60 time:</p>
+     <label class="zero"><input type="checkbox" style="checkbox-align: left;" id="zero1" value="2 Seconds"> 2 Seconds </label>
+     <label class="zero"><input type="checkbox" style="checkbox-align: left;" id="zero2" value="3 Seconds"> 3 Seconds </label>
+     <label class="zero"><input type="checkbox" style="checkbox-align: left;" id="zero3" value="4 Seconds"> 4 Seconds </label>
+     <label class="zero"><input type="checkbox" style="checkbox-align: left;" id="zero4" value="5 Seconds"> 5 Seconds </label>
     <p>
-        <button onclick="checkAllThree()"> I do not have a preference </button>
         <button id="button3" onclick="getZeroValue()"> Find out which car matches your search</button>
     </p>
-        <p> Select your desired Price:</p>
-     <input type="checkbox" id="price1" class="price" value="40000"> $40,000 
-     <input type="checkbox" id="price2" class="price" value="60000"> $60,000 
-     <input type="checkbox" id="price3" class="price" value="70000"> $70,000 
-     <input type="checkbox" id="price4" class="price" value="80000"> $80,000 
-     <input type="checkbox" id="price5" class="price" value="100000"> $100,000+ 
+    <p style="checkbox-align: left; font-size: 20px; color: blue;">Select your desired price:</p>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price1" value="40000"> $40,000 </label>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price2" value="60000"> $60,000 </label>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price3" value="70000"> $70,000 </label>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price4" value="80000"> $80,000 </label>
+     <label class="price"><input type="checkbox" style="checkbox-align: left;" id="price5" value="100000"> $100,000+ </label>
     <p>
-        <button onclick="checkAllFour()"> I do not have a preference </button>
-        <button onclick="getPriceValue()"> Find out which car matches your search</button>
+        <button id="button4" onclick="getPriceValue()"> Find out which car matches your search</button>
     </p>
     <p id="button4"></p>
+    <button id="save" onclick="window.location.reload()"> Save All Changes</button>
     <script>
-    function checkAllOne() {
-        var selectAllRange = document.querySelectorAll('.range');
-         0; i < selectAllRange.length, i++) {
-            selectAllRange[i].checked = true;
+        function getRangeValue() {
+            document.getElementById("button1").outerHTML = "Tesla Roadster";
         }
-    }
-    function checkAllTwo() {
-        var selectAllSeating = document.querySelectorAll('.seating');
-         0; j < selectAllSeating.length, i++) {
-            selectAllSeating[j].checked = true;
+        function getSeatingValue() {
+            document.getElementById("button2").outerHTML = "Rivian R1S";
         }
-    }
-    function checkAllThree() {
-        var selectAllZero = document.querySelectorAll('.zero');
-         0; k < selectAllZero.length, i++) {
-            selectAllZero[k].checked = true; 
+        function getZeroValue(){
+            document.getElementById("button3").outerHTML = "NIO EC7";
         }
-    }
-    function checkAllFour() {
-        var selectAllPrice = document.querySelectorAll('.price');
-         0; l < selectAllPrice.length, i++) {
-            selectAllPrice[l].checked = true;
+        function getPriceValue(){
+            document.getElementById("button4").outerHTML = "Lucid Air Grand Touring";
         }
-    } 
-    function getRangeValue() {
-        var l1 = document.getElementById("range1");
-        var l2 = document.getElementById("range2");
-        var l3 = document.getElementById("range3");
-        var l4 = document.getElementById("range4");
-        if (l1.checked == true){
-            document.getElementById("range1").innerHTML = "Tesla Roadster";
+        function create_user(){
+    const body = {
+        car: document.getElementById("car").value,
+        range: document.getElementById("range").value,
+        seating: document.getElementbyId("seating").value,
+        zero: document.getElementbyId("zero").value,
+        price: document.getElementbyId("zero").value,
+    };
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
         }
-        else if (l2.checked == true){
-            document.getElementById("range2").innerHTML = "Rivian R1S";
-        }
-        else if (l3.checked == true){
-            document.getElementById("range3").innerHTML = "Lucid Air Grand Touring";
-        }
-        else if (l4.checked == true){
-            document.getElementById("range4").innerHTML = "NIO EC7";
-        }
-    }  
-
- </script>
-
+        // response contains valid result
+    })
+  } 
+     <div class = "form-box">
+  <form action="javascript:create_user()" class = "createForm">
+      <p><label class = "form-label">
+          To obtain car:
+          <input class = "input-boxes" type="checkbox" id="car" required>
+      </label></p>
+      <p><label class = "form-label">
+          <input class = "input-boxes" type="checkbox" id="range" required>
+      </label></p>
+      <p>
+    <p><label class = "form-label">
+          <input class = "input-boxes" type="checkbox" id="seating" required>
+      </label></p>
+      <p>
+            <p><label class = "form-label">
+          <input class = "input-boxes" type="checkbox" id="zero" required>
+      </label></p>
+      <p>
+            <p><label class = "form-label">
+          <input class = "input-boxes" type="checkbox" id="price" required>
+      </label></p>
+      <p>
+          <button class = "form-button">Create</button>
+      </p>
+  </form>
+</div> 
+    </script>
 </body>
+
+<style>
+.range {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.seating {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.zero {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.price {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>

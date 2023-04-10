@@ -4,64 +4,81 @@ layout: default
 permalink: /info/charge
 type: pbl
 ---
+<div class = "secondary">
+<button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Show The Different Charging Times for Electric Cars</button>
+</div>
+
+<table class = "readtable">
+  <thead>
+  <tr>
+    <th>Car</th>
+    <th>0-100% Charging Times</th>
+  </tr>
+  </thead>
+  <tbody id="result">
+  </tbody>
+</table>
+
+<style>
+.readtable {
+  background-color: #e0ffe0;
+}
+</style>
+
+<p class = "form-tell">Let us know if you drive an electric car!</p>
+
+<div class = "form-box">
+  <form action="javascript:create_charge()" class = "createForm">
+      <p><label class = "form-label">
+          Car:
+          <input class = "input-boxes" type="text" chargetime="car" id="car" required>
+      </label></p>
+      <p><label class = "form-label">
+          Time it takes to charge from 0-100%:
+          <input class = "input-boxes" type="text" chargetime="chargetime" id="chargetime" required>
+      </label></p>
+      <p>
+          <button class = "form-button">Submit</button>
+      </p>
+  </form>
+</div>
 
 <script>
-  // prepare HTML result container for new output
-  const resultContainer = document.getElementById("result");
-  // prepare URL's to allow easy switch from deployment and localhost
-  const url = "https://zesty.nighthawkcodingsociety.com/api/facts/"
-
-  const create_fetch = url + '/create';
-  const read_fetch = url + '/';
-
-  // Load users on page entry
-  const read_button = document.getElementById("read_button");
-  
-
-
-  // Display User Table, data is fetched from Backend Database
-  function read_users() {
-    // prepare fetch options
-    
-    const read_options = {
-      method: 'GET', // *GET, POST, PUT, DELETE, etc.
-      mode: 'cors', // no-cors, *cors, same-origin
-      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'omit', // include, *same-origin, omit
-      headers: {
-        'Content-Type': 'application/json'
+    const resultContainer = document.getElementById("result");
+    const url = "https://zesty.nighthawkcodingsociety.com/api/charges/"
+    const create_fetch = url + '/create';
+    const read_fetch = url + '/';
+    const read_button = document.getElementById("read_button");
+    // READ
+    function read_users() {
+      const read_options = {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default',
+        credentials: 'omit',
+        headers: {
+      'Content-Type': 'application/json'
       },
     };
-
-    // fetch the data from API
     fetch(read_fetch, read_options)
-      // response is a RESTful "promise" on any successful fetch
       .then(response => {
-        // check for response errors
         if (response.status !== 200) {
-            const errorMsg = 'Database read error: ' + response.status;
-            console.log(errorMsg);
-            const tr = document.createElement("tr");
-            const td = document.createElement("td");
-            td.innerHTML = errorMsg;
-            tr.appendChild(td);
-            resultContainer.appendChild(tr);
-            return;
+          const errorMsg = 'Database read error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
         }
-        // valid response will have json data
-        response.json().then(data => {
-            console.log(data);
-            length = data.length;
-            number = Math.floor(Math.random() * length );
-            for (let row in data) {
-              console.log(data[row]);
-              
-              add_row(data[number]);
-              break;
-            }
-        })
+      response.json().then(data => {
+        resultContainer.innerHTML = ''; 
+        for (let row in data) {
+          add_row(data[row]);
+        }
+      })
     })
-    // catch fetch errors (ie ACCESS to server blocked)
     .catch(err => {
       console.error(err);
       const tr = document.createElement("tr");
@@ -70,43 +87,29 @@ type: pbl
       tr.appendChild(td);
       resultContainer.appendChild(tr);
     });
-  }
+}
 
-  
-
-  function add_row(data) {
+function add_row(data) {
     const tr = document.createElement("tr");
     const car = document.createElement("td");
-    const industry = document.createElement("td");
-    
+    const chargetime = document.createElement("td");
+
     const id = document.createElement("td");
-    
-  
-
-    // obtain data that is specific to the API
     car.innerHTML = data.car; 
-    industry.innerHTML = data.industry; 
-      
-    id.innerHTML = data.id; 
+    chargetime.innerHTML = data.chargetime; 
     
 
-    // add HTML to container
     tr.appendChild(car);
-    tr.appendChild(industry);
-    
-    tr.appendChild(id);
-    
+    tr.appendChild(chargetime);
 
     resultContainer.appendChild(tr);
-  }
+}
 
-
-  function create_user(){
-    //Validate Password (must be 6-20 characters in len)
-    //verifyPassword("click");
+// CREATE
+  function create_charge(){
     const body = {
         car: document.getElementById("car").value,
-        industry: document.getElementById("industry").value,
+        chargetime: document.getElementById("chargetime").value,
     };
     const requestOptions = {
         method: 'POST',
@@ -117,11 +120,8 @@ type: pbl
         },
     };
 
-    // URL for Create API
-    // Fetch API call to the database to create a new user
     fetch(create_fetch, requestOptions)
       .then(response => {
-        // trap error response from Web API
         if (response.status !== 200) {
           const errorMsg = 'Database create error: ' + response.status;
           console.log(errorMsg);
@@ -132,28 +132,39 @@ type: pbl
           resultContainer.appendChild(tr);
           return;
         }
-        // response contains valid result
     })
   }
-  /// New for slideshow
 
-  let slideIndex = 0;
-  showSlides();
+// DELETE
 
-  function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+  function delete_fact(){
+
+  const body = {
+      car: document.getElementById("car").value,
+      chargetime: document.getElementById("chargetime").value,
+  };
+  const requestOptions = {
+      method: 'DELETE',
+      body: JSON.stringify(body),
+      headers: {
+          "content-type": "application/json",
+          'Authorization': 'Bearer my-token',
+      },
+  };
+
+  fetch(create_fetch, requestOptions)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        const tr = document.createElement("tr");
+        const td = document.createElement("td");
+        td.innerHTML = errorMsg;
+        tr.appendChild(td);
+        resultContainer.appendChild(tr);
+        return;
+      }
+  })
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-  }
+
 </script>
