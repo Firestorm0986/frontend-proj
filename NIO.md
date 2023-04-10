@@ -347,6 +347,17 @@
       </p>
   </form>
 </div>
+<div class = "form-box">
+  <form action = "javascript:delete_fact()" class = "createForm">
+    <p><label class = "form-label">
+      ID to delete:
+      <input class = "input-boxes" type = "text" industry="id" id = "id" required>
+    </label></p>
+    <p>
+      <button class = "form-button">Delete</button>
+    </p>
+  </form>
+</div>
 
 <div class="slideshow-container">
 
@@ -383,10 +394,11 @@
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
-  const url = "https://zesty.nighthawkcodingsociety.com/api/facts/"
+  const url = "http://127.0.0.1:8086/api/facts"
 
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
+  const delete_fetch = url + '/delete';
 
   // Load users on page entry
   const read_button = document.getElementById("read_button");
@@ -492,7 +504,7 @@
     };
 
     // URL for Create API
-    // Fetch API call to the database to create a new user
+    // Fetch API call to the database to create a new fact
     fetch(create_fetch, requestOptions)
       .then(response => {
         // trap error response from Web API
@@ -514,8 +526,7 @@
   //Validate Password (must be 6-20 characters in len)
   //verifyPassword("click");
   const body = {
-      car: document.getElementById("car").value,
-      industry: document.getElementById("industry").value,
+      id: document.getElementById("id").value,
   };
   const requestOptions = {
       method: 'DELETE',
@@ -528,7 +539,7 @@
 
   // URL for Create API
   // Fetch API call to the database to create a new user
-  fetch(create_fetch, requestOptions)
+  fetch(delete_fetch, requestOptions)
     .then(response => {
       // trap error response from Web API
       if (response.status !== 200) {
