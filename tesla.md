@@ -213,7 +213,6 @@ img {
     const body = {
         car: document.getElementById("car").value,
         like: 0,
-
     };
     const requestOptions = {
         method: 'POST',
@@ -221,8 +220,7 @@ img {
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
-            'Authorization': 'Bearer my-token',
-            
+            'Authorization': 'Bearer my-token',  
         },
     };
     
@@ -254,19 +252,14 @@ img {
   function delete_car(car_id){
     const body = {
         id: car_id,
-
     };
-
     const requestOptions = {
         method: 'DELETE',
-        mode: 'cors',
         body: JSON.stringify(body),
         headers: {
             'content-type': 'application/json',
             'Authorization': 'Bearer my-token',
         },
-        body: JSON.stringify(body),
-
     };
 
     // Fetch API call to the database to create a new user
@@ -290,17 +283,13 @@ img {
     const body = {
         id: car_id,
         like: num_like,
-
     };
     const requestOptions = {
         method: 'PATCH',
-        mode: 'cors',
-        credentials: 'omit',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
             'Authorization': 'Bearer my-token',
-            
         },
     };
     
@@ -345,7 +334,6 @@ img {
     delete_button.type = "button";
     delete_button.value = "Delete";
     delete_button.onclick = function() {delete_car(data.id)};
-
     col2.appendChild(like_button);
     col4.appendChild(delete_button);
   
