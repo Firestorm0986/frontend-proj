@@ -250,6 +250,7 @@ img {
   }
   
   function delete_car(car_id){
+    alert("The row has been deleted. Please reload your page!");
     const body = {
         id: car_id,
     };
@@ -352,6 +353,7 @@ img {
     //resultContainer.appendChild(td);
     resultContainer.appendChild(tr);
   }
+
 
 /*(function(){
   const t = document.createElement("link").relList;
