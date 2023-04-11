@@ -148,7 +148,7 @@ img {
 
 <script>
   const resultContainer = document.getElementById("result");
-  const url = "http://zesty.nighthawkcodingsociety.com/api/schemas"
+  const url = "https://zesty.nighthawkcodingsociety.com/api/schemas"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
   const delete_fetch = url + '/delete';
@@ -217,7 +217,7 @@ img {
     };
     const requestOptions = {
         method: 'POST',
-        mode: 'cors',
+        //mode: 'cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
@@ -293,7 +293,7 @@ img {
 
     };
     const requestOptions = {
-        method: 'PUT',
+        method: 'PATCH',
         mode: 'cors',
         credentials: 'omit',
         body: JSON.stringify(body),
