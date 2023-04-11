@@ -314,6 +314,7 @@
 
 <div class = "secondary">
 <button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Generate a Fact </button>
+<input class = "input-boxes" placeholder = "or type in a number between 1 to 5" id = "criteria"> 
 </div>
 <table class = "readtable">
   <thead>
@@ -343,7 +344,7 @@
           <input class = "input-boxes" type="text" industry="industry" id="industry" required>
       </label></p>
       <p>
-          <button class = "form-button" type = "submit">Create</button>
+          <button class = "form-button" ONCLICK="alert('Created the fact')" type = "submit">Create</button>
       </p>
   </form>
 </div>
@@ -365,7 +366,7 @@
           <input class = "input-boxes" type="text" industry="industry" id="industry_u" required>
       </label></p>
     <p>
-      <button class = "form-button" type = "submit" >Update</button>
+      <button class = "form-button" ONCLICK="alert('updated the fact')" type = "submit" >Update</button>
     </p>
   </form>
 </div>
@@ -379,7 +380,7 @@
       <input class = "input-boxes" type = "text" industry="id" id = "id" required>
     </label></p>
     <p>
-      <button class = "form-button" type = "submit">Delete</button>
+      <button class = "form-button" ONCLICK="alert('deleted the fact')" type = "submit">Delete</button>
     </p>
   </form>
 </div>
@@ -428,11 +429,12 @@
 
   // Load users on page entry
   const read_button = document.getElementById("read_button");
-  
+  const criteria = document.getElementById("criteria")
+  const criteria_input = document.getElementById("criteria"); 
 
 
   // Display User Table, data is fetched from Backend Database
-  function read_users(read_fetch) {
+  function read_users(read_fetch, criteria) {
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
@@ -458,12 +460,16 @@
         response.json().then(data => {
             console.log(data);
             length = data.length;
-            number = Math.floor(Math.random() * length );
             for (let row in data) {
-              console.log(data[row]);
-              
-              add_row(data[number]);
-              break;
+             if (criteria != null) {
+            add_row(data[Number(criteria)])
+           }
+            else {
+             number = Math.floor(Math.random() * length );
+             console.log(data[row]);
+             add_row(data[number]);
+             break;
+             }
             }
         })
     })
@@ -504,7 +510,11 @@
 
     resultContainer.appendChild(tr);
   }
-
+  read_button.addEventListener("click", () => {
+  const criteria = criteria_input.value;
+  resultContainer.innerHTML = '';
+  read_users(read_fetch, criteria);
+  });
 
   function create_fact(){
     //Validate Password (must be 6-20 characters in len)
