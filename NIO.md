@@ -312,11 +312,6 @@
   }
 </style>
 
-<div class = "secondary">
-<button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Generate a Fact </button>
-<input class = "input-boxes" placeholder = "or type in a number between 1 to 5" id = "criteria"> 
-</div>
-
 <div class = "form-box">
   <form action = "javascript:read_users()" class = "createForm">
     <p><label class = "form-label">
@@ -324,7 +319,7 @@
       <input class = "input-boxes" type = "text" industry="id" id = "id">
     </label></p>
     <p>
-      <button class = "read-button" ONCLICK="alert('deleted the fact')" type = "submit">Generate a fact</button>
+      <button class = "read-button" ONCLICK="alert('showing the fact')" type = "submit">Generate a fact</button>
     </p>
   </form>
 </div>
@@ -356,7 +351,7 @@
           <input class = "input-boxes" type="text" industry="industry" id="industry" required>
       </label></p>
       <p>
-          <button class = "form-button" ONCLICK="alert('deleted the fact')" type = "submit">Create</button>
+          <button class = "form-button" ONCLICK="alert('created the fact')" type = "submit">Create</button>
       </p>
   </form>
 </div>
@@ -446,7 +441,7 @@
 
 
   // Display User Table, data is fetched from Backend Database
-  function read_users(read_fetch, criteria) {
+  function read_users(criteria) {
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
