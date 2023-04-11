@@ -348,6 +348,26 @@
   </form>
 </div>
 <div class = "form-box">
+  <form action = "javascript:update_fact()" class = "createForm">
+    <p><label class = "form-label">
+      ID to delete:
+      <input class = "input-boxes" type = "text" industry="id" id = "id_u" required>
+    </label></p>
+    <p><label class = "form-label">
+          Car Fact:
+          <input class = "input-boxes" type="text" industry="car" id="car_u" required>
+      </label></p>
+      <p><label class = "form-label">
+          industry fact:
+          <input class = "input-boxes" type="text" industry="industry" id="industry_u" required>
+      </label></p>
+    <p>
+      <button class = "form-button">Delete</button>
+    </p>
+  </form>
+</div>
+
+<div class = "form-box">
   <form action = "javascript:delete_fact()" class = "createForm">
     <p><label class = "form-label">
       ID to delete:
