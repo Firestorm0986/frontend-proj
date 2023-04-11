@@ -282,7 +282,7 @@ img {
   function like_car(car_id, num_like) {
     const body = {
         id: car_id,
-        like: num_like,
+        like: num_like+1,
     };
     const requestOptions = {
         method: 'PATCH',
@@ -328,7 +328,7 @@ img {
     const like_button = document.createElement('input');
     like_button.type = "button";
     like_button.value = "Like";
-    like_button.onclick = function() {like_car(data.id, data.like+1)};
+    like_button.onclick = function() {like_car(data.id, data.like)};
     const num_like = document.createElement('td');
     const delete_button = document.createElement('input');
     delete_button.type = "button";
