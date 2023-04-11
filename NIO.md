@@ -379,7 +379,7 @@
       <input class = "input-boxes" type = "text" industry="id" id = "id" required>
     </label></p>
     <p>
-      <button class = "form-button">Delete</button>
+      <button class = "form-button" type = "submit">Delete</button>
     </p>
   </form>
 </div>
@@ -432,7 +432,7 @@
 
 
   // Display User Table, data is fetched from Backend Database
-  function read_users() {
+  function read_users(read_fetch) {
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
