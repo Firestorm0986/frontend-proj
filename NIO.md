@@ -316,6 +316,18 @@
 <button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Generate a Fact </button>
 <input class = "input-boxes" placeholder = "or type in a number between 1 to 5" id = "criteria"> 
 </div>
+
+<div class = "form-box">
+  <form action = "javascript:read_users()" class = "createForm">
+    <p><label class = "form-label">
+      ID to specify:
+      <input class = "input-boxes" type = "text" industry="id" id = "id">
+    </label></p>
+    <p>
+      <button class = "read-button" ONCLICK="alert('deleted the fact')" type = "submit">Generate a fact</button>
+    </p>
+  </form>
+</div>
 <table class = "readtable">
   <thead>
   <tr>
