@@ -344,7 +344,7 @@
           <input class = "input-boxes" type="text" industry="industry" id="industry" required>
       </label></p>
       <p>
-          <button class = "form-button" ONCLICK="alert('Created the fact')" type = "submit">Create</button>
+          <button class = "form-button" ONCLICK="alert('deleted the fact')" type = "submit">Create</button>
       </p>
   </form>
 </div>
@@ -430,7 +430,7 @@
   // Load users on page entry
   const read_button = document.getElementById("read_button");
   const criteria = document.getElementById("criteria")
-  const criteria_input = document.getElementById("criteria"); 
+  
 
 
   // Display User Table, data is fetched from Backend Database
@@ -460,17 +460,16 @@
         response.json().then(data => {
             console.log(data);
             length = data.length;
-            for (let row in data) {
-             if (criteria != null) {
+            number = Math.floor(Math.random() * length );
+            if (criteria != null) {
             add_row(data[Number(criteria)])
            }
-            else {
-             number = Math.floor(Math.random() * length );
+           else{
+            for (let row in data) {
              console.log(data[row]);
              add_row(data[number]);
              break;
-             }
-            }
+            }}
         })
     })
     .catch(err => {
@@ -510,11 +509,7 @@
 
     resultContainer.appendChild(tr);
   }
-  read_button.addEventListener("click", () => {
-  const criteria = criteria_input.value;
-  resultContainer.innerHTML = '';
-  read_users(read_fetch, criteria);
-  });
+
 
   function create_fact(){
     //Validate Password (must be 6-20 characters in len)
