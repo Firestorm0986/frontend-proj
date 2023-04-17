@@ -284,8 +284,9 @@ img {
     const body = {
         car: car_name,
         id: car_id,
-        like: num_like+1,
+        like: num_like,
     };
+
     const requestOptions = {
         method: 'PATCH',
         body: JSON.stringify(body),
@@ -311,6 +312,11 @@ img {
           resultContainer.appendChild(tr);
           return;
         }
+        response.json().then(data => {
+            console.log(data);
+            //add a table row for the new/created userid
+            add_row(data);
+        })
     })
   }
 
@@ -324,7 +330,7 @@ img {
     const like_button = document.createElement('input');
     like_button.type = "button";
     like_button.value = "Like";
-    like_button.onclick = function() {like_car(data.car, data.id, data.like)};
+    like_button.onclick = function() {like_car(data.car, data.id, data.like = data.like+1)};
     const num_like = document.createElement('td');
     const delete_button = document.createElement('input');
     delete_button.type = "button";
