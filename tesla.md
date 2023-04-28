@@ -284,7 +284,7 @@ img {
     const body = {
         car: car_name,
         id: car_id,
-        like: num_like,
+        like: num_like + 1,
     };
 
     const requestOptions = {
