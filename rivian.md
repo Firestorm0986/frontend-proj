@@ -70,8 +70,8 @@
 
 <!--- code for the car builder -->
     
-<p style="checkbox-align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
-<p style="checkbox-align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
+<p style="align: center; font-size: 54px; color: purple;">Which car best matches your preferences?</p>
+<p style="align: center; font-size: 50px; color: black;">Click the check boxes below to find out!</p>
 
 <!---checkboxes for each category -->
 
