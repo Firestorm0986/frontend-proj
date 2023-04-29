@@ -316,7 +316,7 @@
   <form action = "javascript:read_users()" class = "createForm">
     <p><label class = "form-label">
       ID to specify:
-      <input class = "input-boxes" type = "text" industry="id" id = "id">
+      <input class = "input-boxes" type = "text" industry="id" id = "criteria">
     </label></p>
     <p>
       <button class = "read-button" ONCLICK="alert('showing the fact')" type = "submit">Generate a fact</button>
