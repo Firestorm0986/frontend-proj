@@ -208,15 +208,13 @@ img {
   }
 
   function create_car(){
-    //Validate Password (must be 6-20 characters in len)
-    //verifyPassword("click");
     const body = {
         car: document.getElementById("car").value,
         like: 0,
     };
     const requestOptions = {
         method: 'POST',
-        //mode: 'cors',
+        mode: 'cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
