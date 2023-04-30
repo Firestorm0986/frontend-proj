@@ -1,57 +1,124 @@
 <style>
 
-.mytd {
-    height: 80px;
-    width: 160px;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid black;
-    
-}
-.myth{
-    border: 1px solid black;
-    height: 30px;
-}
-.mytable1 {
-    width: 85%;
-    margin: auto;
-    text-align: center;
-    background-color: aliceblue;
-    border: 1px solid black;
-}
-img {
-    width: 90%;
-    height: 275%;
-    object-fit: contain;
+/* Colors */
+:root {
+  --primary-color: #2196F3; /* blue */
+  --secondary-color: #ECEFF1; /* light gray */
+  --background-color: #FFFFFF; /* white */
 }
 
-.mytable {
-  width:70%;
-  margin:auto;
-  text-align: center;
-  background-color: lightgrey;  
-  border-radius: 20px
-}
-.mytext {
-    font-weight: bolder;
-}
- td {
-  border: 1px solid black;
+td {
+  border: 1px solid var(--primary-color);
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.form-input{
-      padding: 2%;
-      width: 60%;
-      border-radius: 4px;
-      background-color: LightGray;
-      margin: auto;
-      margin-bottom: 3px;
+
+.mytable1 {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
 }
-.form{
-    font-size: 50px;
-    color: black;
+
+.mytable {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  background-color: var(--secondary-color);  
+  border-radius: 20px;
 }
+
+.myth {
+  border: 1px solid var(--primary-color);
+  height: 30px;
+}
+
+.mytd {
+  height: 80px;
+  width: 160px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid var(--primary-color);  
+  border-radius: 25px;
+}
+
+img {
+  width: 90%;
+  height: 275%;
+  object-fit: contain;
+}
+
+.form {
+  margin-left: 20px;
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.form-input {
+  padding: 2%;
+  width: 60%;
+  border-radius: 15px;
+  background-color: var(--secondary-color);
+  margin: auto;
+}
+
+.form-input form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-input label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.form-input input[type="text"] {
+  padding: 2%;
+  width: 60%;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #F5F5F5, #E0E0E0);
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.form-input button {
+  padding: 2%;
+  background: linear-gradient(to bottom, #1976D2, #0D47A1);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-input button:hover {
+  background: linear-gradient(to bottom, #0D47A1, #1976D2);
+  transform: scale(1.2);
+}
+
+.form-input input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px rgba(33, 150, 243, 0.5) inset;
+}
+
+.form-input input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.form-input input[type="text"] + label {
+  font-weight: normal;
+  color: #777;
+}
+
+.mytext {
+  font-weight: bolder;
+}
+
 </style>
 
 
@@ -148,7 +215,7 @@ img {
 <p class="form"><b><center>Add your Own Car!</center></b></p>
 
 <div class="form-input">
-<form action="javascript:create_car()"><center>
+<form action="javascript:create_car()">
     <p><label>
         Car Name
         <input type="text" name="car" id="car" required>
@@ -160,11 +227,11 @@ img {
     <p>
         <button id="add_car" onclick='create_car()'>Create</button>
     </p>
-</center></form>
+</form>
 </div>
 <p class="form"><b><center>Update your Review!</center></b></p>
 <div class="form-input">
-<form action="javascript:update_car()"><center>
+<form action="javascript:update_car()">
     <p><label>
         ID
         <input type="text" name="id" id="update_id" required>
@@ -180,7 +247,7 @@ img {
     <p>
         <button id="update" onclick='update_car()'>Update</button>
     </p>
-</center></form>
+</form>
 </div>
 
 <script>
@@ -261,24 +328,17 @@ img {
     };
     
 
-    // URL for Create API
     fetch(create_fetch, requestOptions)
       .then(response => {
         // trap error response from Web API
         if (response.status !== 200) {
           const errorMsg = 'Database create error: ' + response.status;
           console.log(errorMsg);
-          //const tr = document.createElement("tr");
-          //const td = document.createElement("td");
-          //td.innerHTML = errorMsg;
-          //tr.appendChild(td);
-          //resultContainer.appendChild(tr);
           return;
         }
         // response contains valid result
         response.json().then(data => {
             console.log(data);
-            //add a table row for the new/created userid
             add_row(data);
         })
     })
@@ -332,8 +392,6 @@ img {
     };
     
 
-    // URL for Create API
-    // Fetch API call to the database to create a new user
     fetch(update_fetch, requestOptions)
       .then(response => {
         // trap error response from Web API
@@ -348,17 +406,12 @@ img {
           return;
         }
     location.reload()
-      //  response.json().then(data => {
-       //     console.log(data);
-        //    //add a table row for the new/created userid
-        //    add_row(data);
-       // })
     })
   }
 
   function add_row(data) {
     const tr = document.createElement("tr");
-    tr.class="mytd"
+    tr.class="mytd";
     const car = document.createElement("td");
     const id = document.createElement("td");
     const col4 = document.createElement("td");
