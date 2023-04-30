@@ -435,7 +435,7 @@
   const patch_fetch = url + '/update';
 
   // Load users on page entry
-  const read_button = document.getElementById("read_button");
+ // const read_button = document.getElementById("read_button");
   const criteria = document.getElementById("criteria")
   
 
@@ -467,7 +467,7 @@
         response.json().then(data => {
             console.log(data);
             length = data.length;
-            number = Math.floor(Math.random() * length );
+            // number = Math.floor(Math.random() * length );
             if (criteria != null) {
               const index = parseInt(criteria);
               if (isNaN(index) || index < 0 || index >= data.length) {
@@ -478,9 +478,10 @@
             } 
             else {
               for (let row in data) {
-                console.log(data[row]);
-                add_row(data[number]);
-                break; }
+                // console.log(data[row]);
+                add_row(data[row]);
+                //break; 
+                }
             }
         })
     })
