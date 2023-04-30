@@ -8,15 +8,12 @@
     <img src="{{site.baseurl}}/images/ni2-remove.png" alt="main" class = "anima">
   </div>
 </div>
-
-
 <div class = "description-box">
   <h3 class = "body_text"> Description </h3>
   <p class = "body_text"> Nio Inc. is a Chinese multinational automobile manufacturer headquartered in Shanghai, specializing in designing and developing electric vehicles. The company is known for its development of battery-swapping stations for its vehicles, as an alternative to conventional charging stations </p>
   <h3 class = "body_text"> Models </h3>
     <p class = "body_text"> There are a total of 3 models of car with various versions of car in them  </p>
 </div>
-
 <table class = "mytable">
   <tr>
     <th>Model</th>
@@ -51,12 +48,7 @@
   </div>
   <p class = "body_text2"> click the above links to buy them now </p>
 </div>
-
-
-
-
 >>>>>> ### Price and specs
-
 >>>>>>>| Car | O-100 | milage (km) |
 | ES7 | 4.9s | 580 |
 | ET7 | 3.8s | 1000 |
@@ -65,11 +57,6 @@
 | ES6 | 4.7s | 610 |
 | EC7 | 3.8s | 940 |
 | EC6 | 4.5s | 615 |
-
-
-
-
-
 <!--- This section is Cascading Style Sheet (CSS) and applies to HTML -->
 <style>
 /* "row style" is flexible size and aligns pictures in center */
@@ -79,7 +66,6 @@
     z-index: -1;
     width:100%;
   }
-
   .image_back2{
     position: absolute;
     margin-top:100%;
@@ -93,28 +79,22 @@
     border-radius: 7px;
     background-color: none;
   }
-
   .description-box{
     width: 70%;
     margin: auto;
     margin-bottom: 2rem;
-    
     border-radius: 5px;
     padding: 5px;
   }
-
   .body_text{
     margin-left: 3rem; 
     color: white;
   }
-
   .body_text2{
     margin-left: 3rem; 
     color: white;
     text-align: center;
   }
-
-
   .readtable {
     width:70%;
     margin:auto;
@@ -122,7 +102,6 @@
     background-color: lightgrey;  
     border-radius: 7px;
   }
-
   .box{
   margin-right: 20%;
   margin-left: 20%;
@@ -130,20 +109,15 @@
   width: 60%; 
   background-color: white;
   }
-
-
   .mytd, th {
     border: 0.5px groove;
     background-color: none;
-
   }
-
   .secondary{
     margin-top: 1rem;
     text-align:center;
     margin-bottom: 1rem;
   }
-
   .mybutton{
     width: 6rem;
     height:2rem;
@@ -156,31 +130,22 @@
     height: 10%;
     width:100%;
   }
-
   .container2{
     height: 10%;
     width:100%;
-
   }
-
   .image1 {
     width: 100%;
     height:50rem;
   }
-
   .image1:hover{
-
   }
-
   body{
     background-color:darkgrey;
   }
-
-
   .anima{
     width: 10%;
     height: 5%;
-    
     position: relative;
     animation-name: car;
     animation-duration: 4s;
@@ -188,38 +153,30 @@
     margin-right: 10rem;
     animation-iteration-count: infinite;
   }
-
-
   @keyframes car {
     0%   { left:0px; top:0px;}
     25%  { left:70%; top:0px;}
     50%  { left:0rem; top:0px;}
   }
-
   .subbox{
     padding: 2px;
   }
-
   .createForm{
     text-align: center;
   }
-  
   .form-tell{
     text-align: center;
     font-size: 40px;
     margin-top: 5rem;
     color: white;
   }
-
   .input-boxes{
     width: 50%;
   }
-
   .form-label{
     font-weight: bold;
     font-size: 20px;
   }
-
   .form-button{
     width: 6rem;
     height:2rem;
@@ -230,36 +187,29 @@
     font-size: 20px;
     font-weight: bold;
   }
-
   .form-box{
-      
       padding: 2%;
-      
       width: 75%;
       border-radius: 5px;
       background-color: bisque;
       margin: auto;
       margin-bottom: 5rem;
   }
-
   .read-button{
       width: auto;
       margin: auto;
       align-self: center;
   }
-
   * {box-sizing: border-box;}
   body {font-family: Verdana, sans-serif;}
   .mySlides {display: none;}
   img {vertical-align: middle;}
-
   /* Slideshow container */
   .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
   }
-
   /* Caption text */
   .text {
   color: #f2f2f2;
@@ -270,7 +220,6 @@
   width: 100%;
   text-align: center;
   }
-
   /* Number text (1/3 etc) */
   .numbertext {
   color: #f2f2f2;
@@ -279,7 +228,6 @@
   position: absolute;
   top: 0;
   }
-
   /* The dots/bullets/indicators */
   .dot {
   height: 15px;
@@ -290,35 +238,37 @@
   display: inline-block;
   transition: background-color 0.6s ease;
   }
-
   .active {
   background-color: #717171;
   }
-
   /* Fading animation */
   .fade {
   animation-name: fade;
   animation-duration: 1.5s;
   }
-
   @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
   }
-
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
   }
 </style>
 
+<div class = "secondary">
+<button id = "read_button" type = "button" onclick="read_users()"  class = "read-button"> Generate a Fact </button>
+<input class = "input-boxes" placeholder = "or type in a number between 1 to 5" id = "criteria"> 
+</div>
+
 <div class = "form-box">
   <form action = "javascript:read_users()" class = "createForm">
     <p><label class = "form-label">
       ID to specify:
-      <input class = "input-boxes" type = "text"  id = "criteria">
+      <input class = "input-boxes" type = "text" industry="id" id = "id">
     </label></p>
     <p>
+      <button class = "read-button" ONCLICK="alert('deleted the fact')" type = "submit">Generate a fact</button>
       <button class = "read-button" ONCLICK="alert('showing the fact')" type = "submit">Generate a fact</button>
     </p>
   </form>
@@ -329,17 +279,13 @@
     <th>Car Fact</th>
     <th>industry fact</th>
     <th>id</th>
-
   </tr>
   </thead>
   <tbody id="result">
     <!-- javascript generated data -->
   </tbody>
 </table>
-
-
 <p class = "form-tell">Add Your Own Fact</p>
-
 <div class = "form-box">
   <form action="javascript:create_fact()" class = "createForm">
       <p><label class = "form-label">
@@ -351,13 +297,12 @@
           <input class = "input-boxes" type="text" industry="industry" id="industry" required>
       </label></p>
       <p>
+          <button class = "form-button" ONCLICK="alert('deleted the fact')" type = "submit">Create</button>
           <button class = "form-button" ONCLICK="alert('created the fact')" type = "submit">Create</button>
       </p>
   </form>
 </div>
-
 <p class = "form-tell">Update a fact</p>
-
 <div class = "form-box">
   <form action = "javascript:update_fact()" class = "createForm">
     <p><label class = "form-label">
@@ -377,9 +322,7 @@
     </p>
   </form>
 </div>
-
 <p class = "form-tell">Delete a fact</p>
-
 <div class = "form-box">
   <form action = "javascript:delete_fact()" class = "createForm">
     <p><label class = "form-label">
@@ -391,9 +334,7 @@
     </p>
   </form>
 </div>
-
 <div class="slideshow-container">
-
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
     <img src="{{site.baseurl}}/images/slide-image2.jpg" style="width:100%">
@@ -420,27 +361,20 @@
     <span class="dot"></span> 
     <span class="dot"></span> 
   </div>
-
-
-
 <script>
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
-  const url = "localhost:8086"
-
+  const url = "https://zesty.nighthawkcodingsociety.com/api/facts/"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
   const delete_fetch = url + '/delete';
   const patch_fetch = url + '/update';
-
   // Load users on page entry
- // const read_button = document.getElementById("read_button");
+  const read_button = document.getElementById("read_button");
   const criteria = document.getElementById("criteria")
-  
-
-
   // Display User Table, data is fetched from Backend Database
+  function read_users(read_fetch, criteria) {
   function read_users(criteria) {
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -467,22 +401,16 @@
         response.json().then(data => {
             console.log(data);
             length = data.length;
-            // number = Math.floor(Math.random() * length );
+            number = Math.floor(Math.random() * length );
             if (criteria != null) {
-              const index = parseInt(criteria);
-              if (isNaN(index) || index < 0 || index >= data.length) {
-                console.log('Invalid criteria input: ' + criteria);
-                return;
-              }
-              add_row(data[index]);
-            } 
-            else {
-              for (let row in data) {
-                // console.log(data[row]);
-                add_row(data[row]);
-                //break; 
-                }
-            }
+            add_row(data[Number(criteria)])
+           }
+           else{
+            for (let row in data) {
+             console.log(data[row]);
+             add_row(data[number]);
+             break;
+            }}
         })
     })
     .catch(err => {
@@ -499,7 +427,6 @@
     const car = document.createElement("td");
     const industry = document.createElement("td");
     const id = document.createElement("td");
-
     // obtain data that is specific to the API
     car.innerHTML = data.car; 
     industry.innerHTML = data.industry; 
@@ -507,14 +434,9 @@
     // add HTML to container
     tr.appendChild(car);
     tr.appendChild(industry);
-    
     tr.appendChild(id);
-    
-
     resultContainer.appendChild(tr);
   }
-
-
   function create_fact(){
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
@@ -530,7 +452,6 @@
             'Authorization': 'Bearer my-token',
         },
     };
-
     // URL for Create API
     // Fetch API call to the database to create a new fact
     fetch(create_fetch, requestOptions)
@@ -565,7 +486,6 @@
             'Authorization': 'Bearer my-token',
         },
     };
-
     // URL for Create API
     // Fetch API call to the database to create a new fact
     fetch(patch_fetch, requestOptions)
@@ -584,7 +504,6 @@
         // response contains valid result
     })
   }
-
   function delete_fact(){
   //Validate Password (must be 6-20 characters in len)
   //verifyPassword("click");
@@ -599,7 +518,6 @@
           'Authorization': 'Bearer my-token',
       },
   };
-
   // URL for Create API
   // Fetch API call to the database to create a new user
   fetch(delete_fetch, requestOptions)
@@ -619,10 +537,8 @@
   })
   }
   /// New for slideshow
-
   let slideIndex = 0;
   showSlides();
-
   function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -639,9 +555,4 @@
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
-
-
-
-
-
 </script>
