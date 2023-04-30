@@ -40,6 +40,18 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.form-input{
+      padding: 2%;
+      width: 60%;
+      border-radius: 4px;
+      background-color: LightGray;
+      margin: auto;
+      margin-bottom: 3px;
+}
+.form{
+    font-size: 50px;
+    color: black;
+}
 </style>
 
 
@@ -124,8 +136,7 @@ img {
   <tr>
     <th class="myth">ID</th>
     <th class="myth">Car</th>
-    <th class="myth">Like</th>
-    <th class="myth"># of Likes</th>
+    <th class="myth">Reviews</th>
     <th class="myth">Delete</th>
   </tr>
   </thead>
@@ -134,41 +145,64 @@ img {
   </tbody>
 </table>
 
-<p><center>Add your Own Car!</center></p>
+<p class="form"><b><center>Add your Own Car!</center></b></p>
 
+<div class="form-input">
 <form action="javascript:create_car()"><center>
     <p><label>
-        Car
+        Car Name
         <input type="text" name="car" id="car" required>
     </label></p>
     <p>
         <button id="add_car" onclick='create_car()'>Create</button>
     </p>
 </center></form>
+</div>
+<p class="form"><b><center>Update your Review!</center></b></p>
+<div class="form-input">
+<form action="javascript:review_car()"><center>
+    <p><label>
+        ID
+        <input type="text" name="id" id="update_id" required>
+    </label></p>
+    <p><label>
+        Updated Car
+        <input type="text" name="car" id="update_car" required>
+    </label></p>
+    <p><label>
+        Updated Review
+        <input type="text" name="review" id="update_review" required>
+    </label></p>
+    <p>
+        <button id="update" onclick='review_car()'>Update</button>
+    </p>
+</center></form>
+</div>
 
 <script>
   const resultContainer = document.getElementById("result");
-  const url = "https://zesty.nighthawkcodingsociety.com/api/schemas"
+  //const url = "https://zesty.nighthawkcodingsociety.com/api/schemas"
+  const url = "http://172.19.77.45:8086/api/schemas";
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
   const delete_fetch = url + '/delete';
   const update_fetch = url + '/update';
 
 
-  // Load users on page entry
   read_cars();
 
 
-  // Display User Table, data is fetched from Backend Database
   function read_cars() {
     // prepare fetch options
     const read_options = {
-      method: 'GET', // *GET, POST, PUT, DELETE, etc.
-      mode: 'cors', // no-cors, *cors, same-origin
-      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'omit', // include, *same-origin, omit
+      method: 'GET',
+      mode: 'cors',
+      cache: 'default', 
+      credentials: 'omit', 
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer my-token',  
+
       },
     };
 
@@ -278,11 +312,11 @@ img {
     })
   };
 
-  function like_car(car_name, car_id, num_like) {
+  function review_car() {
     const body = {
-        car: car_name,
-        id: car_id,
-        like: num_like + 1,
+        car: document.getElementById("update_car").value,
+        id: document.getElementById("update_id").value,
+        like: document.getElementById("update_review").value,
     };
 
     const requestOptions = {
@@ -323,13 +357,8 @@ img {
     tr.class="mytd"
     const car = document.createElement("td");
     const id = document.createElement("td");
-    const col2 = document.createElement("td");
     const col4 = document.createElement("td");
-    const like_button = document.createElement('input');
-    like_button.type = "button";
-    like_button.value = "Like";
-    like_button.onclick = function() {like_car(data.car, data.id, data.like = data.like+1)};
-    const num_like = document.createElement('td');
+    const reviews = document.createElement('td');
     const delete_button = document.createElement('input');
     delete_button.type = "button";
     delete_button.value = "Delete";
@@ -340,13 +369,12 @@ img {
     // obtain data that is specific to the API
     car.innerHTML = data.car;
     id.innerHTML = data.id;
-    num_like.innerHTML = data.like;
+    reviews.innerHTML = data.reviews;
 
     // add HTML to container
     tr.appendChild(id);
     tr.appendChild(car);
-    tr.appendChild(col2);
-    tr.appendChild(num_like);
+    tr.appendChild(reviews);
     tr.appendChild(col4);
 
     resultContainer.appendChild(tr);
