@@ -197,7 +197,7 @@ img {
 
 
 >>>>>>>## Live Rankings
-
+<!-- The code below has been influenced by the class code from the APCSP class at Del Norte -->
 <table class="mytable1" id="cars_table">
   <thead>
   <tr>
