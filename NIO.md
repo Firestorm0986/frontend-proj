@@ -316,7 +316,7 @@
   <form action = "javascript:read_users()" class = "createForm">
     <p><label class = "form-label">
       ID to specify:
-      <input class = "input-boxes" type = "text" industry="id" id = "criteria">
+      <input class = "input-boxes" type = "text"  id = "criteria">
     </label></p>
     <p>
       <button class = "read-button" ONCLICK="alert('showing the fact')" type = "submit">Generate a fact</button>
@@ -427,7 +427,7 @@
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
-  const url = "https://zesty.nighthawkcodingsociety.com/api/facts/"
+  const url = "localhost:8086"
 
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
