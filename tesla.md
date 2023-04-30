@@ -339,6 +339,7 @@ img {
             add_row(data);
         })
     })
+    location.reload()
   }
   
   function delete_car(car_id){
