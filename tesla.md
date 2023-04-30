@@ -153,6 +153,10 @@ img {
         Car Name
         <input type="text" name="car" id="car" required>
     </label></p>
+    <p><label>
+      Reviews
+      <input type="text" name="review_input" id="review">
+    </label></p>
     <p>
         <button id="add_car" onclick='create_car()'>Create</button>
     </p>
@@ -160,7 +164,7 @@ img {
 </div>
 <p class="form"><b><center>Update your Review!</center></b></p>
 <div class="form-input">
-<form action="javascript:review_car()"><center>
+<form action="javascript:update_car()"><center>
     <p><label>
         ID
         <input type="text" name="id" id="update_id" required>
@@ -174,7 +178,7 @@ img {
         <input type="text" name="review" id="update_review" required>
     </label></p>
     <p>
-        <button id="update" onclick='review_car()'>Update</button>
+        <button id="update" onclick='update_car()'>Update</button>
     </p>
 </center></form>
 </div>
@@ -244,11 +248,11 @@ img {
   function create_car(){
     const body = {
         car: document.getElementById("car").value,
-        like: 0,
+        reviews: document.getElementById("review").value,
     };
     const requestOptions = {
         method: 'POST',
-        mode: 'cors',
+        //mode: 'cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
@@ -258,18 +262,17 @@ img {
     
 
     // URL for Create API
-    // Fetch API call to the database to create a new user
     fetch(create_fetch, requestOptions)
       .then(response => {
         // trap error response from Web API
         if (response.status !== 200) {
           const errorMsg = 'Database create error: ' + response.status;
           console.log(errorMsg);
-          const tr = document.createElement("tr");
-          const td = document.createElement("td");
-          td.innerHTML = errorMsg;
-          tr.appendChild(td);
-          resultContainer.appendChild(tr);
+          //const tr = document.createElement("tr");
+          //const td = document.createElement("td");
+          //td.innerHTML = errorMsg;
+          //tr.appendChild(td);
+          //resultContainer.appendChild(tr);
           return;
         }
         // response contains valid result
@@ -282,7 +285,6 @@ img {
   }
   
   function delete_car(car_id){
-    alert("The row has been deleted. Please reload your page!");
     const body = {
         id: car_id,
     };
@@ -310,13 +312,14 @@ img {
           return;
         }
     })
+    location.reload()
   };
 
-  function review_car() {
+  function update_car() {
     const body = {
         car: document.getElementById("update_car").value,
         id: document.getElementById("update_id").value,
-        like: document.getElementById("update_review").value,
+        reviews: document.getElementById("update_review").value,
     };
 
     const requestOptions = {
@@ -344,11 +347,12 @@ img {
           resultContainer.appendChild(tr);
           return;
         }
-        response.json().then(data => {
-            console.log(data);
-            //add a table row for the new/created userid
-            add_row(data);
-        })
+    location.reload()
+      //  response.json().then(data => {
+       //     console.log(data);
+        //    //add a table row for the new/created userid
+        //    add_row(data);
+       // })
     })
   }
 
@@ -363,7 +367,6 @@ img {
     delete_button.type = "button";
     delete_button.value = "Delete";
     delete_button.onclick = function() {delete_car(data.id)};
-    col2.appendChild(like_button);
     col4.appendChild(delete_button);
   
     // obtain data that is specific to the API
@@ -373,6 +376,7 @@ img {
 
     // add HTML to container
     tr.appendChild(id);
+    console.log(id);
     tr.appendChild(car);
     tr.appendChild(reviews);
     tr.appendChild(col4);
