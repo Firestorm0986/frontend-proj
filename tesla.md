@@ -213,19 +213,18 @@ img {
 </table>
 
 <p class="form"><b><center>Add your Own Car!</center></b></p>
-
 <div class="form-input">
-<form action="javascript:create_car()">
+<form>
     <p><label>
-        Car Name
-        <input type="text" name="car" id="car" required>
+      Car Name
+      <input type="text" name="car" id="car" required>
     </label></p>
     <p><label>
       Reviews
       <input type="text" name="review_input" id="review">
     </label></p>
     <p>
-        <button id="add_car" onclick='create_car()'>Create</button>
+      <button id="add_car" onclick='create_car()'>Create</button>
     </p>
 </form>
 </div>
@@ -252,7 +251,6 @@ img {
 
 <script>
   const resultContainer = document.getElementById("result");
-  //const url = "https://zesty.nighthawkcodingsociety.com/api/schemas"
   const url = "http://172.19.77.45:8086/api/schemas";
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
@@ -319,7 +317,6 @@ img {
     };
     const requestOptions = {
         method: 'POST',
-        //mode: 'cors',
         body: JSON.stringify(body),
         headers: {
             "content-type": "application/json",
@@ -411,7 +408,6 @@ img {
 
   function add_row(data) {
     const tr = document.createElement("tr");
-    tr.class="mytd";
     const car = document.createElement("td");
     const id = document.createElement("td");
     const col4 = document.createElement("td");
@@ -429,7 +425,6 @@ img {
 
     // add HTML to container
     tr.appendChild(id);
-    console.log(id);
     tr.appendChild(car);
     tr.appendChild(reviews);
     tr.appendChild(col4);
