@@ -370,13 +370,13 @@ img {
           return;
         }
     })
-    response.json().then(data => {
-        console.log(data);
-        for (let row in data) {
-          console.log(data[row]);
-          add_row(data[row]);
-            }
-        })
+    //response.json().then(data => {
+     //   console.log(data);
+      //  for (let row in data) {
+      //    console.log(data[row]);
+      //    add_row(data[row]);
+      //      }
+      //  })
     location.reload()
   };
 
